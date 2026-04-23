@@ -1,0 +1,682 @@
+{% comment %}
+  Section: igogomi-product-showcase.liquid
+  Place in: sections/
+{% endcomment %}
+
+<style>
+  :root {
+    --text-color: #333;
+    --light-gray: #f9f9f9;
+    --accent-blue: #00a0e9;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    color: var(--text-color);
+    background-color: #fff;
+  }
+
+  .igomi-container-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        /* Banner Responsive Handling */
+        .igomi-banner {
+            position: relative;
+            width: 100%;
+            display: block;
+        }
+
+        .igomi-banner picture img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .igomi-banner-overlay {
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            transform: translateY(-50%);
+            color: white;
+            max-width: 50%;
+        }
+
+        .igomi-banner-overlay h2 {
+            font-size: clamp(1.5rem, 4vw, 3rem);
+            line-height: 1.1;
+            text-transform: uppercase;
+            font-weight: 800;
+        }
+
+        .igomi-banner-overlay--bottom {
+            top: auto;
+            bottom: 8%;
+            transform: none;
+        }
+
+        /* Feature Sections */
+        .igomi-section-padding {
+            padding: 40px 0;
+        }
+
+        .igomi-intro-text {
+            text-align: left;
+            margin-bottom: 30px;
+        }
+
+        .igomi-intro-text h3 {
+            font-size: 1.2rem;
+            color: #888;
+            margin-bottom: 5px;
+        }
+
+        .igomi-intro-text h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        /* Cards Grid */
+        .igomi-cards-grid {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+            align-items: start;
+        }
+
+        @media (min-width: 768px) {
+            .igomi-cards-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+
+        .igomi-card {
+            background: #fff;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .igomi-card img {
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            display: block;
+            margin-bottom: 15px;
+            border-radius: 10px;
+        }
+
+        .igomi-card h4 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .igomi-card p {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.4;
+        }
+
+        /* Secondary Grid Text */
+        .igomi-bottom-info {
+            padding: 20px 0;
+        }
+
+        .igomi-bottom-info h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .igomi-performance-panel {
+            background: #ffffff;
+            padding: 28px 20px 30px;
+        }
+
+        .igomi-performance-title {
+            font-size: clamp(1.1rem, 2vw, 1.55rem);
+            line-height: 1.2;
+            font-weight: 800;
+            color: #242424;
+            margin-bottom: 26px;
+        }
+
+        .igomi-performance-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 22px;
+        }
+
+        .igomi-performance-item-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 8px;
+        }
+
+        .igomi-performance-badge {
+            width: 26px;
+            height: 26px;
+            border-radius: 50%;
+            background: #f4874c;
+            color: #111;
+            font-weight: 700;
+            font-size: 0.95rem;
+            line-height: 26px;
+            text-align: center;
+            flex-shrink: 0;
+        }
+
+        .igomi-performance-item h3 {
+            font-size: clamp(0.9rem, 1.1vw, 1.2rem);
+            font-weight: 800;
+            color: #262626;
+            line-height: 1.1;
+        }
+
+        .igomi-performance-list {
+            margin: 0;
+            padding-left: 22px;
+            color: #2e2e2e;
+            font-size: 0.88rem;
+            line-height: 1.5;
+        }
+
+        .igomi-performance-list li {
+            margin-bottom: 6px;
+        }
+
+        .igomi-performance-list strong {
+            font-weight: 800;
+        }
+
+        @media (min-width: 768px) {
+            .igomi-performance-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 24px 28px;
+            }
+        }
+
+        @media (min-width: 1100px) {
+            .igomi-performance-panel {
+                padding: 34px 20px 30px;
+            }
+
+            .igomi-performance-grid {
+                grid-template-columns: repeat(4, minmax(0, 1fr));
+                gap: 28px;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .igomi-container-wrapper {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+        }
+</style>
+
+<div class="igomi-container-wrapper">
+
+  {%- comment -%} Banner 1 {%- endcomment -%}
+  <section class="igomi-banner">
+    <picture>
+      {% if section.settings.banner1_desktop_image != blank %}
+        <source media="(min-width: 768px)" srcset="{{ section.settings.banner1_desktop_image | image_url: width: 1200 }}">
+      {% else %}
+        <source media="(min-width: 768px)" srcset="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/kv_7a3364bf-6361-40d4-9e7d-f38dfc362513.jpg">
+      {% endif %}
+      {% if section.settings.banner1_mobile_image != blank %}
+        <img src="{{ section.settings.banner1_mobile_image | image_url: width: 800 }}" alt="{{ section.settings.banner1_alt }}" width="1200" height="600" loading="eager">
+      {% else %}
+        <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomi01_1d108719-d7e9-447a-a694-0f8a638b9653.jpg" alt="{{ section.settings.banner1_alt }}" width="1200" height="600" loading="eager">
+      {% endif %}
+    </picture>
+  </section>
+
+  {%- comment -%} Banner 2 {%- endcomment -%}
+  <section class="igomi-banner">
+    <picture>
+      {% if section.settings.banner2_desktop_image != blank %}
+        <source media="(min-width: 768px)" srcset="{{ section.settings.banner2_desktop_image | image_url: width: 1200 }}">
+      {% else %}
+        <source media="(min-width: 768px)" srcset="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/kv000_fd83a6e2-bccf-4d35-a457-2c6489567c4e.jpg">
+      {% endif %}
+      {% if section.settings.banner2_mobile_image != blank %}
+        <img src="{{ section.settings.banner2_mobile_image | image_url: width: 800 }}" alt="{{ section.settings.banner2_alt }}" width="1200" height="600" loading="lazy">
+      {% else %}
+        <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomi02_5b12a774-064e-4a44-bd72-3d7ec1e25846.jpg" alt="{{ section.settings.banner2_alt }}" width="1200" height="600" loading="lazy">
+      {% endif %}
+    </picture>
+  </section>
+
+  <section class="igomi-performance-panel">
+        <h2 class="igomi-performance-title">Built to dominate the toughest terrain and tested to exceed every limit.</h2>
+        <div class="igomi-performance-grid">
+            <article class="igomi-performance-item">
+                <div class="igomi-performance-item-header">
+                    <span class="igomi-performance-badge">1</span>
+                    <h3>Frame Strength</h3>
+                </div>
+                <ul class="igomi-performance-list">
+                    <li><strong>Built to handle 400 lbs static load</strong></li>
+                    <li><strong>Load:</strong> 400 lbs Static Load</li>
+                </ul>
+            </article>
+            <article class="igomi-performance-item">
+                <div class="igomi-performance-item-header">
+                    <span class="igomi-performance-badge">2</span>
+                    <h3>Suspension Control</h3>
+                </div>
+                <ul class="igomi-performance-list">
+                    <li><strong>Shock Durability:</strong> 500,000 Compression</li>
+                    <li><strong>Bump Sensitivity:</strong> 95% Compliance</li>
+                </ul>
+            </article>
+            <article class="igomi-performance-item">
+                <div class="igomi-performance-item-header">
+                    <span class="igomi-performance-badge">3</span>
+                    <h3>Wheel Precision</h3>
+                </div>
+                <ul class="igomi-performance-list">
+                    <li><strong>Rim Impact:</strong> ASTM F2043 LvL 2</li>
+                    <li><strong>Lateral Stiffness:</strong> 75 N/mm</li>
+                </ul>
+            </article>
+            <article class="igomi-performance-item">
+                <div class="igomi-performance-item-header">
+                    <span class="igomi-performance-badge">4</span>
+                    <h3>Brake Confidence</h3>
+                </div>
+                <ul class="igomi-performance-list">
+                    <li><strong>Pad Wear:</strong> &lt; 0.5mm/500 Miles</li>
+                    <li><strong>Heat Dissipation:</strong> &lt; 200&#176;C Max Braking</li>
+                </ul>
+            </article>
+        </div>
+  </section>
+
+  {%- comment -%} Banner 3 with bottom overlay {%- endcomment -%}
+  <section class="igomi-banner">
+    <picture>
+      {% if section.settings.banner3_desktop_image != blank %}
+        <source media="(min-width: 768px)" srcset="{{ section.settings.banner3_desktop_image | image_url: width: 1200 }}">
+      {% else %}
+        <source media="(min-width: 768px)" srcset="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomi-image.jpg">
+      {% endif %}
+      {% if section.settings.banner3_mobile_image != blank %}
+        <img src="{{ section.settings.banner3_mobile_image | image_url: width: 800 }}" alt="{{ section.settings.banner3_alt }}" width="1200" height="600" loading="lazy">
+      {% else %}
+        <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/0001_4d5630ec-0ba2-4a73-a95a-b9694fb95f8b.jpg" alt="{{ section.settings.banner3_alt }}" width="1200" height="600" loading="lazy">
+      {% endif %}
+    </picture>
+    {% if section.settings.banner3_overlay_text != blank %}
+      <div class="igomi-banner-overlay igomi-banner-overlay--bottom">
+        <h2>{{ section.settings.banner3_overlay_text | newline_to_br }}</h2>
+      </div>
+    {% endif %}
+  </section>
+
+  {%- comment -%} Feature Section 1 {%- endcomment -%}
+  <div class="igomi-section-padding">
+    <div class="igomi-intro-text">
+      <h3>{{ section.settings.intro_eyebrow }}</h3>
+      <h2>{{ section.settings.intro_heading }}</h2>
+      <p>{{ section.settings.intro_body }}</p>
+    </div>
+
+    <div class="igomi-cards-grid">
+      {% assign card1_index = 0 %}
+      {% for block in section.blocks %}
+        {% if block.type == 'feature_card_1' %}
+          {% assign card1_index = card1_index | plus: 1 %}
+          <div class="igomi-card" {{ block.shopify_attributes }}>
+            {% if block.settings.card_image != blank %}
+              <img src="{{ block.settings.card_image | image_url: width: 800 }}" alt="{{ block.settings.card_alt }}" width="400" height="300" loading="lazy">
+            {% else %}
+              {% case card1_index %}
+                {% when 1 %}
+                  <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/a01_8abe84f8-1d7c-40e0-b27b-c963c222742d.jpg" alt="{{ block.settings.card_alt }}" width="400" height="300" loading="lazy">
+                {% when 2 %}
+                  <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/02a.jpg" alt="{{ block.settings.card_alt }}" width="400" height="300" loading="lazy">
+                {% when 3 %}
+                  <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/03a.jpg" alt="{{ block.settings.card_alt }}" width="400" height="300" loading="lazy">
+                {% when 4 %}
+                  <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/04a_b6c0c125-6398-4a1c-9c17-f04c90cf126a.jpg" alt="{{ block.settings.card_alt }}" width="400" height="300" loading="lazy">
+              {% endcase %}
+            {% endif %}
+            <h4>{{ block.settings.card_title }}</h4>
+            <p>{{ block.settings.card_body }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+  {%- comment -%} Banner 4 with center overlay {%- endcomment -%}
+  <section class="igomi-banner">
+    <picture>
+      {% if section.settings.banner4_desktop_image != blank %}
+        <source media="(min-width: 768px)" srcset="{{ section.settings.banner4_desktop_image | image_url: width: 1200 }}">
+      {% else %}
+        <source media="(min-width: 768px)" srcset="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomikv002.jpg">
+      {% endif %}
+      {% if section.settings.banner4_mobile_image != blank %}
+        <img src="{{ section.settings.banner4_mobile_image | image_url: width: 800 }}" alt="{{ section.settings.banner4_alt }}" width="1200" height="600" loading="lazy">
+      {% else %}
+        <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomi002a.jpg" alt="{{ section.settings.banner4_alt }}" width="1200" height="600" loading="lazy">
+      {% endif %}
+    </picture>
+    {% if section.settings.banner4_overlay_text != blank %}
+      <div class="igomi-banner-overlay">
+        <h2>{{ section.settings.banner4_overlay_text | newline_to_br }}</h2>
+      </div>
+    {% endif %}
+  </section>
+
+  {%- comment -%} Feature Section 2 {%- endcomment -%}
+  <div class="igomi-section-padding">
+    <div class="igomi-bottom-info">
+      <h2>{{ section.settings.bottom_heading }}</h2>
+    </div>
+
+    <div class="igomi-cards-grid">
+      {% assign card2_index = 0 %}
+      {% for block in section.blocks %}
+        {% if block.type == 'feature_card_2' %}
+          {% assign card2_index = card2_index | plus: 1 %}
+          <div class="igomi-card" {{ block.shopify_attributes }}>
+            {% if block.settings.card_image != blank %}
+              <img src="{{ block.settings.card_image | image_url: width: 800 }}" alt="{{ block.settings.card_alt }}" width="400" height="300" loading="lazy">
+            {% else %}
+              {% case card2_index %}
+                {% when 1 %}
+                  <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/04.jpg" alt="{{ block.settings.card_alt }}" width="400" height="300" loading="lazy">
+                {% when 2 %}
+                  <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/02.jpg" alt="{{ block.settings.card_alt }}" width="400" height="300" loading="lazy">
+                {% when 3 %}
+                  <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/03.jpg" alt="{{ block.settings.card_alt }}" width="400" height="300" loading="lazy">
+                {% when 4 %}
+                  <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/01_46f9b933-c7aa-4449-b2d1-134e914892f1.jpg" alt="{{ block.settings.card_alt }}" width="400" height="300" loading="lazy">
+              {% endcase %}
+            {% endif %}
+            <h4>{{ block.settings.card_title }}</h4>
+            <p>{{ block.settings.card_body }}</p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "iGOGOMI Showcase",
+  "tag": "div",
+  "class": "igogomi-showcase-section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Banner 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner1_desktop_image",
+      "label": "Banner 1 — Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner1_mobile_image",
+      "label": "Banner 1 — Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "banner1_alt",
+      "label": "Banner 1 — Alt Text",
+      "default": "iGOGOMI TRAIL X Peak Power"
+    },
+    {
+      "type": "header",
+      "content": "Banner 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner2_desktop_image",
+      "label": "Banner 2 — Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner2_mobile_image",
+      "label": "Banner 2 — Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "banner2_alt",
+      "label": "Banner 2 — Alt Text",
+      "default": "iGOGOMI TRAIL X Dimensions and Specs"
+    },
+    {
+      "type": "header",
+      "content": "Banner 3 (with overlay)"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner3_desktop_image",
+      "label": "Banner 3 — Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner3_mobile_image",
+      "label": "Banner 3 — Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "banner3_alt",
+      "label": "Banner 3 — Alt Text",
+      "default": "Inspired by Legends"
+    },
+    {
+      "type": "textarea",
+      "id": "banner3_overlay_text",
+      "label": "Banner 3 — Overlay Text",
+      "default": "Inspired by Legends.\nPowered by Electricity."
+    },
+    {
+      "type": "header",
+      "content": "Feature Section 1"
+    },
+    {
+      "type": "text",
+      "id": "intro_eyebrow",
+      "label": "Eyebrow Text",
+      "default": "IGOGOMI TRAIL X"
+    },
+    {
+      "type": "text",
+      "id": "intro_heading",
+      "label": "Heading",
+      "default": "4000W ELECTRIC DIRT BIKE BUILT TO RIDE HARD"
+    },
+    {
+      "type": "textarea",
+      "id": "intro_body",
+      "label": "Body Text",
+      "default": "The IGOGOMI TRAIL X is a high-performance electric dirt bike powered by a 4000W motor, reaching speeds up to 40 MPH. Equipped with a durable battery, full suspension, and hydraulic disc brakes, it delivers smooth, controlled riding on any terrain."
+    },
+    {
+      "type": "header",
+      "content": "Banner 4 (with overlay)"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner4_desktop_image",
+      "label": "Banner 4 — Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner4_mobile_image",
+      "label": "Banner 4 — Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "banner4_alt",
+      "label": "Banner 4 — Alt Text",
+      "default": "Thoughtful Design"
+    },
+    {
+      "type": "textarea",
+      "id": "banner4_overlay_text",
+      "label": "Banner 4 — Overlay Text",
+      "default": "Where Comfort Meets Thoughtful Design"
+    },
+    {
+      "type": "header",
+      "content": "Feature Section 2"
+    },
+    {
+      "type": "text",
+      "id": "bottom_heading",
+      "label": "Section Heading",
+      "default": "Power. Visibility. Convenience. Comfort."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature_card_1",
+      "name": "Feature Card (Section 1)",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Card Image"
+        },
+        {
+          "type": "text",
+          "id": "card_alt",
+          "label": "Image Alt Text"
+        },
+        {
+          "type": "text",
+          "id": "card_title",
+          "label": "Card Title"
+        },
+        {
+          "type": "textarea",
+          "id": "card_body",
+          "label": "Card Body"
+        }
+      ]
+    },
+    {
+      "type": "feature_card_2",
+      "name": "Feature Card (Section 2)",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "card_image",
+          "label": "Card Image"
+        },
+        {
+          "type": "text",
+          "id": "card_alt",
+          "label": "Image Alt Text"
+        },
+        {
+          "type": "text",
+          "id": "card_title",
+          "label": "Card Title"
+        },
+        {
+          "type": "textarea",
+          "id": "card_body",
+          "label": "Card Body"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "iGOGOMI Showcase",
+      "blocks": [
+        {
+          "type": "feature_card_1",
+          "settings": {
+            "card_alt": "4000W Mid-Drive Motor",
+            "card_title": "4000W Mid-Drive Motor",
+            "card_body": "Designed for young riders who crave excitement, the TRAIL X electric dirt bike delivers power you can trust."
+          }
+        },
+        {
+          "type": "feature_card_1",
+          "settings": {
+            "card_alt": "Full Suspensions",
+            "card_title": "Full Suspensions",
+            "card_body": "The TRAIL X electric dirt bike uses a rear nitrogen shock and 220mm front hydraulic forks to absorb bumps."
+          }
+        },
+        {
+          "type": "feature_card_1",
+          "settings": {
+            "card_alt": "Dual Hydraulic Brakes",
+            "card_title": "Dual Hydraulic Brakes",
+            "card_body": "The TRAIL X electric dirt bike combines front and rear hydraulic disc brakes for smooth, reliable stopping."
+          }
+        },
+        {
+          "type": "feature_card_1",
+          "settings": {
+            "card_alt": "Fat Tires",
+            "card_title": "12\" & 14\" Fat Tires",
+            "card_body": "The TRAIL X features rugged 12\" and 14\" off-road tires for exceptional grip and stability."
+          }
+        },
+        {
+          "type": "feature_card_2",
+          "settings": {
+            "card_alt": "Three Speed Modes",
+            "card_title": "Three Speed Modes",
+            "card_body": "Choose from 22 mph, 28 mph, or 38 mph to match your skill level and riding needs."
+          }
+        },
+        {
+          "type": "feature_card_2",
+          "settings": {
+            "card_alt": "Wide Illumination",
+            "card_title": "Wide Illumination Range",
+            "card_body": "A powerful lighting range lights up the road ahead, helping you spot obstacles easily."
+          }
+        },
+        {
+          "type": "feature_card_2",
+          "settings": {
+            "card_alt": "Plug and Ride",
+            "card_title": "Plug. Charge. Ride.",
+            "card_body": "No battery removal. No opening panels. Just plug and charge instantly."
+          }
+        },
+        {
+          "type": "feature_card_2",
+          "settings": {
+            "card_alt": "Ride Longer",
+            "card_title": "Ride Longer. Sit Better.",
+            "card_body": "Upgraded seat with high-resilience foam for superior comfort and support."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

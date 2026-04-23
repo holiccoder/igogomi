@@ -1,0 +1,1574 @@
+
+            {% assign beae_root_url = routes.root_url %}
+            {% if beae_root_url != '/'%}
+                {% assign beae_root_url = routes.root_url | append: '/' %}
+            {% endif %}
+        {%capture section_id %}beae-preview-template-product{% endcapture%}{% if section_id == section.id %}{% if shop.metafields.beae.global_css %}
+            <!--BEAE-EMBED-->
+            <link href="data:text/css;base64,{{-shop.metafields.beae.global_css-}}" rel="stylesheet" id="beae-global-css"/>
+            <!--/BEAE-EMBED-->
+        {% endif %}
+
+{% render 'beae_header', BEAE_THEME: true %}{% endif %}<link rel="stylesheet" id="beae-exported-page-css" media="all" href="{{"beae-preview-template-product.css" | asset_url}}"><div class="beae-builder-v2 beae-builder"><div class="beae-sections beae-content-wrapper"><script type="text/javascript">if (!window.BEAEARGS) {window.BEAEARGS = {};}</script>
+<!----><section id="" data-sectionid="beae-8dr0o6m2" data-width="1470" data-margin="30px" data-margin-mobile="15px" data-type="flexContainer" class="beae-typo-p1 beae-8dr0o6m2 section-beae-8dr0o6m2 beae-section beae-core" data-template="Product detail 19"><!----><!----><div class="beae-flexbox beae-typo-p1" style="padding: 0px;"><div class="beae__section--container beae-flexbox-container" style="max-width: var(--beae-page-width, 1470px);"><!----><div class="beae-flexbox-core beae-x-flex-section grid-container-width"><!----><div class="beae-s9joytnw beae-block beae-core beae-animation beae-unique-87q3j40t" data-id="beae-s9joytnw" data-uniqueid="87q3j40t""><!---->
+      {% capture beae_variant_size_guide_icon %}{% endcapture %}
+    {% capture beae_variant_size_guide_icon %}{% endcapture %}
+      {% capture beae_lp_unavailable_icon %}<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="currentColor"><path d="M464 32H48C21.5 32 0 53.5 0 80v352c0 26.5 21.5 48 48 48h416c26.5 0 48-21.5 48-48V80c0-26.5-21.5-48-48-48zm0 394c0 3.3-2.7 6-6 6H54c-3.3 0-6-2.7-6-6V86c0-3.3 2.7-6 6-6h404c3.3 0 6 2.7 6 6v340zM356.5 194.6L295.1 256l61.4 61.4c4.6 4.6 4.6 12.1 0 16.8l-22.3 22.3c-4.6 4.6-12.1 4.6-16.8 0L256 295.1l-61.4 61.4c-4.6 4.6-12.1 4.6-16.8 0l-22.3-22.3c-4.6-4.6-4.6-12.1 0-16.8l61.4-61.4-61.4-61.4c-4.6-4.6-4.6-12.1 0-16.8l22.3-22.3c4.6-4.6 12.1-4.6 16.8 0l61.4 61.4 61.4-61.4c4.6-4.6 12.1-4.6 16.8 0l22.3 22.3c4.7 4.6 4.7 12.1 0 16.8z"></path></svg>{% endcapture %}
+      {% capture beae_lp_icon %}<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16">
+  <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+</svg>{% endcapture %}
+        {% liquid
+          if request.page_type != 'product' or product == blank
+            assign beae_product = 'igogomi-alps-electric-bike-for-adults-li-ion-6-8ah-350wh-battery-16-tire-foldable-electric-bike-with-dual-disc-break-and-sturmey-archer-electric-bicycles-red'
+            if beae_product == blank or beae_product == '' or all_products[beae_product] == blank
+              assign product = collections['all'].products.first
+            else
+              assign product = all_products[beae_product]
+            endif
+          endif
+          assign tmp_product = product
+          assign beae_lp_view_store_information = 'undefined'
+          assign beae_lp_check_availability_at_other_stores = 'undefined'
+          assign beae_lp_pickup_available = 'undefined'
+          assign beae_lp_pickup_available_at = 'undefined'
+          assign beae_lp_pickup_unavailable_at = 'undefined'
+          
+          assign beae_variant_type = 'radio'
+          assign beae_variant_show_option_name = 'true'
+          assign beae_variant_color_selector_type = 'variant_image'
+          assign beae_variant_is_link = 'false'
+          assign beae_variant_option_name = 'Color'
+          assign beae_optionValues = ''
+          assign beae_sourceTypes = ''
+          assign beae_variant_size_guide = false
+          assign beae_variant_size_guide_name = 'Size'
+          assign beae_variant_size_guide_label = 'Size guide'
+          assign beae_variant_size_guide_type = 'page'
+          assign beae_variant_size_guide_page = ''
+          assign beae_size_guide_type = 'page'
+          assign beae_size_guide_page = ''
+          assign beae_price_badged = 'sale'
+          assign beae_size_chart_type = 'custom'
+          assign beae_size_chart_show_when = 'all'
+          assign beae_size_chart_value = ''
+          assign beae_size_chart_page = ''
+          assign beae_tags_limit = '5'
+          assign beae_custom_badged_source = 'tags'
+          assign beae_custom_badged_tag = ''
+          assign beae_ct_content_type = 'custom'
+          assign beae_ct_page_handle = ''
+        %}
+        {% capture beae_custom_badged_metafield %}{{  }}{%- endcapture -%}
+        {% capture beae_size_guide_dynamic_source %}{% endcapture %}
+        {% capture beae_variant_dynamic_source %}{% endcapture %}
+        {% capture beae_ct_namespace_and_key %}{% endcapture %}
+        
+        {%- if product != blank -%}
+          {%- form 'product', product,class: "beae-product-form-next beae-product-form--single beae-product-form-detail", data-product_id: product.id, data-handle: product.handle, data-variant-id: product.selected_or_first_available_variant.id, data-available: product.available -%}
+            {%- liquid
+              assign selected_variant = product.selected_or_first_available_variant
+            -%}
+         <div class="beae-flexbox-core beae-x-featuted_product" data-product_id="{{ product.id }}"><!----><!----><div class="beae-iegzpbuc beae-block beae-core beae-animation beae-unique-vd8t94lq" data-id="beae-iegzpbuc" data-loop-index="0" data-uniqueid="vd8t94lq""><!----><div class="beae-block beae-x-breadcrumb">{%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
+            {%- assign t = template | split: '.' | first -%}
+
+            <nav class="beae-breadcrumbs" role="navigation" aria-label="beae-breadcrumbs">
+            <ol class="beae-breadcrumbs__list">
+                <li class="beae-breadcrumbs__item">
+                    <a class="beae-breadcrumbs__link" href="/">{{ 'sections.beae-preview-template-product.be2255103_html' | t }}</a>
+                    <span class="beae-breadcrumbs__item--separator">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </span>
+                </li>
+            {%- case t -%}
+            {%- when 'page' -%}
+                <li class="beae-breadcrumbs__item">
+                    <span class="beae-breadcrumbs__link">{{ page.title }}</span>
+                    <span class="beae-breadcrumbs__item--separator">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </span>
+                </li>
+            {%- when 'product' -%}
+                {%- if product.collections[0] -%}
+                <li class="beae-breadcrumbs__item">
+                <a class="beae-breadcrumbs__link" href="{{product.collections[0].url}}" title="">{{ product.collections[0].title }}</a>
+                    <span class="beae-breadcrumbs__item--separator">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </span>
+                </li>
+                {%- endif -%}
+                <li class="beae-breadcrumbs__item">
+                    <span class="beae-breadcrumbs__link">{{ product.title }}</span>
+                    <span class="beae-breadcrumbs__item--separator">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </span>
+                </li>
+            {%- when 'collection' and collection.handle -%}
+                {%- if current_tags -%}
+                <li class="beae-breadcrumbs__item">
+                    {{ collection.title | link_to: collection.url }}
+                    <span class="beae-breadcrumbs__item--separator">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </span>
+                </li>
+                <li class="beae-breadcrumbs__item">
+                    {%- capture tag_url -%}{{ collection.url }}/{{ current_tags | join: "+"}}{%- endcapture -%}
+                    <span class="beae-breadcrumbs__link">{{ current_tags | join: " + "}}</span>
+                    <span class="beae-breadcrumbs__item--separator">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </span>
+                </li>
+                {%- else -%}
+                <li class="beae-breadcrumbs__item">
+                    <span class="beae-breadcrumbs__link">{{ collection.title }}</span>
+                    <span class="beae-breadcrumbs__item--separator">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </span>
+                </li>
+                {%- endif -%}
+            {%- when 'blog' -%}
+                {%- if current_tags -%}
+                <li class="beae-breadcrumbs__item">
+                    {{ blog.title | link_to: blog.url }}
+                    <span class="beae-breadcrumbs__item--separator">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </span>
+                </li>
+                <li class="beae-breadcrumbs__item">
+                    {%- capture tag_url -%}{{blog.url}}/tagged/{{ current_tags | join: "+" }}{%- endcapture -%}
+                    <span class="beae-breadcrumbs__link" >{{ current_tags | join: " + " }}</span>
+                    <span class="beae-breadcrumbs__item--separator">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </span>
+                </li>
+                {%- else -%}
+                <li class="beae-breadcrumbs__item">
+                    <span class="beae-breadcrumbs__link" >{{ blog.title }}</span>
+                    <span class="beae-breadcrumbs__item--separator">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </span>
+                </li>
+                {%- endif -%}
+            {%- when 'article' -%}
+                <li class="beae-breadcrumbs__item">
+                    {{ blog.title | link_to: blog.url }}
+                    <span class="beae-breadcrumbs__item--separator">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </span>
+                </li>
+                <li class="beae-breadcrumbs__item">
+                    <span class="beae-breadcrumbs__link" >{{ article.title }}</span>
+                    <span class="beae-breadcrumbs__item--separator">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </span>
+                </li>
+                
+            {%- else -%}
+                <li class="beae-breadcrumbs__item">
+                    <span class="beae-breadcrumbs__link" >{{ 'sections.beae-preview-template-product.be77694213_html' | t }}</span>
+                    <span class="beae-breadcrumbs__item--separator">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </span>
+                </li>
+            {%- endcase -%}
+        </ol>
+        </nav>
+            {%- endunless -%}</div><!----></div><!----><!----><!----><div class="beae-vb4pfn7s beae-block beae-core beae-animation beae-unique-6ghjol7v beae-flex-wrapper" data-id="beae-vb4pfn7s" data-loop-index="0" data-uniqueid="6ghjol7v"><!----><!----><!----><div class="beae-g4wi6nkf beae-block beae-core beae-animation beae-unique-rnpidwmc beae-flex-wrapper beae-featured-img" data-id="beae-g4wi6nkf" data-loop-index="0" data-uniqueid="rnpidwmc"><!----><!----><!----><div class="beae-hu12dbvu beae-block beae-core beae-animation beae-unique-5utu0p9k beae-flex-wrapper" data-id="beae-hu12dbvu" data-loop-index="0" data-uniqueid="5utu0p9k"><!----><!----><!----><div class="beae-98vpik0d beae-block beae-core beae-animation beae-unique-071thzlm" data-id="beae-98vpik0d" data-loop-index="0" data-uniqueid="071thzlm""><!----><!----><div class="beae-block beae-x-product-gallery" data-pagination-layout="bottom" data-pagination-layout-mobile="dots"><style type="text/css"></style><div class="beae-slider-wrapper beae-slider slider-beae-98vpik0d items-per-1" data-draggable="true" data-desktop-layout="slider" data-mobile-layout="slider" data-effect="slide" data-pagination="true" data-navigation="true" style="--items-per: 1; --items-per-mobile: 1; --items-gap: 0px; --items-gap-mobile: 20px; --autoplay-delay: 5s;"><div class="beae-slider-content beae-slider-items">
+      {%- for media in product.media -%}
+        {% case media.media_type %}
+          {% when 'image' %}
+            <div class="beae-slide-item" data-index="{{ forloop.index0 }}" data-media-id="{{ media.id  }}" type="{{media.media_type}}">
+              <img
+                src="{{ media | img_url: 'master' }}"
+                alt="{{ media.alt | escape | default: 'Product Image' }}"
+                width="{{ media.preview_image.width | default: 915 }}"
+                height="{{ media.preview_image.height | default: 915 }}"
+                loading="lazy"
+              />
+            </div>
+          {% when 'external_video'%}
+            <div class="beae-slide-item" data-index="{{ forloop.index0 }}" data-media-id="{{ media.id  }}" type="{{media.media_type}}">
+              <img
+                preview
+                style="display: none !important;"
+                src="{{ media.preview_image | img_url: 'master' }}"
+                alt="{{ media.preview_image.alt | escape | default: 'Product Image' }}"
+                width="{{ media.preview_image.width | default: 915 }}"
+                height="{{ media.preview_image.height | default: 915 }}"
+                loading="lazy"
+              />
+            {{ media | external_video_url:  controls: 1, loop: 1 | external_video_tag: image_size:'master'}}
+            </div>
+          {% when 'video' %}
+            <div class="beae-slide-item" data-index="{{ forloop.index0 }}" data-media-id="{{ media.id  }}" type="{{media.media_type}}">
+              <img
+                preview
+                style="display: none !important;"
+                src="{{ media.preview_image | img_url: 'master' }}"
+                alt="{{ media.preview_image.alt | escape | default: 'Product Image' }}"
+                width="{{ media.preview_image.width | default: 915 }}"
+                height="{{ media.preview_image.height | default: 915 }}"
+                loading="lazy"
+              />  
+              {% if beae_is_video_autoplay == true %}
+                {{ media | video_tag: image_size:'master', class: 'media-video', muted: true, autoPlay: true, controls: true, loop: true }}
+              {% else %}
+                {{ media | video_tag: image_size:'master', class: 'media-video', controls: true, loop: true }}
+              {% endif %}
+            </div>
+          {% when 'model' %}
+            <div class="beae-slide-item" data-index="{{ forloop.index0 }}" data-media-id="{{ media.id  }}" type="{{media.media_type}}">
+              <img
+                preview
+                style="display: none !important;"
+                src="{{ media.preview_image | img_url: 'master' }}"
+                alt="{{ media.preview_image.alt | escape | default: 'Product Image' }}"
+                width="{{ media.preview_image.width | default: 915 }}"
+                height="{{ media.preview_image.height | default: 915 }}"
+                loading="lazy"
+              />
+              {{ media | model_viewer_tag: image_size:'master', reveal: 'interaction', toggleable: true, data-model-id: media.id }}
+            </div>
+          {% else %}
+            <div class="beae-slide-item" data-index="{{ forloop.index0 }}" data-media-id="{{ media.id  }}" type="{{media.media_type}}">
+              {{ media | media_tag: image_size:'master', class: 'beae-product-single__media--item' }}
+            </div>
+        {% endcase %}
+      {% endfor %}
+  </div><div class="beae-slider-controls"><div class="beae-slider-controls-wrp"><!----><div class="beae-slider-nav-left"><button aria-label="button" type="button"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0"></path>
+</svg></span></button></div><div class="beae-slider-pagination-wrp"></div><div class="beae-slider-nav-right"><button aria-label="button" type="button"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"></path>
+</svg></span></button></div></div></div></div><script type="text/javascript">window.BEAEARGS['beae-98vpik0dsection-slide-show'] = {
+    "id": "beae-98vpik0d",
+    "mode": {"value": "live"},
+    "layout":"slider","layoutMobile":"slider","effect":"slide","isLoop":false,"autoPlay":false,"autoPlayDelay":5,"itemsPerSlide":1,"itemsPerSlideMobile":1,"itemsGap":0,"itemsGapMobile":"20px","paginationImage":true,"paginationImageMobile":false,"typeScroll":"default","numItemsScroll":1,"showNavigation":true,"showPagination":true,"showProgress":false,"hookSliderInit":"\n            let zoomButton = document.createElement('button');\n            zoomButton.type = 'button';\n            zoomButton.className = 'beae-media-zoom';\n            zoomButton.innerHTML = '<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748ZM10 10V7H12V10H15V12H12V15H10V12H7V10H10Z\"></path></svg>';\n            zoomButton.setAttribute('data-type', 'slider');data.el.querySelector('.beae-slider-wrapper').appendChild(zoomButton);\n          window.addEventListener('load', () => {\n              setTimeout(() => {\n                \n      setTimeout(() => {\n        const layout = data.slider.getAttribute('data-desktop-layout');\n        const isGrid = layout === 'grid' && window.innerWidth >= 768;\n        const resetPlay = (el) => {\n            let video = el.querySelector('video'),\n                iframe = el.querySelector('iframe');\n            if (iframe) {\n              let src = iframe.getAttribute('src'),\n                  url = new URL(src),\n                  params = url.searchParams;\n              params.set('autoplay', 0);\n              url.search = new URLSearchParams(params).toString();\n              iframe.setAttribute('src', url.href);\n            } else if(video) {\n              video.autoplay = false;\n              video.pause();\n              video.currentTime = 0;\n            }\n        };\n        \n          const zoom = data.slider.querySelector('.beae-media-zoom[data-type=\"slider\"]');\n          if(zoom) {\n            zoom.style.display = 'flex';\n          }\n          \n        \n        data.slides.forEach((slide) => {\n          \n            if(slide.classList.contains('active') && zoom && slide.getAttribute('type') != 'image') {\n              zoom.style.display = 'none';\n          }\n          \n          \n        \n        \n        });\n      }, 1000)\n    \n              }, 1000)\n            })","hookBeforeSlideChange":"","hookAfterSlideChange":"\n      setTimeout(() => {\n        const layout = data.slider.getAttribute('data-desktop-layout');\n        const isGrid = layout === 'grid' && window.innerWidth >= 768;\n        const resetPlay = (el) => {\n            let video = el.querySelector('video'),\n                iframe = el.querySelector('iframe');\n            if (iframe) {\n              let src = iframe.getAttribute('src'),\n                  url = new URL(src),\n                  params = url.searchParams;\n              params.set('autoplay', 0);\n              url.search = new URLSearchParams(params).toString();\n              iframe.setAttribute('src', url.href);\n            } else if(video) {\n              video.autoplay = false;\n              video.pause();\n              video.currentTime = 0;\n            }\n        };\n        \n          const zoom = data.slider.querySelector('.beae-media-zoom[data-type=\"slider\"]');\n          if(zoom) {\n            zoom.style.display = 'flex';\n          }\n          \n        \n        data.slides.forEach((slide) => {\n          \n            if(slide.classList.contains('active') && zoom && slide.getAttribute('type') != 'image') {\n              zoom.style.display = 'none';\n          }\n          \n          \n        \n        \n        });\n      }, 1000)\n    ","noRunJs":false,"itemGap":0,"itemGapMobile":0
+  };</script></div><script type="text/javascript">window.BEAEARGS['beae-98vpik0dblock-gallery'] = {
+    "id": "beae-98vpik0d",
+    "mode": {"value": "live"},
+    
+  };</script><!----></div><!----><!----><!----></div><!----><!----><!----><div class="beae-jhmn4rhc beae-block beae-core beae-animation beae-unique-r629sfqh beae-flex-wrapper" data-id="beae-jhmn4rhc" data-loop-index="0" data-uniqueid="r629sfqh"><!----><!----><!----><div class="beae-6devoost beae-block beae-core beae-animation beae-unique-3e3b5skx beae-x-tab" data-id="beae-6devoost" data-loop-index="0" data-uniqueid="3e3b5skx" data-min-height="content"><!----><div class="beae-tab-wrp" data-type="accordions"><div class="beae-tab-items"><div class="beae-tab-item active" data-tab-id="0"><!----> {{ 'sections.beae-preview-template-product.be2106552512_html' | t }}</div><div class="beae-tab-item" data-tab-id="1"><!----> {{ 'sections.beae-preview-template-product.be1424141121_html' | t }}</div></div><div class="beae-tab-contents"><!----><div class="beae-tab-content" data-tab-id="0""><div class="beae-accordion-title--mobile"><span class="beae-accordion-title-with-icon"><!----> {{ 'sections.beae-preview-template-product.be2106552512_html' | t }}</span><span class="beae-accordion-icon--mobile" data-status="open"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"></path>
+</svg></span><span class="beae-accordion-icon--mobile" data-status="close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path>
+</svg></span></div><div class="beae-accordion-body"><div class="beae-tab-content-wrp beae-flex-container beae-k4m4hjzg"><!----><!----><div class="beae-jbp2qb1r beae-block beae-core beae-animation beae-unique-jz8xpdwh" data-id="beae-jbp2qb1r" data-loop-index="0" data-uniqueid="jz8xpdwh"><!----><div data-height="100px" class="beae-product-des-wrp"><!----><div class="beae-des-content">{{ product.description }}</div></div><!----><script type="text/javascript">window.BEAEARGS['beae-jbp2qb1rblock-description'] = {
+    "id": "beae-jbp2qb1r",
+    "mode": {"value": "live"},
+    "type":"show_full_content","numberOfWords":100,"extendOptions":"{}","hasDescription":"{% if product.description != blank %}true{% else %}false{% endif %}","loopIndex":0
+  };</script><!----></div><!----><!----></div></div></div><div class="beae-tab-content" data-tab-id="1""><div class="beae-accordion-title--mobile"><span class="beae-accordion-title-with-icon"><!----> {{ 'sections.beae-preview-template-product.be1424141121_html' | t }}</span><span class="beae-accordion-icon--mobile" data-status="open"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708z"></path>
+</svg></span><span class="beae-accordion-icon--mobile" data-status="close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"></path>
+</svg></span></div><div class="beae-accordion-body"><div class="beae-tab-content-wrp beae-flex-container beae-19tot5yj"><!----><!----><div class="beae-3rq9qy0j beae-block beae-core beae-animation beae-unique-fy1pjyi0" data-id="beae-3rq9qy0j" data-loop-index="0" data-uniqueid="fy1pjyi0"><!----><div class="beae-block beae-x-text beae-typo-p2" data-autolayout="beae-3rq9qy0j"><div class="beae-product--metafield">{% if product.metafields["custom"]["specifications"] != blank %}
+          {{ product.metafields["custom"]["specifications"] | metafield_tag | default: "" }}
+        {% endif %}</div></div><!----><!----></div><!----><!----></div></div></div></div><!----></div><script type="text/javascript">window.BEAEARGS['beae-6devoostblock-tabs'] = {
+    "id": "beae-6devoost",
+    "mode": {"value": "live"},
+    "extendOptions":"{}","activeTab":"none","activeTabMobile":0,"accordionMode":"single","toggleImg":false,"layout":"accordions","reactives":[2,"single",null,null,[{},{}]]
+  };</script><!----></div><!----><!----><!----><div class="beae-0fy2w68y beae-block beae-core beae-animation beae-unique-r20mvqn2" data-id="beae-0fy2w68y" data-loop-index="0" data-uniqueid="r20mvqn2""><!----><style type="text/css"></style><div class="beae-slider-wrapper beae-slider slider-beae-0fy2w68y items-per-2" data-draggable="true" data-desktop-layout="grid" data-mobile-layout="grid" data-effect="slide" data-pagination="false" data-navigation="false" style="--items-per: 2; --items-per-mobile: 2; --items-gap: 1vmax; --items-gap-mobile: 1vmax; --autoplay-delay: 5s;"><div class="beae-slider-content beae-slider-items"><div data-loop-index="0" class="beae-list-item beae-9cqnk9hw"><!----><!----><div class="beae-ixs856gc beae-block beae-core beae-unique-ufiw9bwc beae-x-icon" data-id="beae-ixs856gc" data-loop-index="0" data-uniqueid="ufiw9bwc"><!----><div class="beae-elm__ic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
+  <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"></path>
+</svg></div><!----></div><!----><!----><!----><div class="beae-kcxiqejj beae-block beae-core beae-unique-qyoi8xx5 beae-flex-wrapper" data-id="beae-kcxiqejj" data-loop-index="0" data-uniqueid="qyoi8xx5"><!----><!----><!----><div class="beae-k0apu2lk beae-block beae-core beae-unique-vve6b591" data-id="beae-k0apu2lk" data-loop-index="0" data-uniqueid="vve6b591"><!----><div class="beae-block beae-x-text beae-typo-p2" data-autolayout="beae-k0apu2lk">{{ 'sections.beae-preview-template-product.be1090008910_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-cfhsq9il beae-block beae-core beae-unique-21e4r3ma" data-id="beae-cfhsq9il" data-loop-index="0" data-uniqueid="21e4r3ma"><!----><div class="beae-block beae-x-text beae-typo-p3" data-autolayout="beae-cfhsq9il">{{ 'sections.beae-preview-template-product.be1816794871_html' | t }}</div><!----><!----></div><!----><!----><!----></div><!----><!----></div><div data-loop-index="1" class="beae-list-item beae-n4no7ztj"><!----><!----><div class="beae-ixs856gc beae-block beae-core beae-unique-xewlyiw8 beae-x-icon" data-id="beae-ixs856gc" data-loop-index="1" data-uniqueid="xewlyiw8"><!----><div class="beae-elm__ic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-suit-club" viewBox="0 0 16 16">
+  <path d="M8 1a3.25 3.25 0 0 0-3.25 3.25c0 .186 0 .29.016.41.014.12.045.27.12.527l.19.665-.692-.028a3.25 3.25 0 1 0 2.357 5.334.5.5 0 0 1 .844.518l-.003.005-.006.015-.024.055a22 22 0 0 1-.438.92 22 22 0 0 1-1.266 2.197c-.013.018-.02.05.001.09q.016.029.03.036A.04.04 0 0 0 5.9 15h4.2q.014 0 .022-.006a.1.1 0 0 0 .029-.035c.02-.04.014-.073.001-.091a23 23 0 0 1-1.704-3.117l-.024-.054-.006-.015-.002-.004a.5.5 0 0 1 .838-.524c.601.7 1.516 1.168 2.496 1.168a3.25 3.25 0 1 0-.139-6.498l-.699.03.199-.671c.14-.47.14-.745.139-.927V4.25A3.25 3.25 0 0 0 8 1m2.207 12.024c.225.405.487.848.78 1.294C11.437 15 10.975 16 10.1 16H5.9c-.876 0-1.338-1-.887-1.683.291-.442.552-.88.776-1.283a4.25 4.25 0 1 1-2.007-8.187l-.009-.064c-.023-.187-.023-.348-.023-.52V4.25a4.25 4.25 0 0 1 8.5 0c0 .14 0 .333-.04.596a4.25 4.25 0 0 1-.46 8.476 4.2 4.2 0 0 1-1.543-.298"></path>
+</svg></div><!----></div><!----><!----><!----><div class="beae-kcxiqejj beae-block beae-core beae-unique-udakrhot beae-flex-wrapper" data-id="beae-kcxiqejj" data-loop-index="1" data-uniqueid="udakrhot"><!----><!----><!----><div class="beae-k0apu2lk beae-block beae-core beae-unique-qno0kuar" data-id="beae-k0apu2lk" data-loop-index="1" data-uniqueid="qno0kuar"><!----><div class="beae-block beae-x-text beae-typo-p2" data-autolayout="beae-k0apu2lk">{{ 'sections.beae-preview-template-product.be239687581_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-cfhsq9il beae-block beae-core beae-unique-1k2npqge" data-id="beae-cfhsq9il" data-loop-index="1" data-uniqueid="1k2npqge"><!----><div class="beae-block beae-x-text beae-typo-p3" data-autolayout="beae-cfhsq9il">{{ 'sections.beae-preview-template-product.be1763297579_html' | t }}</div><!----><!----></div><!----><!----><!----></div><!----><!----></div><div data-loop-index="2" class="beae-list-item beae-2pjzzz8x"><!----><!----><div class="beae-ixs856gc beae-block beae-core beae-unique-lizhd9j5 beae-x-icon" data-id="beae-ixs856gc" data-loop-index="2" data-uniqueid="lizhd9j5"><!----><div class="beae-elm__ic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-text" viewBox="0 0 16 16">
+  <path d="M5 4a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm-.5 2.5A.5.5 0 0 1 5 6h6a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5M5 8a.5.5 0 0 0 0 1h6a.5.5 0 0 0 0-1zm0 2a.5.5 0 0 0 0 1h3a.5.5 0 0 0 0-1z"></path>
+  <path d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2zm10-1H4a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1"></path>
+</svg></div><!----></div><!----><!----><!----><div class="beae-kcxiqejj beae-block beae-core beae-unique-1zcw9lkq beae-flex-wrapper" data-id="beae-kcxiqejj" data-loop-index="2" data-uniqueid="1zcw9lkq"><!----><!----><!----><div class="beae-k0apu2lk beae-block beae-core beae-unique-eoygskxn" data-id="beae-k0apu2lk" data-loop-index="2" data-uniqueid="eoygskxn"><!----><div class="beae-block beae-x-text beae-typo-p2" data-autolayout="beae-k0apu2lk">{{ 'sections.beae-preview-template-product.be1350586535_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-cfhsq9il beae-block beae-core beae-unique-f37bz99q" data-id="beae-cfhsq9il" data-loop-index="2" data-uniqueid="f37bz99q"><!----><div class="beae-block beae-x-text beae-typo-p3" data-autolayout="beae-cfhsq9il">{{ 'sections.beae-preview-template-product.be2119991564_html' | t }}</div><!----><!----></div><!----><!----><!----></div><!----><!----></div><div data-loop-index="3" class="beae-list-item beae-x8z047xo"><!----><!----><div class="beae-ixs856gc beae-block beae-core beae-unique-v2tllhee beae-x-icon" data-id="beae-ixs856gc" data-loop-index="3" data-uniqueid="v2tllhee"><!----><div class="beae-elm__ic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lightning-charge" viewBox="0 0 16 16">
+  <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09zM4.157 8.5H7a.5.5 0 0 1 .478.647L6.11 13.59l5.732-6.09H9a.5.5 0 0 1-.478-.647L9.89 2.41z"></path>
+</svg></div><!----></div><!----><!----><!----><div class="beae-kcxiqejj beae-block beae-core beae-unique-tf0bksl8 beae-flex-wrapper" data-id="beae-kcxiqejj" data-loop-index="3" data-uniqueid="tf0bksl8"><!----><!----><!----><div class="beae-k0apu2lk beae-block beae-core beae-unique-lg54rxbd" data-id="beae-k0apu2lk" data-loop-index="3" data-uniqueid="lg54rxbd"><!----><div class="beae-block beae-x-text beae-typo-p2" data-autolayout="beae-k0apu2lk">{{ 'sections.beae-preview-template-product.be540704119_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-cfhsq9il beae-block beae-core beae-unique-7vmj4edv" data-id="beae-cfhsq9il" data-loop-index="3" data-uniqueid="7vmj4edv"><!----><div class="beae-block beae-x-text beae-typo-p3" data-autolayout="beae-cfhsq9il">{{ 'sections.beae-preview-template-product.be1557517536_html' | t }}</div><!----><!----></div><!----><!----><!----></div><!----><!----></div><div data-loop-index="4" class="beae-list-item beae-u7ogeydk"><!----><!----><div class="beae-ixs856gc beae-block beae-core beae-unique-pyde47k5 beae-x-icon" data-id="beae-ixs856gc" data-loop-index="4" data-uniqueid="pyde47k5"><!----><div class="beae-elm__ic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-nut" viewBox="0 0 16 16">
+  <path d="m11.42 2 3.428 6-3.428 6H4.58L1.152 8 4.58 2zM4.58 1a1 1 0 0 0-.868.504l-3.428 6a1 1 0 0 0 0 .992l3.428 6A1 1 0 0 0 4.58 15h6.84a1 1 0 0 0 .868-.504l3.429-6a1 1 0 0 0 0-.992l-3.429-6A1 1 0 0 0 11.42 1z"></path>
+  <path d="M6.848 5.933a2.5 2.5 0 1 0 2.5 4.33 2.5 2.5 0 0 0-2.5-4.33m-1.78 3.915a3.5 3.5 0 1 1 6.061-3.5 3.5 3.5 0 0 1-6.062 3.5z"></path>
+</svg></div><!----></div><!----><!----><!----><div class="beae-kcxiqejj beae-block beae-core beae-unique-b5cus1uq beae-flex-wrapper" data-id="beae-kcxiqejj" data-loop-index="4" data-uniqueid="b5cus1uq"><!----><!----><!----><div class="beae-k0apu2lk beae-block beae-core beae-unique-l8lau1p6" data-id="beae-k0apu2lk" data-loop-index="4" data-uniqueid="l8lau1p6"><!----><div class="beae-block beae-x-text beae-typo-p2" data-autolayout="beae-k0apu2lk">{{ 'sections.beae-preview-template-product.be1815338600_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-cfhsq9il beae-block beae-core beae-unique-m0yr5o9s" data-id="beae-cfhsq9il" data-loop-index="4" data-uniqueid="m0yr5o9s"><!----><div class="beae-block beae-x-text beae-typo-p3" data-autolayout="beae-cfhsq9il">{{ 'sections.beae-preview-template-product.be2144769239_html' | t }}</div><!----><!----></div><!----><!----><!----></div><!----><!----></div></div><div class="beae-slider-controls"><div class="beae-slider-controls-wrp"><!----><!----><!----><!----></div></div></div><script type="text/javascript">window.BEAEARGS['beae-0fy2w68ysection-slide-show'] = {
+    "id": "beae-0fy2w68y",
+    "mode": {"value": "live"},
+    "layout":"grid","layoutMobile":"grid","effect":"slide","isLoop":false,"autoPlay":false,"autoPlayDelay":5,"itemsPerSlide":2,"itemsPerSlideMobile":2,"itemsGap":"1vmax","itemsGapMobile":"1vmax","paginationImage":false,"paginationImageMobile":false,"typeScroll":"default","numItemsScroll":1,"showNavigation":false,"showPagination":false,"showProgress":false,"hookSliderInit":"","hookBeforeSlideChange":"","hookAfterSlideChange":"","noRunJs":false
+  };</script><!----></div><!----><!----><!----></div><!----><!----><!----></div><!----><!----><!----><div class="beae-5k8tw1f4 beae-block beae-core beae-animation beae-unique-l2sb520x beae-flex-wrapper" data-id="beae-5k8tw1f4" data-loop-index="0" data-uniqueid="l2sb520x"><!----><!----><!----><div class="beae-ykq0s8ck beae-block beae-core beae-animation beae-unique-69zqltrt beae-flex-wrapper" data-id="beae-ykq0s8ck" data-loop-index="0" data-uniqueid="69zqltrt"><!----><!----><!----><div class="beae-88qg1kes beae-block beae-core beae-animation beae-unique-m1ibo4bf" data-id="beae-88qg1kes" data-loop-index="0" data-uniqueid="m1ibo4bf""><!----><!----><div class="beae-block beae-x-product-gallery" data-pagination-layout="bottom" data-pagination-layout-mobile="bottom"><style type="text/css"></style><div class="beae-slider-wrapper beae-slider slider-beae-88qg1kes items-per-1" data-draggable="true" data-desktop-layout="slider" data-mobile-layout="slider" data-effect="slide" data-pagination="true" data-navigation="false" style="--items-per: 1; --items-per-mobile: 1; --items-gap: 5px; --items-gap-mobile: 5px; --autoplay-delay: 5s;"><div class="beae-slider-content beae-slider-items">
+      {%- for media in product.media -%}
+        {% case media.media_type %}
+          {% when 'image' %}
+            <div class="beae-slide-item" data-index="{{ forloop.index0 }}" data-media-id="{{ media.id  }}" type="{{media.media_type}}">
+              <img
+                src="{{ media | img_url: 'master' }}"
+                alt="{{ media.alt | escape | default: 'Product Image' }}"
+                width="{{ media.preview_image.width | default: 915 }}"
+                height="{{ media.preview_image.height | default: 915 }}"
+                loading="lazy"
+              />
+            </div>
+          {% when 'external_video'%}
+            <div class="beae-slide-item" data-index="{{ forloop.index0 }}" data-media-id="{{ media.id  }}" type="{{media.media_type}}">
+              <img
+                preview
+                style="display: none !important;"
+                src="{{ media.preview_image | img_url: 'master' }}"
+                alt="{{ media.preview_image.alt | escape | default: 'Product Image' }}"
+                width="{{ media.preview_image.width | default: 915 }}"
+                height="{{ media.preview_image.height | default: 915 }}"
+                loading="lazy"
+              />
+            {{ media | external_video_url:  controls: 1, loop: 1 | external_video_tag: image_size:'master'}}
+            </div>
+          {% when 'video' %}
+            <div class="beae-slide-item" data-index="{{ forloop.index0 }}" data-media-id="{{ media.id  }}" type="{{media.media_type}}">
+              <img
+                preview
+                style="display: none !important;"
+                src="{{ media.preview_image | img_url: 'master' }}"
+                alt="{{ media.preview_image.alt | escape | default: 'Product Image' }}"
+                width="{{ media.preview_image.width | default: 915 }}"
+                height="{{ media.preview_image.height | default: 915 }}"
+                loading="lazy"
+              />  
+              {% if beae_is_video_autoplay == true %}
+                {{ media | video_tag: image_size:'master', class: 'media-video', muted: true, autoPlay: true, controls: true, loop: true }}
+              {% else %}
+                {{ media | video_tag: image_size:'master', class: 'media-video', controls: true, loop: true }}
+              {% endif %}
+            </div>
+          {% when 'model' %}
+            <div class="beae-slide-item" data-index="{{ forloop.index0 }}" data-media-id="{{ media.id  }}" type="{{media.media_type}}">
+              <img
+                preview
+                style="display: none !important;"
+                src="{{ media.preview_image | img_url: 'master' }}"
+                alt="{{ media.preview_image.alt | escape | default: 'Product Image' }}"
+                width="{{ media.preview_image.width | default: 915 }}"
+                height="{{ media.preview_image.height | default: 915 }}"
+                loading="lazy"
+              />
+              {{ media | model_viewer_tag: image_size:'master', reveal: 'interaction', toggleable: true, data-model-id: media.id }}
+            </div>
+          {% else %}
+            <div class="beae-slide-item" data-index="{{ forloop.index0 }}" data-media-id="{{ media.id  }}" type="{{media.media_type}}">
+              {{ media | media_tag: image_size:'master', class: 'beae-product-single__media--item' }}
+            </div>
+        {% endcase %}
+      {% endfor %}
+  </div><div class="beae-slider-controls"><div class="beae-slider-controls-wrp"><!----><!----><div class="beae-slider-pagination-wrp"></div><!----></div></div></div><script type="text/javascript">window.BEAEARGS['beae-88qg1kessection-slide-show'] = {
+    "id": "beae-88qg1kes",
+    "mode": {"value": "live"},
+    "layout":"slider","layoutMobile":"slider","effect":"slide","isLoop":false,"autoPlay":false,"autoPlayDelay":5,"itemsPerSlide":1,"itemsPerSlideMobile":1,"itemsGap":"5px","itemsGapMobile":"5px","paginationImage":true,"paginationImageMobile":true,"typeScroll":"default","numItemsScroll":1,"showNavigation":false,"showPagination":true,"showProgress":false,"hookSliderInit":"\n            let zoomButton = document.createElement('button');\n            zoomButton.type = 'button';\n            zoomButton.className = 'beae-media-zoom';\n            zoomButton.innerHTML = '<svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M18.031 16.6168L22.3137 20.8995L20.8995 22.3137L16.6168 18.031C15.0769 19.263 13.124 20 11 20C6.032 20 2 15.968 2 11C2 6.032 6.032 2 11 2C15.968 2 20 6.032 20 11C20 13.124 19.263 15.0769 18.031 16.6168ZM16.0247 15.8748C17.2475 14.6146 18 12.8956 18 11C18 7.1325 14.8675 4 11 4C7.1325 4 4 7.1325 4 11C4 14.8675 7.1325 18 11 18C12.8956 18 14.6146 17.2475 15.8748 16.0247L16.0247 15.8748ZM10 10V7H12V10H15V12H12V15H10V12H7V10H10Z\"></path></svg>';\n            data.el.querySelectorAll('.beae-slider-content.beae-slider-items>div[type=\"image\"]').forEach((item) => {\n                  item.appendChild(zoomButton.cloneNode(true));\n                });\n          window.addEventListener('load', () => {\n              setTimeout(() => {\n                \n      setTimeout(() => {\n        const layout = data.slider.getAttribute('data-desktop-layout');\n        const isGrid = layout === 'grid' && window.innerWidth >= 768;\n        const resetPlay = (el) => {\n            let video = el.querySelector('video'),\n                iframe = el.querySelector('iframe');\n            if (iframe) {\n              let src = iframe.getAttribute('src'),\n                  url = new URL(src),\n                  params = url.searchParams;\n              params.set('autoplay', 0);\n              url.search = new URLSearchParams(params).toString();\n              iframe.setAttribute('src', url.href);\n            } else if(video) {\n              video.autoplay = false;\n              video.pause();\n              video.currentTime = 0;\n            }\n        };\n        \n          const zoom = data.slider.querySelector('.beae-media-zoom[data-type=\"slider\"]');\n          if(zoom) {\n            zoom.style.display = 'flex';\n          }\n          \n        \n        data.slides.forEach((slide) => {\n          \n            if(slide.classList.contains('active') && zoom && slide.getAttribute('type') != 'image') {\n              zoom.style.display = 'none';\n          }\n          \n          \n        \n        \n        });\n      }, 1000)\n    \n              }, 1000)\n            })","hookBeforeSlideChange":"","hookAfterSlideChange":"\n      setTimeout(() => {\n        const layout = data.slider.getAttribute('data-desktop-layout');\n        const isGrid = layout === 'grid' && window.innerWidth >= 768;\n        const resetPlay = (el) => {\n            let video = el.querySelector('video'),\n                iframe = el.querySelector('iframe');\n            if (iframe) {\n              let src = iframe.getAttribute('src'),\n                  url = new URL(src),\n                  params = url.searchParams;\n              params.set('autoplay', 0);\n              url.search = new URLSearchParams(params).toString();\n              iframe.setAttribute('src', url.href);\n            } else if(video) {\n              video.autoplay = false;\n              video.pause();\n              video.currentTime = 0;\n            }\n        };\n        \n          const zoom = data.slider.querySelector('.beae-media-zoom[data-type=\"slider\"]');\n          if(zoom) {\n            zoom.style.display = 'flex';\n          }\n          \n        \n        data.slides.forEach((slide) => {\n          \n            if(slide.classList.contains('active') && zoom && slide.getAttribute('type') != 'image') {\n              zoom.style.display = 'none';\n          }\n          \n          \n        \n        \n        });\n      }, 1000)\n    ","noRunJs":false,"itemGap":0,"itemGapMobile":0
+  };</script></div><script type="text/javascript">window.BEAEARGS['beae-88qg1kesblock-gallery'] = {
+    "id": "beae-88qg1kes",
+    "mode": {"value": "live"},
+    
+  };</script><!----></div><!----><!----><!----></div><!----><!----><!----><div class="beae-l5lr6zag beae-block beae-core beae-animation beae-unique-5o26iwsm beae-flex-wrapper" data-id="beae-l5lr6zag" data-loop-index="0" data-uniqueid="5o26iwsm"><!----><!----><!----><div class="beae-gvhc65qq beae-block beae-core beae-animation beae-unique-o85n5ld2 beae-flex-wrapper" data-id="beae-gvhc65qq" data-loop-index="0" data-uniqueid="o85n5ld2"><!----><!----><!----><div class="beae-80kk9j5f beae-block beae-core beae-animation beae-unique-t1os3nal" data-id="beae-80kk9j5f" data-loop-index="0" data-uniqueid="t1os3nal"><!----><div class="beae-block beae-x-text beae-typo-p3" data-autolayout="beae-80kk9j5f">
+          <span class="beae-vendor-label"></span>
+          <span class="beae-vendor-value">{{ product.vendor }}</span>
+      </div><!----><!----></div><!----><!----><!----><div class="beae-y2t5c400 beae-block beae-core beae-animation beae-unique-tm3rbenp" data-id="beae-y2t5c400" data-loop-index="0" data-uniqueid="tm3rbenp"><!----><div class="beae-block beae-x-text beae-typo-p1" data-autolayout="beae-y2t5c400">
+        <div class="beae-attr-sku">
+          <span class="beae-attr-label">{{ 'sections.beae-preview-template-product.be2547421_html' | t }}</span>
+          <span class="beae-attr-value">
+    {% assign variant_selected = product.first_available_variant %}
+    {% if variant_selected.sku %}
+      {{variant_selected.sku}}
+    {% elsif product.selected_or_first_available_variant.sku != blank %}
+      {{product.selected_or_first_available_variant.sku}}
+    {% else %}
+      {{ 'sections.beae-preview-template-product.be76480_html' | t }}
+    {%endif%}
+  </span>
+        </div>
+            </div><!----><!----></div><!----><!----><!----></div><!----><!----><!----><div class="beae-5sbt1wuk beae-block beae-core beae-animation beae-unique-apx3j8xb beae-product-title" data-id="beae-5sbt1wuk" data-loop-index="0" data-uniqueid="apx3j8xb"><!----><h1 class="beae-block beae-x-text beae-typo-h4" data-product-title="true" data-autolayout="beae-5sbt1wuk"><a href="{{ product.url }}">{{ product.title }}</a>
+<div data-shop-id="{{shop.id}}" product-id="{{product.id }}" data-page="{{request.page_type}}" class="ddreview-star"></div></h1><!----><!----></div><script type="text/javascript">window.BEAEARGS['beae-5sbt1wukblock-developer'] = {
+    "id": "beae-5sbt1wuk",
+    "mode": {"value": "live"},
+    "title":"{{ product.title }}"
+  };</script><!----><!----><div class="beae-pgdbbui3 beae-block beae-core beae-animation beae-unique-mbduubpx" data-id="beae-pgdbbui3" data-loop-index="0" data-uniqueid="mbduubpx""><!----><!----><div class="beae-x-price" data-badged="none"><div class="beae-prd-single-price-wrapper"><span class="beae-product-single__price" data-sale="true">
+    
+      {% if product.price_varies and product.compare_at_price %}
+        {% assign cheapest_variant = product.variants | sort: 'price' | first %}
+        {% capture price_normal %}
+          {% if settings.currency_code_enabled %}
+            {{ product.selected_or_first_available_variant.price | money_with_currency }}
+          {% else %}
+            {{ product.selected_or_first_available_variant.price | money }}
+          {% endif %}
+        {% endcapture %}
+        {% capture price_min %}
+          {% if settings.currency_code_enabled %}
+            {{ cheapest_variant.price | money_with_currency }}
+          {% else %}
+            {{ cheapest_variant.price | money }}
+          {% endif %}
+        {% endcapture %}
+        {% if cheapest_variant.price < cheapest_variant.compare_at_price %}
+          <span class="beae-price-on-sale">
+            <span class="beae-price-from">{{ 'sections.beae-preview-template-product.be978022322_html' | t: price_min:price_min }}</span>
+            <span class="beae-price-normal">{{ 'sections.beae-preview-template-product.be1950827197_html' | t: price_normal:price_normal }}</span>
+          </span>
+        {% else %}
+          <span class="beae-price-from">{{ 'sections.beae-preview-template-product.be978022322_html' | t: price_min:price_min }}</span>
+          <span class="beae-price-normal">{{ 'sections.beae-preview-template-product.be1950827197_html' | t: price_normal:price_normal }}</span>
+        {% endif %}
+      {% elsif product.price < product.compare_at_price %}
+        <span class="beae-price-on-sale">{% if settings.currency_code_enabled %}
+          {{ product.price | money_with_currency }}
+        {% else %}
+          {{ product.price | money }}
+        {% endif %}</span>
+      {% elsif product.price_varies %}
+        {% capture price_min %}
+          {% if settings.currency_code_enabled %}
+            {{ product.price_min | money_with_currency }}
+          {% else %}
+            {{ product.price_min | money }}
+          {% endif %}
+        {% endcapture %}
+        {% capture price_max %}
+          {% if settings.currency_code_enabled %}
+            {{ product.price_max | money_with_currency }}
+          {% else %}
+            {{ product.price_max | money }}
+          {% endif %}
+        {% endcapture %}
+        <span class="beae-price-from">{{ 'sections.beae-preview-template-product.be978022322_html' | t: price_min:price_min }}</span>
+        <span class="beae-price-normal">{{ 'sections.beae-preview-template-product.be1950827197_html' | t: price_normal:price_normal }}</span>
+      {% else %}
+        {% if settings.currency_code_enabled %}
+          {{ product.price | money_with_currency }}
+        {% else %}
+          {{ product.price | money }}
+        {% endif %}
+      {% endif %}
+      
+  </span><span class="beae-product-single__price--regular">{% liquid
+    assign print_compare = ''
+    if selected_variant != blank   
+      if selected_variant.price < selected_variant.compare_at_price
+        if settings.currency_code_enabled
+          assign print_compare = selected_variant.compare_at_price | money_with_currency
+        else
+          assign print_compare = selected_variant.compare_at_price | money
+        endif
+      endif
+    else                                                            
+      if product.price_varies and product.compare_at_price
+        assign cheapest_variant = product.variants | sort: 'price' | first
+        if cheapest_variant.price < cheapest_variant.compare_at_price
+          if settings.currency_code_enabled
+            assign print_compare = cheapest_variant.compare_at_price | money_with_currency
+          else
+            assign print_compare = cheapest_variant.compare_at_price | money
+          endif
+        endif
+      elsif product.price < product.compare_at_price
+        if settings.currency_code_enabled
+          assign print_compare = product.compare_at_price | money_with_currency
+        else
+          assign print_compare = product.compare_at_price | money
+        endif
+      endif
+    endif
+  %}{{ print_compare }}</span><span type="none" class="beae-typo-p3 {% liquid
+    assign badge_class = ''
+    if product.available
+      assign checkHidden = true
+      if selected_variant != blank
+        if selected_variant.price < selected_variant.compare_at_price
+          assign checkHidden = false
+        endif
+      else
+        if product.price_varies and product.compare_at_price
+          assign cheapest_variant = product.variants | sort: 'price' | first
+          if cheapest_variant.price < cheapest_variant.compare_at_price
+            assign checkHidden = false
+          endif
+        elsif product.price < product.compare_at_price
+          assign checkHidden = false
+        endif
+      endif
+      if checkHidden
+        assign badge_class = 'beae-sale-hidden'
+      else
+        assign badge_class = 'beae-product-single__price--sale'
+      endif
+    else
+      assign badge_class = 'beae-sale-sold-out'
+    endif
+  %}{{ badge_class }} beae-product-single__price--badged" data-sale="" data-sold-out="{{ 'sections.beae-preview-template-product.be1538363906_html' | t }}"></span></div><div class="beae-product-single__tax-shipping">
+      {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
+        <div class="beae-tax-shipping-policy">
+        {%- if shop.taxes_included -%}
+          {% capture include_taxes_text %}{{ 'products.product.include_taxes' | t }}{% endcapture %}
+          {% unless include_taxes_text contains 'Translation missing' %}
+            {{ include_taxes_text }}
+          {% else %}
+            {{ 'sections.beae-preview-template-product.be430210269_html' | t }} 
+          {% endunless %}
+        {%- endif -%}
+        {%- if shop.shipping_policy.body != blank -%}
+          {% capture shipping_policy_text %}{{ 'products.product.shipping_policy_html' | t: link: shop.shipping_policy.url }}{% endcapture %}
+          {% unless shipping_policy_text contains 'Translation missing' %}
+            {{ shipping_policy_text }}
+          {% else %}
+            <a href="{{shop.shipping_policy.url}}">{{ 'sections.beae-preview-template-product.be198651612937_html' | t }}
+          {% endunless %}
+        {%- endif -%}
+        </div>
+      {%- endif -%}
+    </div></div><!----></div><!----><!----><!----><div class="beae-82ha6kc8 beae-block beae-core beae-animation beae-unique-4b9f1ib8" data-id="beae-82ha6kc8" data-loop-index="0" data-uniqueid="4b9f1ib8""><div class="beae-block beae-x-code""><div>
+Enter snippet code of review app or contact with our support to help add review block.
+</div></div><!----></div><!----><!----><!----><div class="beae-7mxyhfi0 beae-block beae-core beae-animation beae-unique-grf0e4o9 beae-flex-wrapper" data-id="beae-7mxyhfi0" data-loop-index="0" data-uniqueid="grf0e4o9"><!----><!----><!----><div class="beae-s1dxtlr4 beae-block beae-core beae-animation beae-unique-nr2nkmd0" data-id="beae-s1dxtlr4" data-loop-index="0" data-uniqueid="nr2nkmd0"><!----><div class="beae-block beae-x-text beae-typo-p1" data-autolayout="beae-s1dxtlr4">{{ 'sections.beae-preview-template-product.be981756329362_html' | t }}</div><!----><!----></div><!----><!----><!----></div><!----><!----><!----><div class="beae-9fv2994n beae-block beae-core beae-animation beae-unique-h5kxukw8" data-id="beae-9fv2994n" data-loop-index="0" data-uniqueid="h5kxukw8""><!----><!----><div class="beae-block beae-x-variant" data-scroll="true"><div class="beae-variant-wrapper"><div class="beae-variant-container beae-typo-p2">
+    {% assign beae_has_variant_picker = true %}
+    {% assign variant_selected = product.selected_or_first_available_variant%}
+    {% assign store_colors = shop.metafields.beae.colors %}
+    {% if product.has_only_default_variant %}
+      {% assign beae_has_variant_picker = false %}
+    {% else %}
+
+    {% assign optionValues = beae_optionValues | split: "," %}
+    {% assign sourceTypes = beae_sourceTypes | split: "," %}
+
+      {%- for option in product.options_with_values -%}
+        {% assign option_index = option.position | minus: 1 %}
+
+        {% assign is_swatch = "false" %}
+
+        {% assign option_name = option.name %}
+        {% for item in optionValues %}
+            {% if item == option_name %}
+                {% assign source = sourceTypes[forloop.index0] %}
+            {% endif %}
+        {% endfor %}
+
+        {% if beae_variant_color_selector_type != blank and optionValues contains option_name %}
+          {% assign is_swatch = "true" %}
+        {% endif %}
+
+        {%- assign index = option.position | prepend:  'option' -%}
+        {% assign value_key_selected = variant_selected[index] %}
+
+        <div class="beae-product-option-cont beae-product-option-{{ option_name }}" 
+          data-type="{{beae_variant_type}}"
+          data-option-position="{{ option.position }}"
+          {% if optionValues contains option_name %}
+            data-swatch-type="{{beae_variant_color_selector_type}}"
+          {% endif %}
+        >
+          <div class="beae-variant-label-cont">
+            {% if beae_variant_show_option_name == 'true' %}
+              <div>
+                <span class="beae-product-{{ beae_variant_type }}-label">
+                  {{ option.name }}:
+                </span>
+                <span
+                  class="beae-variant-label"
+                  data-option-position="{{ option.position }}"
+                >
+                  {{ variant_selected.options[option_index] }}
+                </span>
+              </div>
+            {%- endif -%}
+            {% if beae_variant_size_guide and option.name contains beae_variant_size_guide_name %}
+            <div class="beae-variant-size-guide">
+              <div class="beae-variant-size-guide-btn">
+                {% if beae_variant_size_guide_icon %}
+                  <span class="beae-size-guide-icon">
+                    {{ beae_variant_size_guide_icon }}
+                  </span>
+                {% endif %}
+                {{ beae_variant_size_guide_label }}
+              </div>
+              {% assign size_guide_content = "" %}
+              {% if beae_variant_size_guide_type contains 'page' %}
+                {% assign p = pages[beae_variant_size_guide_page] %}
+                {% if p %}
+                  {% assign size_guide_content = p.content %}
+                {% endif %}
+              {% elsif beae_variant_size_guide_type contains 'dynamic' %}
+                {% if beae_variant_dynamic_source.type contains 'file_reference' %}
+                  {% capture size_guide_content %}
+                    <img src={{ beae_variant_dynamic_source | image_url }} width="300" height="300" alt="Size chart"/>
+                  {% endcapture %}
+                {% else %}
+                  {% assign size_guide_content = beae_variant_dynamic_source %}
+                {% endif %}
+              {% endif %}
+              {% if size_guide_content != blank %}
+                <div class="beae-variant-size-guide-content" style="display: none">
+                  {{ size_guide_content }}
+                </div>
+              {% endif %}
+            </div>
+          {% endif %}
+          </div>
+
+          {% assign is_dropdown = "false" %}
+          {% if is_swatch == "true" %}
+            {% if beae_variant_color_selector_type == 'dropdown_with_color' %}
+              {% assign is_dropdown = "true" %}
+            <div class="beae-custom-select_wrp">
+              <button class="beae-custom-select__btn" type="button" data-option-position="{{ option.position }}">
+                <span class="beae-selected-color" {% if store_colors and store_colors.value[variant_selected.options[option_index]] != blank  %} 
+                style="--beae-color-variant: {{store_colors.value[variant_selected.options[option_index]]}}"
+                {% endif %}></span>
+                <span class="beae-text-selected">{{ variant_selected.options[option_index] }}</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" class="icon" role="presentation" focusable="false" aria-hidden="true">
+                  <path d="M20 8.5 12.5 16 5 8.5" stroke="currentColor" stroke-width="1.5" fill="none"></path>
+                </svg>
+              </button>
+            {% endif %}
+          {% else %}
+            {% if beae_variant_type == 'dropdown' %}
+              {% assign is_dropdown = "true" %}
+              <div class="beae-custom-select_wrp">
+                <button class="beae-custom-select__btn" type="button" data-option-position="{{ option.position }}">
+                  <span class="beae-text-selected">{{ variant_selected.options[option_index] }}</span>
+                  <svg width="20" height="20" viewBox="0 0 24 24" class="icon" role="presentation" focusable="false" aria-hidden="true">
+                    <path d="M20 8.5 12.5 16 5 8.5" stroke="currentColor" stroke-width="1.5" fill="none"></path>
+                  </svg>
+                </button>
+            {% endif %}
+          {% endif %}
+
+        <ul 
+          class="beae-variant-option-list"
+          data-option-position="{{option.position}}"
+        >
+            {% assign option_values = "" %}
+            {% for option in variant_selected.options %}
+              {% if option != value_key_selected %}
+                {% assign option_values = option_values | append: option | append: "," %}
+              {% endif %}
+            {% endfor %}
+            {% assign option_values = option_values | split: "," %}
+            {% capture keyOption %}option{{option.position}}{% endcapture %}
+            {% assign optionActive = variant_selected[keyOption] %}
+           {% for op in option.values %}
+              {% assign url_variant = '#' %}
+              {% if beae_variant_is_link == 'true' and optionActive != op %} 
+                {% liquid 
+                  assign url_variant = op.variant.metafields.beae_link_variant.link_variant.value | strip
+                  if url_variant == blank
+                   assign url_variant = '#'
+                  endif
+                %}
+              {% endif %}
+              <li 
+                class="beae-product-variant-item{% 
+                    if beae_variant_color_selector_type == "variant_image" 
+                      %} beae-product-variant-item-image{% 
+                    endif %}{% 
+                    if optionActive == op 
+                      %} beae-product-variant-item--selected{% 
+                    endif %}{% 
+                    if beae_variant_is_link == 'true' 
+                      %} beae-variant-link{% 
+                    endif %}"
+                data-option-position="{{option.position}}"
+                data-value="{{ op | escape }}"
+                {% if is_swatch == "true" and store_colors and store_colors.value[op] != blank  %} 
+                  style="--beae-color-variant: {{store_colors.value[op]}}"
+                  data-color="{{store_colors.value[op]}}"
+                {% endif %}
+                {% if beae_variant_color_selector_type == "variant_image"
+                  and beae_variant_is_link == 'true'
+                  and url_variant != '#' %}
+                  data-link="{{ url_variant }}"
+                {% endif %}
+
+               >
+                {% if beae_variant_is_link == 'true' and url_variant != '#' %}
+                  <a class='beae-variant--link' href={{ url_variant }}>
+                {% endif %}
+               {% if is_swatch == "false" %}
+                      {{ op }}
+                    {% elsif beae_variant_color_selector_type == "color_swatch" %}
+                      {% if source == 'beae' %}
+                        <span
+                          {% if store_colors and store_colors.value[op] != blank  %} 
+                            style="background-color: var(--beae-color-variant)"
+                          {% else %}
+                            class="beae-product-colors--no-color"
+                            data-beae-tooltip="Please set the color in settings" 
+                          {% endif %}
+                        ></span>
+                      {% else %}
+                        <span class="beae-swatch-color--item" 
+                          {% if op.swatch.image %}
+                            style="--beae-swatch-background: url({{ op.swatch.image | image_url: width: 50 }}); {% if op.swatch.image.presentation.focal_point %} --beae-swatch-focal-point: {{ op.swatch.image.presentation.focal_point }};{% endif %}"
+                          {% elsif op.swatch.color %}
+                            style="--beae-swatch-background: {{ 'rgb(' | append: op.swatch.color.rgb | append: ')' }};"
+                          {% endif %}
+                        ></span>
+
+                      {% endif %}
+
+                    {% elsif beae_variant_color_selector_type == "variant_image" %}
+                    {% else %}
+                      <div class="beae-product-swatch-special">
+                      <span
+                        {% if is_swatch == "true" and store_colors and store_colors.value[op] != blank  %} 
+                          style="background-color: var(--beae-color-variant)"
+                          class="beae-variant-swatch-color"
+                        {% else %}
+                          class="beae-product-colors--no-color"
+                          data-beae-tooltip="Please set the color in settings" 
+                        {% endif %}
+                      ></span>
+                      <span class="beae-variant-swatch-label">{{ op }}</span>
+                      </div>
+                    {% endif %}
+                    {% if beae_variant_is_link == 'true' and url_variant != '#' %} </a>{% endif %}
+                    </li>
+             {% endfor %}
+            </ul>
+            {% if is_swatch == "true" %}
+              {% if beae_variant_color_selector_type == 'dropdown_with_color' %}
+                </div>
+              {% endif %}
+            {% else %}
+              {% if beae_variant_type == 'dropdown' %}
+                </div>
+              {% endif %}
+            {% endif %}
+          
+        </div>
+      {%- endfor -%}
+      <div
+        class="beae-variant--options"
+        style="display: none;"
+      >
+        <select 
+          name="id" 
+          class="beae-variant-options-combined" 
+          data-product-id="{{product.id}}"
+          data-selector
+          id="beae-variant-selector-{{section.id}}-beae-s9joytnw"
+        >
+          {% for variant in product.variants%}
+            <option
+              value="{{variant.id}}"
+              {% if variant_selected.id == variant.id %}
+                selected="selected"
+              {% endif %}
+            >{{variant.title}}</option>
+          {% endfor %}
+        </select>
+      </div>
+    {% endif %}
+  </div></div></div><!----><!----></div><!----><!----><!----><div class="beae-484qnnze beae-block beae-core beae-animation beae-unique-9rgagntl" data-id="beae-484qnnze" data-loop-index="0" data-uniqueid="9rgagntl""><!----><div class="beae-block beae-x-inventory" data-in-stock-text="{{ 'sections.beae-preview-template-product.be1381492177_html' | t }}" data-low-stock-text="{{ 'sections.beae-preview-template-product.be1597998112_html' | t }}" data-very-low-stock-text="{{ 'sections.beae-preview-template-product.be1377618486_html' | t }}" data-out-stock-text="{{ 'sections.beae-preview-template-product.be28375103_html' | t }}" data-pre-order-text="{{ 'sections.beae-preview-template-product.be912676988_html' | t }}" data-incoming-date-text="{{ 'sections.beae-preview-template-product.be1494994701_html' | t }}" data-very-low-number="5" data-low-number="20" data-max-number="60" data-show-next-incoming-date="true"><div class="beae-inventory-in-stock"><div class="beae-inventory-label beae-typo-p3">In stock ({quantity})</div><div class="beae-inventory-process"><div class="beae-inventory-process-body"></div></div></div></div><!----></div><!----><!----><!----><div class="beae-4t7hokhs beae-block beae-core beae-animation beae-unique-i4eip2av beae-flex-wrapper" data-id="beae-4t7hokhs" data-loop-index="0" data-uniqueid="i4eip2av"><!----><!----><!----><div class="beae-9o6oa8au beae-block beae-core beae-animation beae-unique-420vwusa" data-id="beae-9o6oa8au" data-loop-index="0" data-uniqueid="420vwusa""><!----><!----><div class="beae-quantity-wrapper"><button type="button" class="beae-quantity-btn" name="minus"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-minus" fill="none" viewBox="0 0 10 2"><path fill-rule="evenodd" clip-rule="evenodd" d="M.5 1C.5.7.7.5 1 .5h8a.5.5 0 110 1H1A.5.5 0 01.5 1z" fill="currentColor"></path></svg></button><input class="beae-quantity-input" type="number" min="1" step="1" name="quantity"><button type="button" class="beae-quantity-btn" name="plus"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" class="icon icon-plus" fill="none" viewBox="0 0 10 10"><path fill-rule="evenodd" clip-rule="evenodd" d="M1 4.51a.5.5 0 000 1h3.5l.01 3.5a.5.5 0 001-.01V5.5l3.5-.01a.5.5 0 00-.01-1H5.5L5.49.99a.5.5 0 00-1 .01v3.5l-3.5.01H1z" fill="currentColor"></path></svg></button></div><!----><!----></div><!----><!----><!----><div class="beae-qufc1ls5 beae-block beae-core beae-animation beae-unique-i43kjdrb" data-id="beae-qufc1ls5" data-loop-index="0" data-uniqueid="i43kjdrb""><!----><button type="submit" class="beae-add-to-cart--submit beae-btn-cart beae-btn-se" data-product-variant-media="{%- liquid
+            assign default_add_to_cart_text = 'actions.add_to_cart' | t
+            assign product_variant_media = product.selected_or_first_available_variant.featured_media.preview_image | image_url: width: 100
+            if product.selected_or_first_available_variant.featured_media.preview_image == blank
+                assign product_variant_media = product.featured_media.preview_image | image_url: width: 100
+            endif
+        -%}{{ product_variant_media }}" data-action="cart" data-add-to-cart-text="{{ 'sections.beae-preview-template-product.be649020154_html' | t }}" data-text-outstock="{{ 'sections.beae-preview-template-product.be28375103_html' | t }}" data-text-added-cart="{{ 'sections.beae-preview-template-product.be1182278043_html' | t }}" data-sold-out-text="{{ 'sections.beae-preview-template-product.be1538394658_html' | t }}" data-add-success="{{ 'sections.beae-preview-template-product.be1427617666_html' | t }}" data-link="" data-choose-options-text="{{ 'sections.beae-preview-template-product.be719299147_html' | t }}" data-type="text" data-show-icon-mobile="false"><!----><span class="beae-add-to-cart-text-content">{{ 'sections.beae-preview-template-product.be649020154_html' | t }}</span><!----><div class="beae-add-to-cart-loader-wrp"><span class="beae-add-to-cart-loader"></span></div></button><script type="text/javascript">window.BEAEARGS['beae-qufc1ls5block-add-to-cart'] = {
+    "id": "beae-qufc1ls5",
+    "mode": {"value": "live"},
+    "loopIndex":0
+  };</script><!----></div><!----><!----><!----></div><!----><!----><!----><div class="beae-fo1yyxz8 beae-block beae-core beae-animation beae-unique-kk01pgd5" data-id="beae-fo1yyxz8" data-loop-index="0" data-uniqueid="kk01pgd5""><!----><div class="beae-block beae-x-checkout">{{ form | payment_button }}</div><script type="text/javascript">window.BEAEARGS['beae-fo1yyxz8'] = {
+    "id": "beae-fo1yyxz8",
+    "mode": {"value": "live"},
+    "buyItNowType":"beae-btn-pr"
+  };</script><!----></div><!----><!----><!----><div class="beae-thw9b9lm beae-block beae-core beae-animation beae-unique-6srohrx6 beae-x-local-pickup beae-product-single beae-pa" data-id="beae-thw9b9lm" data-loop-index="0" data-uniqueid="6srohrx6"><!----><div class="beae-pa-wrapper"><div class="beae-pa-container beae-typo-p2" data-section-id-template="{{ section.id }}" data-beae-placeholder="">
+    {%- assign product_variant = product.selected_or_first_available_variant -%}
+      {%- capture pickup_icon -%}<span class="beae-ic-pa">{{ beae_lp_icon }}</span>{%- endcapture -%}
+      {%- capture unavailable_icon -%}<span class="beae-ic-pu">{{ beae_lp_unavailable_icon }}</span>{%-endcapture -%}
+      {% if product_variant %}
+      <Beae-custom-liquid-pickup>
+        {%- assign pick_up_availabilities = product_variant.store_availabilities | where: 'pick_up_enabled', true -%}
+        <div class="beae-pa-items" {%- if pick_up_availabilities.size <= 0 -%}style="display: none"{%- endif -%}>
+          <div class="beae-pa-item" data-variant_id="{{product_variant.id}}">
+            <div class="beae-pa-infor">
+              <div class="beae-pa-content">
+                <div class="beae-pa-icon" data-status="{% if pick_up_availabilities.first.available %}available{% else %}unavailable{% endif %}">
+                  {%- liquid
+                    assign closest_location = pick_up_availabilities.first
+                  -%}
+                  {{ pickup_icon }}
+                  {{ unavailable_icon }}
+                </div>
+                <div>
+                  <p 
+                    class="beae-pa-infor--caption-large" 
+                  >
+                  {% assign location_name_closest = closest_location.location.name %}
+                  {%- if pick_up_availabilities.first.available -%}
+                  {{ 'sections.beae-preview-template-product.be1203385433_html' | t: location_name:location_name_closest }}
+                  {%- else -%}
+                  {{ 'sections.beae-preview-template-product.be1121680012_html' | t: location_name:location_name_closest }}
+                  {%- endif -%}
+                    
+                  </p>
+                  {%- if closest_location and pick_up_availabilities.first.available -%}
+                  <p class="beae-pa-infor--caption">{{ closest_location.pick_up_time }}</p>
+                  {%- endif -%}
+                  <div class="beae-pa-container-btn beae-button-default">
+                    {%- if closest_location -%}
+                      <button 
+                        aria-label="button" 
+                        type="button" 
+                        class="beae-pa--btn"
+                        data-view-info="{{ 'sections.beae-preview-template-product.be1358949576_html' | t }}"
+                        data-check-other-stores="{{ 'sections.beae-preview-template-product.be260978430_html' | t }}"
+                      >
+                        {%- if pick_up_availabilities.size == 1 -%}
+                          {{ 'sections.beae-preview-template-product.be1358949576_html' | t }}
+                        {%- else -%}
+                          {{ 'sections.beae-preview-template-product.be260978430_html' | t }}
+                        {%- endif -%}
+                      </button>
+                    {%- else -%}
+                      {%- if pick_up_availabilities.size > 1 -%}
+                        <button aria-label="button" type="button" class="beae-pa--btn" 
+                        data-view-info="{{ 'sections.beae-preview-template-product.be1358949576_html' | t }}"
+                        data-check-other-stores="{{ 'sections.beae-preview-template-product.be260978430_html' | t }}"
+                        >
+                          {{ 'sections.beae-preview-template-product.be260978430_html' | t }}
+                        </button>
+                      {%- endif -%}
+                    {%- endif -%}
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="beae-pa--detail" style="display: none">
+              <div class="pickup-availability-header">
+                                <h2 class="beae-pa--title beae-typo-h4">{{ product_variant.product.title | escape }}</h2>
+<div data-shop-id="{{shop.id}}" product-id="{{product_variant.product.id }}" data-page="{{request.page_type}}" class="ddreview-star"></div>
+                {%- unless product_variant.product.has_only_default_variant -%}
+                  <p class="beae-pa--variant beae-typo-p2">
+                      {%- for product_option in product_variant.product.options_with_values -%}
+                        {{ product_option.name | escape }}:&nbsp;
+                        {%- for value in product_option.values -%}
+                            {%- if product_option.selected_value == value -%}
+                            <span class="beae-option__escape" data-position="{{ product_option.position }}">{{ value | escape }}</span>
+                            {%- endif -%}
+                        {%- endfor -%}
+                      {%- unless forloop.last -%},&nbsp;{%- endunless forloop.last -%}
+                      {%- endfor -%}
+                  </p>
+                {%- endunless -%}
+              </div>
+              <div class="beae-pa--content beae-typo-p2">
+                <ul class="beae-pa--list" role="list">
+                  {%- for availability in pick_up_availabilities -%}
+                    <li class="beae-pa--list-item">
+                    <h3 class="beae-pa--list-item-heading beae-typo-p1">{{ availability.location.name | escape }}</h3>
+                    <p class="beae-pa--list-item-caption-large">
+                      {%- if availability.available -%}
+                        {% assign pick_up_time = availability.pick_up_time | downcase %}
+                        {{ 'sections.beae-preview-template-product.be1316440194_html' | t: pickup_icon:pickup_icon,pick_up_time:pick_up_time }}
+                      {% else %}
+                        {% assign location_name = availability.location.name %}
+                        {{ 'sections.beae-preview-template-product.be1961221788_html' | t: unavailable_icon:unavailable_icon,location_name:location_name }}
+                      {%- endif -%}
+                    </p>
+                    {%- assign address = availability.location.address -%}
+                      <address class="beae-pa--list-item-address">
+                        {{ address | format_address }}
+                        {%- if address.phone.size > 0 -%}
+                        <p>{{ address.phone }}</p>
+                        {%- endif -%}
+                      </address>
+                    </li>
+                  {%- endfor -%}
+                </ul>
+              </div>
+            </div>
+          </div>          
+        </div>
+        </Beae-custom-liquid-pickup>
+    {%- endif -%}
+  </div></div><script type="text/javascript">window.BEAEARGS['beae-thw9b9lmblock-local-pickup'] = {
+    "id": "beae-thw9b9lm",
+    "mode": {"value": "live"},
+    "extendOptions":"{}"
+  };</script><!----></div><!----><!----><!----><div class="beae-mjpundk3 beae-block beae-core beae-animation beae-unique-khh7u2c7 beae-flex-wrapper" data-id="beae-mjpundk3" data-loop-index="0" data-uniqueid="khh7u2c7"><!----><!----><!----><div class="beae-ri4740n4 beae-block beae-core beae-animation beae-unique-vwa70hyf" data-id="beae-ri4740n4" data-loop-index="0" data-uniqueid="vwa70hyf"><!----><div class="beae-block beae-x-text beae-typo-p1" data-autolayout="beae-ri4740n4">{{ 'sections.beae-preview-template-product.be76139998_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-biqtvvkn beae-block beae-core beae-animation beae-unique-g4h3n2uh beae-x-tab" data-id="beae-biqtvvkn" data-loop-index="0" data-uniqueid="g4h3n2uh" data-min-height="content"><!----><div class="beae-tab-wrp" data-type="accordions"><div class="beae-tab-items"><div class="beae-tab-item active" data-tab-id="0"><span class="beae-tab-item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+  <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"></path>
+</svg></span> {{ 'sections.beae-preview-template-product.be545332739_html' | t }}</div><div class="beae-tab-item" data-tab-id="1"><span class="beae-tab-item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
+  <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"></path>
+</svg></span> {{ 'sections.beae-preview-template-product.be498670068_html' | t }}</div><div class="beae-tab-item" data-tab-id="2"><span class="beae-tab-item-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
+  <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"></path>
+</svg></span> {{ 'sections.beae-preview-template-product.be1786856931_html' | t }}</div></div><div class="beae-tab-contents"><!----><div class="beae-tab-content" data-tab-id="0""><div class="beae-accordion-title--mobile"><span class="beae-accordion-title-with-icon"><span class="beae-accordion-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
+  <path d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2"></path>
+</svg></span> {{ 'sections.beae-preview-template-product.be545332739_html' | t }}</span><span class="beae-accordion-icon--mobile" data-status="open"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"></path>
+</svg></span><span class="beae-accordion-icon--mobile" data-status="close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"></path>
+</svg></span></div><div class="beae-accordion-body"><div class="beae-tab-content-wrp beae-flex-container beae-sh9ujjmr"><!----><!----><div class="beae-f7nyysyw beae-block beae-core beae-animation beae-unique-6srl8cyf" data-id="beae-f7nyysyw" data-loop-index="0" data-uniqueid="6srl8cyf"><!----><div class="beae-block beae-x-text beae-typo-p1" data-autolayout="beae-f7nyysyw">{{ 'sections.beae-preview-template-product.be201276707226_html' | t }}</div><!----><!----></div><!----><!----></div></div></div><div class="beae-tab-content" data-tab-id="1""><div class="beae-accordion-title--mobile"><span class="beae-accordion-title-with-icon"><span class="beae-accordion-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
+  <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"></path>
+</svg></span> {{ 'sections.beae-preview-template-product.be498670068_html' | t }}</span><span class="beae-accordion-icon--mobile" data-status="open"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"></path>
+</svg></span><span class="beae-accordion-icon--mobile" data-status="close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"></path>
+</svg></span></div><div class="beae-accordion-body"><div class="beae-tab-content-wrp beae-flex-container beae-ms3jzgkh"><!----><!----><div class="beae-9bnlxm3r beae-block beae-core beae-animation beae-unique-jvkzf74r" data-id="beae-9bnlxm3r" data-loop-index="0" data-uniqueid="jvkzf74r"><!----><div class="beae-block beae-x-text beae-typo-p1" data-autolayout="beae-9bnlxm3r">{{ 'sections.beae-preview-template-product.be1090699532222_html' | t }}</div><!----><!----></div><!----><!----></div></div></div><div class="beae-tab-content" data-tab-id="2""><div class="beae-accordion-title--mobile"><span class="beae-accordion-title-with-icon"><span class="beae-accordion-title-icon"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-seam" viewBox="0 0 16 16">
+  <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5l2.404.961L10.404 2zm3.564 1.426L5.596 5 8 5.961 14.154 3.5zm3.25 1.7-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"></path>
+</svg></span> {{ 'sections.beae-preview-template-product.be1786856931_html' | t }}</span><span class="beae-accordion-icon--mobile" data-status="open"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"></path>
+</svg></span><span class="beae-accordion-icon--mobile" data-status="close"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708"></path>
+</svg></span></div><div class="beae-accordion-body"><div class="beae-tab-content-wrp beae-flex-container beae-wifivq8s"><!----><!----><div class="beae-w7z43soz beae-block beae-core beae-animation beae-unique-zfensamn" data-id="beae-w7z43soz" data-loop-index="0" data-uniqueid="zfensamn"><!----><div class="beae-block beae-x-text beae-typo-p1" data-autolayout="beae-w7z43soz">{{ 'sections.beae-preview-template-product.be1222693547192_html' | t }}</div><!----><!----></div><!----><!----></div></div></div></div><!----></div><script type="text/javascript">window.BEAEARGS['beae-biqtvvknblock-tabs'] = {
+    "id": "beae-biqtvvkn",
+    "mode": {"value": "live"},
+    "extendOptions":"{}","activeTab":"none","activeTabMobile":0,"accordionMode":"popup","toggleImg":false,"layout":"accordions","reactives":[3,"popup",null,null,[{},{},{}]]
+  };</script><!----></div><!----><!----><!----></div><!----><!----><!----><div class="beae-n9vldkbi beae-block beae-core beae-animation beae-unique-2qsdmnk4 beae-flex-wrapper" data-id="beae-n9vldkbi" data-loop-index="0" data-uniqueid="2qsdmnk4"><!----><!----><!----><div class="beae-3wsjnx6b beae-block beae-core beae-animation beae-unique-txexgwu4" data-id="beae-3wsjnx6b" data-loop-index="0" data-uniqueid="txexgwu4"><!----><div class="beae-block beae-x-text beae-typo-p1" data-autolayout="beae-3wsjnx6b">{{ 'sections.beae-preview-template-product.be1231792689_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-xkbh6z20 beae-block beae-core beae-animation beae-unique-9ws0dbb5" data-id="beae-xkbh6z20" data-loop-index="0" data-uniqueid="9ws0dbb5""><!----><!----><div class="beae-money-format" style="display: none;">{% if settings.currency_code_enabled %}{{ shop.money_with_currency_format | escape }}{% else %}{{ shop.money_format | escape }}{% endif %}</div><div class="beae-flexbox-core beae-x-featured_collection grid-container-width"><div class="beae-featured_collection-wrp beae-related-products-content">
+        {% liquid
+          assign tmp_collection = collection
+          assign tmp_product = product
+          assign beae_maximum_items = 10
+          assign beae_swatch_type = "color"
+          assign beae_swatches_max_items = 4
+          assign beae_price_badged = 'sale'
+          assign beae_badged = 'percent'
+          assign beae_tags_limit = '5'
+          assign beae_show_when_hover = false
+          assign beae_custom_badged_source = 'tags'
+          assign beae_custom_badged_tag = ''
+          assign beae_cart_variant_type = ''
+          assign beae_quick_add_variant_selector = ''
+          assign beae_quick_add_variant_type = ''
+          assign beae_cart_variant_name = ''
+          assign beae_cart_exclude = ''
+          assign beae_variant_name_option = ''
+          assign beae_variant_name_type = 'name'
+          assign beae_option_values_swatch = ''
+          assign beae_source_types_swatch = ''
+          assign beae_option_values_quick_add = ''
+          assign beae_source_types_quick_add = ''
+        %}
+
+        {%- capture beae_add_to_cart_text -%}{{ 'sections.beae-preview-template-product.be649020154_html' | t }}{%- endcapture -%}
+        {%- capture beae_sold_out_text -%}{{ 'sections.beae-preview-template-product.be1538394658_html' | t }}{%- endcapture -%}
+        {%- capture beae_swatches_name -%}{{ 'sections.beae-preview-template-product.be65290051_html' | t }}{%- endcapture -%}
+        {%- capture beae_choose_options_text -%}{{ 'sections.beae-preview-template-product.be719299147_html' | t }}{%- endcapture -%}
+      <div class="beae-related-product-info" style="display:none" section-id="{{section.id}}" product-id="{{product.id}}"></div> <div class="beae-product-list-wrp"><style type="text/css"></style><div class="beae-slider-wrapper beae-slider slider-beae-xkbh6z20 items-per-1.4" data-draggable="true" data-desktop-layout="slider" data-mobile-layout="slider" data-effect="slide" data-pagination="false" data-navigation="false" style="--items-per: 1.4; --items-per-mobile: 1.1; --items-gap: 1vmax; --items-gap-mobile: 1.5vmax; --autoplay-delay: 5s;"><div class="beae-slider-content beae-slider-items">
+        {%- if recommendations.performed and recommendations.products_count > 0 -%}
+          {%- for product in recommendations.products -%}
+          <div id="product_form_{{product.id}}" accept-charset="UTF-8" class="beae-recommendation-item beae-product-form-next beae-product-form--single" enctype="multipart/form-data" data-product_id="{{product.id}}" data-handle="{{product.handle}}" data-variant-id="{{product.selected_or_first_available_variant.id}}" data-available="{{product.available}}">
+            
+          
+      {% capture beae_custom_badged_metafield %}{{  }}{%- endcapture -%}
+        
+       <div class="beae-product-card beae-z8dl270m"><!----><!----><div class="beae-6730qjy1 beae-block beae-core beae-unique-suueg55p" data-id="beae-6730qjy1" data-loop-index="0" data-uniqueid="suueg55p""><!---->
+        
+        
+        <!----><a class="beae-block beae-x-image beae-container-image beae-image-content-position beae-image-picture beae-image-product" hover-mode="false" href="{{ product.url }}"><!----><!----><picture image-mode="" class="beae-yijrn beae-image-primary">
+    {% assign beae_show_image = true %}
+    {% if beae_check_product_video == true %} 
+      {%- for media in product.media -%}
+        {% if media.media_type == 'video' %}
+          {% assign beae_show_image = false %}
+          <div class="beae-video-product">
+            <img
+              preview
+              style="display: none !important;"
+              src="{{ media.preview_image | img_url: 'master' }}"
+              alt="{{ media.preview_image.alt | escape | default: 'Product Image' }}"
+              width="{{ media.preview_image.width | default: 915 }}"
+              height="{{ media.preview_image.height | default: 915 }}"
+              loading="lazy"
+            />  
+              {{ media | video_tag: image_size:'master', class: 'media-video', muted: true, autoPlay: true, loop: true }}
+          </div>
+          {% break %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    {% if beae_show_image == true %}
+      <img
+        src="{{ product.featured_media | img_url: 'master' }}"
+        alt="{{ product.featured_media.alt | escape | default: 'Product Image' }}"
+        width="{{ product.featured_media.width | default: 915 }}"
+        height="{{ product.featured_media.height | default: 915 }}"
+        loading="lazy"
+      />
+    {% endif %}
+  </picture><!----><picture image-mode="" class="beae-vjy49 beae-image-secondary">
+    {% if product.media.size > 1 %}
+      <img
+        src="{{ product.media[1] | img_url: 'master' }}"
+        alt="{{ product.media[1].alt | escape | default: 'Product Image' }}"
+        width="{{ product.media[1].width | default: 915 }}"
+        height="{{ product.media[1].height | default: 915 }}"
+        loading="lazy"
+      />
+    {% endif %}
+  </picture></a><script type="text/javascript">window.BEAEARGS['beae-6730qjy1block-image'] = {
+    "id": "beae-6730qjy1",
+    "mode": {"value": "live"},
+    "autoHover":false
+  };</script><!----></div><!----><!----><!----><div class="beae-hr3na4pb beae-block beae-core beae-unique-bsbd79mr beae-flex-wrapper" data-id="beae-hr3na4pb" data-loop-index="0" data-uniqueid="bsbd79mr"><!----><!----><!----><div class="beae-ram9wgkh beae-block beae-core beae-unique-inz8my7b beae-product-title" data-id="beae-ram9wgkh" data-loop-index="0" data-uniqueid="inz8my7b"><!----><div class="beae-block beae-x-text beae-typo-p1" data-product-title="true" data-autolayout="beae-ram9wgkh"><a href="{{ product.url }}">{{ product.title }}</a></div><!----><!----></div><script type="text/javascript">window.BEAEARGS['beae-ram9wgkhblock-developer'] = {
+    "id": "beae-ram9wgkh",
+    "mode": {"value": "live"},
+    "title":"{{ product.title }}"
+  };</script><!----><!----><div class="beae-tzq6swao beae-block beae-core beae-unique-q44zpl0d" data-id="beae-tzq6swao" data-loop-index="0" data-uniqueid="q44zpl0d""><!----><!----><div class="beae-x-price" data-badged="none"><div class="beae-prd-single-price-wrapper"><span class="beae-product-single__price">
+    
+      {% if product.price_varies and product.compare_at_price %}
+        {% assign cheapest_variant = product.variants | sort: 'price' | first %}
+        {% capture price_normal %}
+          {% if settings.currency_code_enabled %}
+            {{ product.selected_or_first_available_variant.price | money_with_currency }}
+          {% else %}
+            {{ product.selected_or_first_available_variant.price | money }}
+          {% endif %}
+        {% endcapture %}
+        {% capture price_min %}
+          {% if settings.currency_code_enabled %}
+            {{ cheapest_variant.price | money_with_currency }}
+          {% else %}
+            {{ cheapest_variant.price | money }}
+          {% endif %}
+        {% endcapture %}
+        {% if cheapest_variant.price < cheapest_variant.compare_at_price %}
+          <span class="beae-price-on-sale">
+            <span class="beae-price-from">{{ 'sections.beae-preview-template-product.be978022322_html' | t: price_min:price_min }}</span>
+            <span class="beae-price-normal">{{ 'sections.beae-preview-template-product.be1950827197_html' | t: price_normal:price_normal }}</span>
+          </span>
+        {% else %}
+          <span class="beae-price-from">{{ 'sections.beae-preview-template-product.be978022322_html' | t: price_min:price_min }}</span>
+          <span class="beae-price-normal">{{ 'sections.beae-preview-template-product.be1950827197_html' | t: price_normal:price_normal }}</span>
+        {% endif %}
+      {% elsif product.price < product.compare_at_price %}
+        <span class="beae-price-on-sale">{% if settings.currency_code_enabled %}
+          {{ product.price | money_with_currency }}
+        {% else %}
+          {{ product.price | money }}
+        {% endif %}</span>
+      {% elsif product.price_varies %}
+        {% capture price_min %}
+          {% if settings.currency_code_enabled %}
+            {{ product.price_min | money_with_currency }}
+          {% else %}
+            {{ product.price_min | money }}
+          {% endif %}
+        {% endcapture %}
+        {% capture price_max %}
+          {% if settings.currency_code_enabled %}
+            {{ product.price_max | money_with_currency }}
+          {% else %}
+            {{ product.price_max | money }}
+          {% endif %}
+        {% endcapture %}
+        <span class="beae-price-from">{{ 'sections.beae-preview-template-product.be978022322_html' | t: price_min:price_min }}</span>
+        <span class="beae-price-normal">{{ 'sections.beae-preview-template-product.be1950827197_html' | t: price_normal:price_normal }}</span>
+      {% else %}
+        {% if settings.currency_code_enabled %}
+          {{ product.price | money_with_currency }}
+        {% else %}
+          {{ product.price | money }}
+        {% endif %}
+      {% endif %}
+      
+  </span><span class="beae-product-single__price--regular">{% liquid
+    assign print_compare = ''
+    if selected_variant != blank   
+      if selected_variant.price < selected_variant.compare_at_price
+        if settings.currency_code_enabled
+          assign print_compare = selected_variant.compare_at_price | money_with_currency
+        else
+          assign print_compare = selected_variant.compare_at_price | money
+        endif
+      endif
+    else                                                            
+      if product.price_varies and product.compare_at_price
+        assign cheapest_variant = product.variants | sort: 'price' | first
+        if cheapest_variant.price < cheapest_variant.compare_at_price
+          if settings.currency_code_enabled
+            assign print_compare = cheapest_variant.compare_at_price | money_with_currency
+          else
+            assign print_compare = cheapest_variant.compare_at_price | money
+          endif
+        endif
+      elsif product.price < product.compare_at_price
+        if settings.currency_code_enabled
+          assign print_compare = product.compare_at_price | money_with_currency
+        else
+          assign print_compare = product.compare_at_price | money
+        endif
+      endif
+    endif
+  %}{{ print_compare }}</span><span type="none" class="beae-typo-p3 {% liquid
+    assign badge_class = ''
+    if product.available
+      assign checkHidden = true
+      if selected_variant != blank
+        if selected_variant.price < selected_variant.compare_at_price
+          assign checkHidden = false
+        endif
+      else
+        if product.price_varies and product.compare_at_price
+          assign cheapest_variant = product.variants | sort: 'price' | first
+          if cheapest_variant.price < cheapest_variant.compare_at_price
+            assign checkHidden = false
+          endif
+        elsif product.price < product.compare_at_price
+          assign checkHidden = false
+        endif
+      endif
+      if checkHidden
+        assign badge_class = 'beae-sale-hidden'
+      else
+        assign badge_class = 'beae-product-single__price--sale'
+      endif
+    else
+      assign badge_class = 'beae-sale-sold-out'
+    endif
+  %}{{ badge_class }} beae-product-single__price--badged" data-sale="" data-sold-out="{{ 'sections.beae-preview-template-product.be1538363906_html' | t }}"></span></div><div class="beae-product-single__tax-shipping"></div></div><!----></div><!----><!----><!----></div><!----><!----><script data-id="Product-json-{{ product.id }}" type="application/json" style="display: none;">
+    {
+      "id":  {{ product.id | json }},
+      "title":  {{ product.title | json }},
+      "handle":  {{ product.handle | json }},
+      "price":  {{ product.price| json }},
+      "price_min":  {{ product.price_min| json }},
+      "price_max":  {{ product.price_max| json }},
+      "price_normal":  {{ product.selected_or_first_available_variant.price| json }},
+      "available":  {{ product.available | json }},
+      "price_varies":  {{ product.price_varies| json }},
+      "compare_at_price":  {{ product.compare_at_price| json }},
+      "compare_at_price_min":  {{ product.compare_at_price_min| json }},
+      "compare_at_price_max":  {{ product.compare_at_price_max| json }},
+      "compare_at_price_varies":  {{ product.compare_at_price_varies| json }},
+      "has_only_default_variant":  {{ product.has_only_default_variant | json }},
+      "selected_or_first_available_variant":  {{ product.selected_or_first_available_variant | json }},
+      "options":  {{ product.options_with_values | json }},
+      "variants": [
+        {%- for variant in product.variants -%}
+          {
+            "id":  {{ variant.id | json }},
+            "title": " {{ variant.option1 | handleize }}{%- if product.options.size == 2 -%} / {%- endif -%} {{ variant.option2 | handleize }}{%- if product.options.size == 3 -%} / {%- endif -%} {{ variant.option3 | handleize }}",
+            "option1":  {{ variant.option1  | json }},
+            "option2": {%- if product.options.size == 1 -%}null{%-else-%} {{ variant.option2  | json }}{%-endif-%},
+            "option3": {%- if product.options.size == 1 or product.options.size == 2 -%}null{%-else-%} {{ variant.option3  | json }}{%-endif-%},
+            "sku":  {{ variant.sku | json }},
+            "requires_shipping":  {{ variant.requires_shipping }},
+            "taxable":  {{ variant.taxable | json }},
+            "selling_plan_allocations":{{variant.selling_plan_allocations | json }},
+            "featured_image": {%- if variant.image.id != blank -%}{
+              "id":  {{ variant.image.id | json }},
+              "product_id":  {{ product.id | json }},
+              "width":  {{ variant.image.width | json }},
+              "height":  {{ variant.image.height | json }},
+              "src":  {{ variant.image.src | json }},
+              "position": {{ variant.image.position }}
+            }{%- else-%}null{%-endif-%},
+            "featured_media": {{ variant.featured_media | json }},
+            "available":  {{ variant.available }},
+            "public_title": " {{ variant.option1 | handleize }}{%- if product.options.size == 2 -%} / {%- endif -%} {{ variant.option2 | handleize }}{%- if product.options.size == 3 -%} / {%- endif -%} {{ variant.option3 | handleize }}",
+            "options":   {{ variant.options | json }},
+            "price":  {{ variant.price | json }},
+            "weight":  {{ variant.weight | json }},
+            "compare_at_price":  {{ variant.compare_at_price | json }},
+            "inventory_quantity":  {{ variant.inventory_quantity | json }},
+            "inventory_management":  {{ variant.inventory_management | json }},
+            "inventory_policy":  {{ variant.inventory_policy | json }},
+            "next_incoming_date": {% if variant.next_incoming_date %}{{variant.next_incoming_date | date: "%Y-%m-%d %H:%M" | time_tag | json }}{% else%}null{% endif %},
+            "barcode":  {{ variant.barcode | json }},
+            "store_availabilities": [
+              {%- for variantStore in variant.store_availabilities -%}
+                {
+                  "location": {
+                    "name": {{ variantStore.location.name | json }},
+                    "address": {{ variantStore.location.address | json }},
+                    "id": {{ variantStore.location.id | json }}
+                  },
+                  "available": {{ variantStore.available | json }},
+                  "pick_up_enabled": {{ variantStore.pick_up_enabled | json }},
+                  "pick_up_time": {{ variantStore.pick_up_time | json }}
+                }{%- if forloop.last == false -%},{%- endif -%}
+              {%- endfor -%}
+            ],
+            "unit_price":  {{ variant.unit_price | json }},
+            "unit_price_measurement":  {
+              "measured_type": {{ variant.unit_price_measurement.measured_type | json }},
+              "quantity_value": {{ variant.unit_price_measurement.quantity_value | json }},
+              "quantity_unit": {{ variant.unit_price_measurement.quantity_unit | json }},
+              "reference_value": {{ variant.unit_price_measurement.reference_value | json }},
+              "reference_unit": {{ variant.unit_price_measurement.reference_unit | json }}
+            }
+          }{%- if forloop.last == false -%},{%- endif -%}
+        {%- endfor -%}
+      ],
+      "featured_image":  {{ product.featured_image | json }},
+      "size_available":[
+        {%- for value in product.options_with_values[0].values -%}
+        {%- assign available_ops = product.variants | where: "available" | where: "option1",value -%}
+          {{available_ops.size}}{%- unless forloop.last %},{% endunless -%}
+        {%- endfor -%}
+      ],
+      "shopColors": {{ shop.metafields.beae.colors }}
+    }
+  </script></div> 
+                  <input type="hidden" name="sections" value="cart-notification-product,cart-notification-button,cart-icon-bubble">
+                  <input type="hidden" name="section_url" value="{{product.handle}}">
+            
+                
+      
+          
+          </div>
+          {%- endfor -%}
+        {% endif %}
+          </div><div class="beae-slider-controls"><div class="beae-slider-controls-wrp"><div class="beae-slider-indicator"><div class="beae-slider-progress"></div></div><!----><!----><!----></div></div></div><script type="text/javascript">window.BEAEARGS['beae-xkbh6z20section-slide-show'] = {
+    "id": "beae-xkbh6z20",
+    "mode": {"value": "live"},
+    "layout":"slider","layoutMobile":"slider","effect":"slide","isLoop":false,"autoPlay":false,"autoPlayDelay":5,"itemsPerSlide":1.4,"itemsPerSlideMobile":1.1,"itemsGap":"1vmax","itemsGapMobile":"1.5vmax","paginationImage":false,"paginationImageMobile":false,"typeScroll":"default","numItemsScroll":1,"showNavigation":false,"showPagination":false,"showProgress":true,"hookSliderInit":" \nfunction updateSidebarWidth() {\n  const element = data.el.querySelector('.beae-x-featured_collection');\n    element.style.setProperty('--data-length', data.slides.length);\n    element.style.setProperty('--data-width', Math.ceil(data.el.clientWidth) + 'px');\n}\nupdateSidebarWidth();\nwindow.addEventListener('resize', () => {\nupdateSidebarWidth();\n}); ","hookBeforeSlideChange":"","hookAfterSlideChange":"","noRunJs":false
+  };</script></div><!----> 
+        {%- assign collection = tmp_collection -%}    
+        {%- assign product = tmp_product -%}    
+      <!----></div></div><script type="text/javascript">window.BEAEARGS['beae-xkbh6z20section-featured-collection'] = {
+    "id": "beae-xkbh6z20",
+    "mode": {"value": "live"},
+    "mobileMode":false,"maximumItems":10,"promotionPosition":false,"intent":"complementary"
+  };</script><!----></div><!----><!----><!----></div><!----><!----><!----><div class="beae-b0zkhygv beae-block beae-core beae-animation beae-unique-nv3g9k4f beae-flex-wrapper" data-id="beae-b0zkhygv" data-loop-index="0" data-uniqueid="nv3g9k4f"><!----><!----><!----><div class="beae-ieuohdpk beae-block beae-core beae-animation beae-unique-yq3e7vqw" data-id="beae-ieuohdpk" data-loop-index="0" data-uniqueid="yq3e7vqw"><!----><div class="beae-block beae-x-text beae-typo-p1" data-autolayout="beae-ieuohdpk">{{ 'sections.beae-preview-template-product.be402291331_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-q0e4dqzo beae-block beae-core beae-animation beae-unique-tzt4e1c8" data-id="beae-q0e4dqzo" data-loop-index="0" data-uniqueid="tzt4e1c8""><!---->{% assign beae_image_pr = images['payment.png'].alt %}
+        
+        
+        <!----><div class="beae-block beae-x-image beae-container-image beae-image-content-position beae-image-picture beae-replace-notice" hover-mode="false"><!----><!----><picture image-mode="" class="beae-shy64 beae-image-primary"><!----><img src="https://upload.beae.com/tasks/67ac0e45b47b8feb5822054f/images/payment.png?v=1739335998790" alt="payment.png" width="460" height="24" fetchpriority="high" loading="lazy"></picture><!----></div><script type="text/javascript">window.BEAEARGS['beae-q0e4dqzoblock-image'] = {
+    "id": "beae-q0e4dqzo",
+    "mode": {"value": "live"},
+    "autoHover":false
+  };</script><!----></div><!----><!----><!----><div class="beae-1u39w8p7 beae-block beae-core beae-animation beae-unique-m4ludvn0" data-id="beae-1u39w8p7" data-loop-index="0" data-uniqueid="m4ludvn0"><!----><div class="beae-block beae-x-text beae-typo-p2" data-autolayout="beae-1u39w8p7">{{ 'sections.beae-preview-template-product.be1233088897_html' | t }}</div><!----><!----></div><!----><!----><!----></div><!----><!----><!----><div class="beae-re1qlqyy beae-block beae-core beae-animation beae-unique-m4w799cw" data-id="beae-re1qlqyy" data-loop-index="0" data-uniqueid="m4w799cw""><!---->{% assign beae_image_pr = images['banner1.jpg'].alt %}
+        
+        
+        <!----><div class="beae-block beae-x-image beae-container-image beae-image-content-position beae-image-picture beae-replace-notice" hover-mode="false"><!----><!----><picture image-mode="" class="beae-c8xyq beae-image-primary"><!----><img src="https://upload.beae.com/tasks/67ac0e45b47b8feb5822054f/images/banner1.jpg?v=1739337273397" alt="banner1.jpg" width="1381" height="343" fetchpriority="high" loading="lazy"></picture><!----></div><script type="text/javascript">window.BEAEARGS['beae-re1qlqyyblock-image'] = {
+    "id": "beae-re1qlqyy",
+    "mode": {"value": "live"},
+    "autoHover":false
+  };</script><!----></div><!----><!----><!----><div class="beae-dikjtvgx beae-block beae-core beae-animation beae-unique-bjkwjzsj" data-id="beae-dikjtvgx" data-loop-index="0" data-uniqueid="bjkwjzsj""><!----><div class="beae-block beae-x-share"><div class="beae-share--container"><div class="beae-share-wrp"><!----><span class="beae-share--label">{{ 'sections.beae-preview-template-product.be1819699109_html' | t }}</span></div><!----><div class="beae-share--toast">{{ 'sections.beae-preview-template-product.be762197622_html' | t }}</div><div class="beae-share-links"><a type="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://app.beae.com/next-v3/editor-v3/product/69b977da0ba5bf79000588a2" class="beae-share-link facebook"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+        <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"></path>
+        </svg></a><a type="twitter" href="https://twitter.com/intent/tweet?url=https://app.beae.com/next-v3/editor-v3/product/69b977da0ba5bf79000588a2" class="beae-share-link twitter"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter-x" viewBox="0 0 16 16">
+        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"></path>
+        </svg></a><a type="linkedIn" href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://app.beae.com/next-v3/editor-v3/product/69b977da0ba5bf79000588a2" class="beae-share-link linkedIn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+        <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"></path>
+        </svg></a><a type="pinterest" href="https://pinterest.com/pin/create/button/?url=https://app.beae.com/next-v3/editor-v3/product/69b977da0ba5bf79000588a2" class="beae-share-link pinterest"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pinterest" viewBox="0 0 16 16">
+        <path d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0"></path>
+        </svg></a></div></div></div><script type="text/javascript">window.BEAEARGS['beae-dikjtvgxblock-share'] = {
+    "id": "beae-dikjtvgx",
+    "mode": {"value": "live"},
+    "type":"label_with_icon"
+  };</script><!----></div><!----><!----><!----></div><!----><!----><!----></div><!----><!----><!----></div><!----><!----></div><div class="beae-money-format" style="display: none;">{% if settings.currency_code_enabled %}{{ shop.money_with_currency_format | escape }}{% else %}{{ shop.money_format | escape }}{% endif %}</div><script data-id="Product-json-beae-s9joytnw" type="application/json">
+    {
+      "id":  {{ product.id | json }},
+      "title":  {{ product.title | json }},
+      "handle":  {{ product.handle | json }},
+      "price":  {{ product.price| json }},
+      "price_min":  {{ product.price_min| json }},
+      "price_max":  {{ product.price_max| json }},
+      "price_normal":  {{ product.selected_or_first_available_variant.price| json }},
+      "available":  {{ product.available | json }},
+      "price_varies":  {{ product.price_varies| json }},
+      "compare_at_price":  {{ product.compare_at_price| json }},
+      "compare_at_price_min":  {{ product.compare_at_price_min| json }},
+      "compare_at_price_max":  {{ product.compare_at_price_max| json }},
+      "compare_at_price_varies":  {{ product.compare_at_price_varies| json }},
+      "has_only_default_variant":  {{ product.has_only_default_variant | json }},
+      "selected_or_first_available_variant":  {{ product.selected_or_first_available_variant | json }},
+      "options":  {{ product.options_with_values | json }},
+      "variants": [
+        {%- for variant in product.variants -%}
+          {
+            "id":  {{ variant.id | json }},
+            "title": " {{ variant.option1 | handleize }}{%- if product.options.size == 2 -%} / {%- endif -%} {{ variant.option2 | handleize }}{%- if product.options.size == 3 -%} / {%- endif -%} {{ variant.option3 | handleize }}",
+            "option1":  {{ variant.option1  | json }},
+            "option2": {%- if product.options.size == 1 -%}null{%-else-%} {{ variant.option2  | json }}{%-endif-%},
+            "option3": {%- if product.options.size == 1 or product.options.size == 2 -%}null{%-else-%} {{ variant.option3  | json }}{%-endif-%},
+            "sku":  {{ variant.sku | json }},
+            "requires_shipping":  {{ variant.requires_shipping }},
+            "taxable":  {{ variant.taxable | json }},
+            "selling_plan_allocations":{{variant.selling_plan_allocations | json }},
+            "featured_image": {%- if variant.image.id != blank -%}{
+              "id":  {{ variant.image.id | json }},
+              "product_id":  {{ product.id | json }},
+              "width":  {{ variant.image.width | json }},
+              "height":  {{ variant.image.height | json }},
+              "src":  {{ variant.image.src | json }},
+              "position": {{ variant.image.position }}
+            }{%- else-%}null{%-endif-%},
+            "featured_media": {{ variant.featured_media | json }},
+            "available":  {{ variant.available }},
+            "public_title": " {{ variant.option1 | handleize }}{%- if product.options.size == 2 -%} / {%- endif -%} {{ variant.option2 | handleize }}{%- if product.options.size == 3 -%} / {%- endif -%} {{ variant.option3 | handleize }}",
+            "options":   {{ variant.options | json }},
+            "price":  {{ variant.price | json }},
+            "weight":  {{ variant.weight | json }},
+            "compare_at_price":  {{ variant.compare_at_price | json }},
+            "inventory_quantity":  {{ variant.inventory_quantity | json }},
+            "inventory_management":  {{ variant.inventory_management | json }},
+            "inventory_policy":  {{ variant.inventory_policy | json }},
+            "next_incoming_date": {% if variant.next_incoming_date %}{{variant.next_incoming_date | date: "%Y-%m-%d %H:%M" | time_tag | json }}{% else%}null{% endif %},
+            "barcode":  {{ variant.barcode | json }},
+            "store_availabilities": [
+              {%- for variantStore in variant.store_availabilities -%}
+                {
+                  "location": {
+                    "name": {{ variantStore.location.name | json }},
+                    "address": {{ variantStore.location.address | json }},
+                    "id": {{ variantStore.location.id | json }}
+                  },
+                  "available": {{ variantStore.available | json }},
+                  "pick_up_enabled": {{ variantStore.pick_up_enabled | json }},
+                  "pick_up_time": {{ variantStore.pick_up_time | json }}
+                }{%- if forloop.last == false -%},{%- endif -%}
+              {%- endfor -%}
+            ],
+            "unit_price":  {{ variant.unit_price | json }},
+            "unit_price_measurement":  {
+              "measured_type": {{ variant.unit_price_measurement.measured_type | json }},
+              "quantity_value": {{ variant.unit_price_measurement.quantity_value | json }},
+              "quantity_unit": {{ variant.unit_price_measurement.quantity_unit | json }},
+              "reference_value": {{ variant.unit_price_measurement.reference_value | json }},
+              "reference_unit": {{ variant.unit_price_measurement.reference_unit | json }}
+            }
+          }{%- if forloop.last == false -%},{%- endif -%}
+        {%- endfor -%}
+      ],
+      "featured_image":  {{ product.featured_image | json }},
+      "size_available":[
+        {%- for value in product.options_with_values[0].values -%}
+        {%- assign available_ops = product.variants | where: "available" | where: "option1",value -%}
+          {{available_ops.size}}{%- unless forloop.last %},{% endunless -%}
+        {%- endfor -%}
+      ],
+      "shopColors": {{ shop.metafields.beae.colors }}
+    }
+  </script><script src="https://cdn.beae.com/vendors/js-v2/shopify_option_selection.min.js"></script><!----><script type="text/javascript">window.BEAEARGS['beae-s9joytnwsection-featured-product'] = {
+    "id": "beae-s9joytnw",
+    "mode": {"value": "live"},
+    "reactiveJs":{"value":"igogomi-alps-electric-bike-for-adults-li-ion-6-8ah-350wh-battery-16-tire-foldable-electric-bike-with-dual-disc-break-and-sturmey-archer-electric-bicycles-red","name":"IGOGOMI ALPS 3 folding 7-Speed Electric Bicycles (Red)","id":"7487436193971","thumbnail":"https://cdn.shopify.com/s/files/1/0540/8820/4467/files/0W0A9307-3_6bd9314f-1ca5-4105-8d27-24d43d343f11.jpg?v=1693151039"},"reactiveLength":4
+  };</script> 
+            <!-- <input type="hidden" name="id" value="{{product.selected_or_first_available_variant.id}}" /> -->
+    
+            <input type="hidden" name="sections" value="cart-notification-product,cart-notification-button,cart-icon-bubble">
+            <input type="hidden" name="section_url" value="{{product.handle}}">
+    
+          {%- endform -%}
+    
+            {% assign beae_has_variant_picker = false %}
+            
+            <script type="text/javascript">
+              var afterpay_product_selector = 'afterpay-placement.beae-afterpay-integrate';
+              var afterpay_cart_integration_enabled  = window.afterpay_cart_integration_enabled ||  true;
+              var afterpay_shop_currency = {{ shop.currency | json }};
+              var afterpay_cart_currency = {{ cart.currency.iso_code | json }};
+              var afterpay_shop_money_format = {{ shop.money_format | json }};
+              var afterpay_shop_permanent_domain = {{ shop.permanent_domain | json }};
+              var afterpay_theme_name = {{ theme.name | json }};
+              var afterpay_product = {% if beae_product_json%}{{beae_product_json}}{% else %}{{ product | json }}{% endif %};
+              var afterpay_current_variant = {{ product.selected_or_first_available_variant | json }};
+              var afterpay_cart_total_price = {{ cart.total_price | json }};
+              var afterpay_js_snippet_version = '1.0.10';
+            </script>
+    
+          {%- endif -%}
+
+          {% assign product = tmp_product %}
+        <!----></div><!----><!----><!----><div class="beae-j4o40eut beae-block beae-core beae-animation beae-unique-l4cxdeie" data-id="beae-j4o40eut" data-uniqueid="l4cxdeie""><!----><div class="beae-block beae-x-line"><div class="beae-element"><div class="beae-line beae-line-style" style="display: block;"></div><!----></div></div><!----></div><!----><!----></div></div></div><!----><!----><!----><!----><!----><!----></section><!----><script type="text/javascript">window.BEAEARGS['beae-8dr0o6m2section-js'] = {
+    "id": "beae-8dr0o6m2",
+    "mode": {"value": "live"},
+    "optionsVideo":false,"optionsVideoMobile":false
+  };</script><!----><section id="" data-sectionid="beae-qaq7mu91" data-width="1470" data-margin="30px" data-margin-mobile="15px" data-type="flexContainer" class="beae-typo-p1 beae-qaq7mu91 section-beae-qaq7mu91 beae-section beae-core" data-template="Product detail 19"><!----><!----><div class="beae-flexbox beae-typo-p1" style="padding: 0px;"><div class="beae__section--container beae-flexbox-container" style="max-width: var(--beae-page-width, 1470px);"><!----><div class="beae-flexbox-core beae-x-flex-section grid-container-width"><!----><div class="beae-t9lsqgwz beae-block beae-core beae-animation beae-unique-84ehqjt3 beae-flex-wrapper" data-id="beae-t9lsqgwz" data-uniqueid="84ehqjt3"><!----><!----><!----><div class="beae-sbeatwv0 beae-block beae-core beae-animation beae-unique-cn34vlb6" data-id="beae-sbeatwv0" data-uniqueid="cn34vlb6"><!----><div class="beae-block beae-x-text beae-typo-h5" data-autolayout="beae-sbeatwv0">{{ 'sections.beae-preview-template-product.be191323380_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-f8e0l6c8 beae-block beae-core beae-animation beae-unique-zwu6xh2i" data-id="beae-f8e0l6c8" data-uniqueid="zwu6xh2i"><!----><div class="beae-block beae-x-text beae-typo-p1" data-autolayout="beae-f8e0l6c8">{{ 'sections.beae-preview-template-product.be1341626088_html' | t }}</div><!----><!----></div><!----><!----><!----></div><!----><!----><!----><!----></div></div></div><!----><!----><!----><!----><!----><!----></section><!----><script type="text/javascript">window.BEAEARGS['beae-qaq7mu91section-js'] = {
+    "id": "beae-qaq7mu91",
+    "mode": {"value": "live"},
+    "optionsVideo":false,"optionsVideoMobile":false
+  };</script><!----><section id="" data-sectionid="beae-rfgionln" data-width="1470" data-margin="30px" data-margin-mobile="15px" data-type="flexContainer" class="beae-typo-p1 beae-rfgionln section-beae-rfgionln beae-section beae-core" data-template="Image with text overlay 5"><!----><!----><div class="beae-flexbox beae-typo-p1" style="padding: 0px;"><div class="beae__section--container beae-flexbox-container" style="max-width: var(--beae-page-width, 1470px);"><!----><div class="beae-flexbox-core beae-x-flex-section grid-container-width"><!----><div class="beae-qmp8qhpw beae-block beae-core beae-animation beae-unique-6gkqweg7 beae-flex-wrapper" data-id="beae-qmp8qhpw" data-uniqueid="6gkqweg7"><!----><!----><!----><div class="beae-kxnlcunf beae-block beae-core beae-animation beae-unique-77o2e0g3" data-id="beae-kxnlcunf" data-uniqueid="77o2e0g3"><!----><div class="beae-block beae-x-text beae-typo-p3" data-autolayout="beae-kxnlcunf">{{ 'sections.beae-preview-template-product.be284685552_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-4r0z72r8 beae-block beae-core beae-animation beae-unique-u3x5c97h" data-id="beae-4r0z72r8" data-uniqueid="u3x5c97h"><!----><div class="beae-block beae-x-text beae-typo-h2" data-autolayout="beae-4r0z72r8">{{ 'sections.beae-preview-template-product.be311426514_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-vnjhl803 beae-block beae-core beae-animation beae-unique-n2t5usek" data-id="beae-vnjhl803" data-uniqueid="n2t5usek"><!----><div class="beae-block beae-x-text beae-typo-p2" data-autolayout="beae-vnjhl803">{{ 'sections.beae-preview-template-product.be242786539_html' | t }}</div><!----><!----></div><!----><!----><!----></div><!----><!----></div></div></div><!----><picture image-mode="" class="beae-hdcsr beae-background-image"><!----><img src="https://upload.beae.com/placeholder/background1.svg" alt="background1" width="267" height="150" fetchpriority="high" loading="lazy"></picture><!----><!----><!----><!----><!----></section><!----><script type="text/javascript">window.BEAEARGS['beae-rfgionlnsection-js'] = {
+    "id": "beae-rfgionln",
+    "mode": {"value": "live"},
+    "optionsVideo":{},"optionsVideoMobile":false
+  };</script><!----><section id="" data-sectionid="beae-616f3zph" data-width="1470" data-margin="30px" data-margin-mobile="15px" data-type="flexContainer" class="beae-typo-p1 beae-616f3zph section-beae-616f3zph beae-section beae-core" data-template="Text with icon 6"><!----><!----><div class="beae-flexbox beae-typo-p1" style="padding: 0px;"><div class="beae__section--container beae-flexbox-container" style="max-width: var(--beae-page-width, 1470px);"><!----><div class="beae-flexbox-core beae-x-flex-section grid-container-width"><!----><div class="beae-fhppyjys beae-block beae-core beae-animation beae-unique-87pxelah" data-id="beae-fhppyjys" data-uniqueid="87pxelah""><!----><style type="text/css"></style><div class="beae-slider-wrapper beae-slider slider-beae-fhppyjys items-per-4" data-draggable="true" data-desktop-layout="slider" data-mobile-layout="slider" data-effect="slide" data-pagination="true" data-navigation="false" style="--items-per: 4; --items-per-mobile: 1; --items-gap: 2vmax; --items-gap-mobile: 0vmax; --autoplay-delay: 5s;"><div class="beae-slider-content beae-slider-items"><div data-loop-index="0" class="beae-list-item beae-guy3n7s4"><!----><!----><div class="beae-dnjujo96 beae-block beae-core beae-unique-vxcxmuzl beae-x-icon" data-id="beae-dnjujo96" data-loop-index="0" data-uniqueid="vxcxmuzl"><!----><div class="beae-elm__ic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box" viewBox="0 0 16 16">
+  <path d="M8.186 1.113a.5.5 0 0 0-.372 0L1.846 3.5 8 5.961 14.154 3.5zM15 4.239l-6.5 2.6v7.922l6.5-2.6V4.24zM7.5 14.762V6.838L1 4.239v7.923zM7.443.184a1.5 1.5 0 0 1 1.114 0l7.129 2.852A.5.5 0 0 1 16 3.5v8.662a1 1 0 0 1-.629.928l-7.185 2.874a.5.5 0 0 1-.372 0L.63 13.09a1 1 0 0 1-.63-.928V3.5a.5.5 0 0 1 .314-.464z"></path>
+</svg></div><!----></div><!----><!----><!----><div class="beae-gh051bmm beae-block beae-core beae-unique-cx54q7oq" data-id="beae-gh051bmm" data-loop-index="0" data-uniqueid="cx54q7oq"><!----><div class="beae-block beae-x-text beae-typo-p3" data-autolayout="beae-gh051bmm">{{ 'sections.beae-preview-template-product.be770461890_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-1kbl8gbo beae-block beae-core beae-unique-h8djrovt" data-id="beae-1kbl8gbo" data-loop-index="0" data-uniqueid="h8djrovt"><!----><div class="beae-block beae-x-text beae-typo-p3" data-autolayout="beae-1kbl8gbo">{{ 'sections.beae-preview-template-product.be1045367892_html' | t }}</div><!----><!----></div><!----><!----></div><div data-loop-index="1" class="beae-list-item beae-ylaebifq"><!----><!----><div class="beae-dnjujo96 beae-block beae-core beae-unique-c5a6sz6s beae-x-icon" data-id="beae-dnjujo96" data-loop-index="1" data-uniqueid="c5a6sz6s"><!----><div class="beae-elm__ic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telephone" viewBox="0 0 16 16">
+  <path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.6 17.6 0 0 0 4.168 6.608 17.6 17.6 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.68.68 0 0 0-.58-.122l-2.19.547a1.75 1.75 0 0 1-1.657-.459L5.482 8.062a1.75 1.75 0 0 1-.46-1.657l.548-2.19a.68.68 0 0 0-.122-.58zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"></path>
+</svg></div><!----></div><!----><!----><!----><div class="beae-gh051bmm beae-block beae-core beae-unique-i6wcukoi" data-id="beae-gh051bmm" data-loop-index="1" data-uniqueid="i6wcukoi"><!----><div class="beae-block beae-x-text beae-typo-p3" data-autolayout="beae-gh051bmm">{{ 'sections.beae-preview-template-product.be968386707_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-1kbl8gbo beae-block beae-core beae-unique-it2fyimf" data-id="beae-1kbl8gbo" data-loop-index="1" data-uniqueid="it2fyimf"><!----><div class="beae-block beae-x-text beae-typo-p3" data-autolayout="beae-1kbl8gbo">{{ 'sections.beae-preview-template-product.be315444806_html' | t }}</div><!----><!----></div><!----><!----></div><div data-loop-index="2" class="beae-list-item beae-r9j6k4xr"><!----><!----><div class="beae-dnjujo96 beae-block beae-core beae-unique-67e4joq0 beae-x-icon" data-id="beae-dnjujo96" data-loop-index="2" data-uniqueid="67e4joq0"><!----><div class="beae-elm__ic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-lock" viewBox="0 0 16 16">
+  <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2m3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2M5 8h6a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1"></path>
+</svg></div><!----></div><!----><!----><!----><div class="beae-gh051bmm beae-block beae-core beae-unique-9eczlinf" data-id="beae-gh051bmm" data-loop-index="2" data-uniqueid="9eczlinf"><!----><div class="beae-block beae-x-text beae-typo-p3" data-autolayout="beae-gh051bmm">{{ 'sections.beae-preview-template-product.be1875414653_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-1kbl8gbo beae-block beae-core beae-unique-vishhwto" data-id="beae-1kbl8gbo" data-loop-index="2" data-uniqueid="vishhwto"><!----><div class="beae-block beae-x-text beae-typo-p3" data-autolayout="beae-1kbl8gbo">{{ 'sections.beae-preview-template-product.be1738677981_html' | t }}</div><!----><!----></div><!----><!----></div><div data-loop-index="3" class="beae-list-item beae-280rkvk9"><!----><!----><div class="beae-dnjujo96 beae-block beae-core beae-unique-a0ys7y82 beae-x-icon" data-id="beae-dnjujo96" data-loop-index="3" data-uniqueid="a0ys7y82"><!----><div class="beae-elm__ic"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+  <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"></path>
+</svg></div><!----></div><!----><!----><!----><div class="beae-gh051bmm beae-block beae-core beae-unique-fd79q3nb" data-id="beae-gh051bmm" data-loop-index="3" data-uniqueid="fd79q3nb"><!----><div class="beae-block beae-x-text beae-typo-p3" data-autolayout="beae-gh051bmm">{{ 'sections.beae-preview-template-product.be2133281470_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-1kbl8gbo beae-block beae-core beae-unique-ae7z758o" data-id="beae-1kbl8gbo" data-loop-index="3" data-uniqueid="ae7z758o"><!----><div class="beae-block beae-x-text beae-typo-p3" data-autolayout="beae-1kbl8gbo">{{ 'sections.beae-preview-template-product.be1565901384_html' | t }}</div><!----><!----></div><!----><!----></div></div><div class="beae-slider-controls"><div class="beae-slider-controls-wrp"><!----><!----><div class="beae-slider-pagination-wrp"></div><!----></div></div></div><script type="text/javascript">window.BEAEARGS['beae-fhppyjyssection-slide-show'] = {
+    "id": "beae-fhppyjys",
+    "mode": {"value": "live"},
+    "layout":"slider","layoutMobile":"slider","effect":"slide","isLoop":false,"autoPlay":false,"autoPlayDelay":5,"itemsPerSlide":4,"itemsPerSlideMobile":1,"itemsGap":"2vmax","itemsGapMobile":"0vmax","paginationImage":false,"paginationImageMobile":false,"typeScroll":"default","numItemsScroll":1,"showNavigation":false,"showPagination":true,"showProgress":false,"hookSliderInit":"","hookBeforeSlideChange":"","hookAfterSlideChange":"","noRunJs":false
+  };</script><!----></div><!----><!----></div></div></div><!----><!----><!----><!----><!----><!----></section><!----><script type="text/javascript">window.BEAEARGS['beae-616f3zphsection-js'] = {
+    "id": "beae-616f3zph",
+    "mode": {"value": "live"},
+    "optionsVideo":false,"optionsVideoMobile":false
+  };</script><!----><section id="" data-sectionid="beae-5j1cydg2" data-width="1470" data-margin="30px" data-margin-mobile="15px" data-type="flexContainer" class="beae-typo-p1 beae-5j1cydg2 section-beae-5j1cydg2 beae-section beae-core" data-template="Image banner 2"><!----><!----><div class="beae-flexbox beae-typo-p1" style="padding: 0px;"><div class="beae__section--container beae-flexbox-container" style="max-width: var(--beae-page-width, 1470px);"><!----><div class="beae-flexbox-core beae-x-flex-section grid-container-width"><!----><div class="beae-n2m2iv2t beae-block beae-core beae-animation beae-unique-yxuh19qo" data-id="beae-n2m2iv2t" data-uniqueid="yxuh19qo"><!----><div class="beae-block beae-x-text beae-typo-h6" data-autolayout="beae-n2m2iv2t">{{ 'sections.beae-preview-template-product.be420202974_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-1uwzjbj9 beae-block beae-core beae-animation beae-unique-5642wrw5 beae-flex-wrapper" data-id="beae-1uwzjbj9" data-uniqueid="5642wrw5"><!----><!----><!----><div class="beae-b24xjbou beae-block beae-core beae-animation beae-unique-b09466q0" data-id="beae-b24xjbou" data-uniqueid="b09466q0"><!----><div class="beae-block beae-x-text beae-typo-h6" data-autolayout="beae-b24xjbou">{{ 'sections.beae-preview-template-product.be2070910374_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-ku6dsuoo beae-block beae-core beae-animation beae-unique-7czbv9od beae-flexbox-core beae-x-button" data-id="beae-ku6dsuoo" data-uniqueid="7czbv9od"><!----><a href="#" class="beae-btn-pr beae-button-js"><span class="beae-btn-txt">{{ 'sections.beae-preview-template-product.be354000730_html' | t }} <!----></span></a><!----><script type="text/javascript">window.BEAEARGS['beae-ku6dsuoobutton-js'] = {
+    "id": "beae-ku6dsuoo",
+    "mode": {"value": "live"},
+    "id":"beae-ku6dsuoo","pageContent":"","extendOptions":"{}","type":"pages"
+  };</script><!----></div><!----><!----><!----></div><!----><!----><!----><div class="beae-6kqik79h beae-block beae-core beae-animation beae-unique-gudztnum beae-flex-wrapper" data-id="beae-6kqik79h" data-uniqueid="gudztnum"><!----><!----><!----><div class="beae-8fuvavh8 beae-block beae-core beae-animation beae-unique-e0qt2doy beae-flex-wrapper" data-id="beae-8fuvavh8" data-uniqueid="e0qt2doy"><!----><!----><!----><div class="beae-pauqtt6w beae-block beae-core beae-animation beae-unique-5duqupfw" data-id="beae-pauqtt6w" data-uniqueid="5duqupfw"><!----><div class="beae-block beae-x-text beae-typo-h6" data-autolayout="beae-pauqtt6w">{{ 'sections.beae-preview-template-product.be2070910374_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-0z55wfn7 beae-block beae-core beae-animation beae-unique-kl92bkra beae-flexbox-core beae-x-button" data-id="beae-0z55wfn7" data-uniqueid="kl92bkra"><!----><a href="#" class="beae-btn-pr beae-button-js"><span class="beae-btn-txt">{{ 'sections.beae-preview-template-product.be354000730_html' | t }} <!----></span></a><!----><script type="text/javascript">window.BEAEARGS['beae-0z55wfn7button-js'] = {
+    "id": "beae-0z55wfn7",
+    "mode": {"value": "live"},
+    "id":"beae-0z55wfn7","pageContent":"","extendOptions":"{}","type":"pages"
+  };</script><!----></div><!----><!----><!----></div><!----><!----><!----><div class="beae-27i3yecx beae-block beae-core beae-animation beae-unique-4x7krzrb beae-flex-wrapper" data-id="beae-27i3yecx" data-uniqueid="4x7krzrb"><!----><!----><!----><div class="beae-1swga2fo beae-block beae-core beae-animation beae-unique-y9zd1hnt" data-id="beae-1swga2fo" data-uniqueid="y9zd1hnt"><!----><div class="beae-block beae-x-text beae-typo-h6" data-autolayout="beae-1swga2fo">{{ 'sections.beae-preview-template-product.be2070910374_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-1ot50hwf beae-block beae-core beae-animation beae-unique-zntiam3x beae-flexbox-core beae-x-button" data-id="beae-1ot50hwf" data-uniqueid="zntiam3x"><!----><a href="#" class="beae-btn-pr beae-button-js"><span class="beae-btn-txt">{{ 'sections.beae-preview-template-product.be354000730_html' | t }} <!----></span></a><!----><script type="text/javascript">window.BEAEARGS['beae-1ot50hwfbutton-js'] = {
+    "id": "beae-1ot50hwf",
+    "mode": {"value": "live"},
+    "id":"beae-1ot50hwf","pageContent":"","extendOptions":"{}","type":"pages"
+  };</script><!----></div><!----><!----><!----></div><!----><!----><!----><div class="beae-58vtipcz beae-block beae-core beae-animation beae-unique-rqg4ec3t beae-flex-wrapper" data-id="beae-58vtipcz" data-uniqueid="rqg4ec3t"><!----><!----><!----><div class="beae-m4immdum beae-block beae-core beae-animation beae-unique-7820gqv4" data-id="beae-m4immdum" data-uniqueid="7820gqv4"><!----><div class="beae-block beae-x-text beae-typo-h6" data-autolayout="beae-m4immdum">{{ 'sections.beae-preview-template-product.be2070910374_html' | t }}</div><!----><!----></div><!----><!----><!----><div class="beae-37tlilhv beae-block beae-core beae-animation beae-unique-zdgivu4i beae-flexbox-core beae-x-button" data-id="beae-37tlilhv" data-uniqueid="zdgivu4i"><!----><a href="#" class="beae-btn-pr beae-button-js"><span class="beae-btn-txt">{{ 'sections.beae-preview-template-product.be354000730_html' | t }} <!----></span></a><!----><script type="text/javascript">window.BEAEARGS['beae-37tlilhvbutton-js'] = {
+    "id": "beae-37tlilhv",
+    "mode": {"value": "live"},
+    "id":"beae-37tlilhv","pageContent":"","extendOptions":"{}","type":"pages"
+  };</script><!----></div><!----><!----><!----></div><!----><!----><!----></div><!----><!----></div></div></div><!----><!----><!----><!----><!----><!----></section><!----><script type="text/javascript">window.BEAEARGS['beae-5j1cydg2section-js'] = {
+    "id": "beae-5j1cydg2",
+    "mode": {"value": "live"},
+    "optionsVideo":false,"optionsVideoMobile":false
+  };</script>
+<script type="text/javascript">
+  (() => {
+    let testText = document.createElement('div');
+    testText.innerHTML = 'test';
+    testText.style.fontSize = '100px';
+    document.body.appendChild(testText);
+    let realFontSize = parseFloat(window.getComputedStyle(testText).getPropertyValue('font-size').replace('px', ''));
+    testText.style.zoom = '50%';
+    let detectDesktopRequestMode = window.getComputedStyle(testText).getPropertyValue('font-size') !== '100px';
+    document.body.removeChild(testText);
+    
+    document.body.style.setProperty('--font-size-ratio', (realFontSize / 100).toString());
+
+    function getTextNodesIn(elem) {
+      let textNodes = [];
+      if (elem) {
+        for (var nodes = elem.childNodes, i = nodes.length; i--;) {
+          let node = nodes[i], nodeType = node.nodeType;
+          if (nodeType == 1 || nodeType == 9 || nodeType == 11) {
+            textNodes = textNodes.concat(getTextNodesIn(node));
+          }
+        }
+      }
+      return textNodes;
+    }
+
+    let scaleFitGridBlock = () => {
+
+      document.querySelectorAll('.beae-section.beae-core').forEach((sec) => {
+        let container = sec.querySelector(".beae__section--container");
+        if (!container) { return; };
+        let winWidth = document.documentElement.offsetWidth;
+        if (winWidth >= 768) {
+          sec.querySelectorAll('.beae__section--container').forEach(container => {
+            container.parentNode.style.setProperty("--container-width", container.closest('.grid-container-width') ? container.closest('.grid-container-width').parentNode.offsetWidth+'px' : container.offsetWidth+'px');
+          });
+        }
+      });
+
+      document.querySelectorAll('.beae-grid-block').forEach(block => {
+       let child = block.querySelector('.beae-block.beae-core > *'),
+           zoom = 0,
+           count = 0;
+        child.style.zoom = '';
+        child.style.lineHeight = '';
+        while(child.offsetHeight > block.offsetHeight && count < 14 && (zoom === 0 || block.offsetHeight < (child.offsetHeight*zoom))) {
+            zoom = (block.offsetHeight+block.offsetWidth)/(child.offsetHeight+child.offsetWidth);
+            child.style.zoom = zoom < 1 ? Math.floor(zoom*100)+'%' : '';
+            child.style.lineHeight = '2.4rem';
+            count++;
+        }
+      });
+    };
+
+    scaleFitGridBlock();
+    let timmer = 0;
+    window.addEventListener('resize', () => {
+      clearTimeout(timmer);
+      timmer = setTimeout(scaleFitGridBlock, 150);
+    });
+    window.addEventListener('load', scaleFitGridBlock);
+    
+    if (document.getElementById('beae-exported-page-css')) {
+      document.getElementById('beae-exported-page-css').addEventListener('load', scaleFitGridBlock);
+    }
+
+  })();
+</script>
+</div></div>{% if section_id == section.id %}{% endif%}
+<script id="beae-exported-page-js" src="{{'beae-preview-template-product.js'  | asset_url }}" defer></script>
+
+{% schema %}
+{
+    "name": "BEAE BUILDER APP",
+    "locales": {
+        "en": {
+            "be76480_html": "N\/A",
+            "be427520332_html": "Save { sale }",
+            "be1538363906_html": "Sold Out",
+            "be1066872809_html": "Save {{ sale }}%",
+            "be2569319_html": "Sale",
+            "be1203385433_html": "Pickup available at {{ location_name }}",
+            "be1121680012_html": "Pickup currently unavailable at {{ location_name }}",
+            "be1358949576_html": "View store info",
+            "be260978430_html": "Check availability at other stores",
+            "be1316440194_html": "{{ pickup_icon }} Pickup available, {{ pick_up_time }}",
+            "be1961221788_html": "{{ unavailable_icon }} Pickup currently unavailable at {{ location_name }}",
+            "be430210269_html": "Tax included. ",
+            "be198651612937_html": "Shipping<\/a>  calculated at checkout.",
+            "be2255103_html": "Home",
+            "be77694213_html": "Untitled",
+            "be978022322_html": "From {{ price_min }}",
+            "be1950827197_html": "{{ price_normal }}",
+            "be2106552512_html": "About this product",
+            "be1424141121_html": "Product specifications",
+            "be1090008910_html": "Essential Parts",
+            "be1816794871_html": "The core elements of your furniture.",
+            "be239687581_html": "Fixings &amp; Connectors",
+            "be1763297579_html": "Everything you need\u2014no extra tools required.",
+            "be1350586535_html": "Setup Guide",
+            "be2119991564_html": "Step-by-step instructions with clear visuals.",
+            "be540704119_html": "Included Tools",
+            "be1557517536_html": "Basic tools may be provided for convenience.",
+            "be1815338600_html": "Guarantee",
+            "be2144769239_html": "Backed by a lifetime warranty.",
+            "be2547421_html": "SKU:",
+            "be981756329362_html": "Introducing the Benson Leather Chair \u2013 where timeless elegance meets modern comfort. Crafted with meticulous attention to detail and premium materials, this chair is designed to elevate any space with its sophisticated charm and luxurious feel.<br><br><div>This demo store does not offer goods for purchase. All products and images kindly provided by IKEA.<\/div>",
+            "be1381492177_html": "In stock ({quantity})",
+            "be1597998112_html": "Low stock ({quantity})",
+            "be1377618486_html": "Very low stock ({quantity})",
+            "be28375103_html": "Out of stock",
+            "be912676988_html": "Pre-order",
+            "be1494994701_html": "Back in stock {next_incoming_date}",
+            "be649020154_html": "Add to cart",
+            "be1182278043_html": "Added to cart",
+            "be1538394658_html": "Sold out",
+            "be1427617666_html": "Added to cart successfully",
+            "be719299147_html": "Choose options",
+            "be76139998_html": "Still deciding?",
+            "be545332739_html": "Free shipping on all U.S. orders of $40+",
+            "be498670068_html": "Easy returns and exchanges",
+            "be1786856931_html": "60 night money back guarantee",
+            "be201276707226_html": "Shop your favorite tech accessories and get free shipping when you spend $40 or more\u2014no codes, no hassle! Stay powered up and connected with fast, reliable delivery.<div><br><\/div><div>\ud83d\uded2 Shop Now &amp; Save on Shipping!<\/div>",
+            "be1090699532222_html": "Not completely satisfied? No worries! We offer easy returns and exchanges to make sure you get exactly what you need. Shop with confidence, knowing we\u2019ve got you covered.<div><br><\/div><div>\ud83d\udca1 Shop Stress-Free Today!<\/div>",
+            "be1222693547192_html": "Try it risk-free! If you\u2019re not satisfied within 60 nights, we\u2019ll give you a full refund\u2014no questions asked. Your satisfaction is our priority!<div><br><\/div><div>\u2705 Shop with Confidence!<\/div>",
+            "be1231792689_html": "Pairs well with",
+            "be65290051_html": "Color",
+            "be402291331_html": "Payment &amp; Security",
+            "be1233088897_html": "Your payment information is processed securely. We do not store credit card details nor have access to your credit card information.",
+            "be1819699109_html": "Share:",
+            "be762197622_html": "Link copied",
+            "be191323380_html": "You may also like",
+            "be1341626088_html": "Describe your featured collection here",
+            "be284685552_html": "Add a tagline",
+            "be311426514_html": "Image with text overlay",
+            "be242786539_html": "Pair text with an image to focus on your chosen product, collection, or blog post. Add details on availability, style, or even provide a review.",
+            "be165214872_html": "Add a tag line",
+            "be1942531745_html": "Image with text columns",
+            "be2023997302_html": "Column",
+            "be347608833128_html": "Pair text with an image to focus on your chosen product, collection, or blog post.<div>Add details on availability, style.<\/div>",
+            "be770461890_html": "Free shipping",
+            "be1045367892_html": "Free worldwide shipping and returns - customs and duties taxes included",
+            "be968386707_html": "Customer service",
+            "be315444806_html": "We are available from monday to friday to answer your questions.",
+            "be1875414653_html": "Secure payment",
+            "be1738677981_html": "Your payment information is processed securely.",
+            "be2133281470_html": "Contact us",
+            "be1565901384_html": "Need to contact us ? Just send us an e-mail at info@yourstore.com",
+            "be420202974_html": "Media grid",
+            "be2070910374_html": "Media heading",
+            "be354000730_html": "Button label"
+        }
+    },
+    "settings": [
+        {
+            "type": "header",
+            "content": "The section was generated by BEAE BUILDER",
+            "info": "\n                        Beae is a flexible page builder app on Shopify AppStore.\n                        It provides 100+ Shopify Elements and pre-built templates library, \n                        so you can build unlimited pages that you can imagine with it.\n                    "
+        },
+        {
+            "type": "header",
+            "content": "[EDIT WITH BEAE APP \u2192](https:\/\/50off-app.myshopify.com\/admin\/apps\/beae-flexible-page-builder\/next\/editor-v2\/product\/preview-template-product)",
+            "info": "(*You must install the app to start editing this section [Learn more](https:\/\/docs.beae.com\/en\/article\/quick-start-guide-dkoesy\/))"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "@app"
+        }
+    ]
+}
+{% endschema %}

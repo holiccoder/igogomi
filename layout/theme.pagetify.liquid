@@ -1,0 +1,70 @@
+<!doctype html>
+<html
+  class="
+    no-js
+    {{ settings.layout_space_between_sections }}
+    {{ settings.layout_space_between_blocks }}
+    {% if settings.enable_reveal_on_scroll_animations %}
+      scroll-animations-enabled
+    {% endif %}
+    {% if settings.enable_zoom_in_animations %}
+      image-hover-zoom-enabled
+    {% endif %}
+  "
+  lang="{{ request.locale.iso_code }}"
+>
+  <head>
+<!-- BEAE-GLOBAL-FONT --> 
+{% capture the_snippet_global_font %}{% include 'beae-global-font' %}{% endcapture %} {% unless the_snippet_global_font contains 'Liquid error' %} {{ the_snippet_global_font }} {% endunless %} 
+ <!-- END BEAE-GLOBAL-FONT -->
+<!-- BEAE-HEADER --> 
+{%- render 'beae_header' -%}
+<!-- END BEAE-HEADER -->
+ {%- render 'ecom_header' -%}
+ {%- render 'layouthub_header' -%}
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+
+    {% if settings.favicon != blank %}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {% endif %}
+
+    <title>
+      {{ page_title -}}
+      {%- if current_tags %} – tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} – Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} – {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {% render 'meta-tags' %}
+
+    <script type="module" src="{{ 'vendor.mjs' | asset_url }}" defer></script>
+    <script type="module" src="{{ 'main.mjs' | asset_url }}" defer></script>
+
+    {{ content_for_header }}
+
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
+
+    {% liquid
+      render 'theme-css-colors'
+      render 'theme-css-typography'
+      render 'theme-css-layout'
+      render 'theme-css-appearance'
+      render 'theme-css-icons'
+    %}
+
+    {{ 'main.css' | asset_url | stylesheet_tag }}
+  {% include 'dadao_reviews_core.liquid' %}
+{% include 'pagefly-app-header' %}</head>
+  <body>{{ content_for_layout }}</body>
+</html>

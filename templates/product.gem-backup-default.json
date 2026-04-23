@@ -1,0 +1,344 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "70fc43fe-06b6-415f-b0c3-557197d434bb": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "07b2f4eb-d5bd-46bf-8ef7-7c3a9dbff7b7": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3",
+            "content": "{{ product.title }}",
+            "text_color": "rgba(0,0,0,0)"
+          }
+        },
+        "946375dc-aa95-407e-a9cd-35be355f8dc4": {
+          "type": "rating",
+          "disabled": true,
+          "settings": {
+            "show_empty_rating": false,
+            "star_size": 24
+          }
+        },
+        "c0b62d1f-e562-4b86-84cb-fc22c849e93e": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false,
+            "use_bold_font": true
+          }
+        },
+        "afterpay_on_site_messaging_payments_messaging_4rD3UH": {
+          "type": "shopify:\/\/apps\/afterpay-on-site-messaging\/blocks\/payments-messaging\/f45a5524-d177-4475-bf59-281efd2215a8",
+          "settings": {
+            "text_align": "inherit",
+            "margin_top": 16,
+            "margin_bottom": 16,
+            "color": "",
+            "size": "md",
+            "intro_text": "or",
+            "show_interest_free": true,
+            "payment_amount_is_bold": true,
+            "show_with": true,
+            "logo_type": "badge",
+            "logo_theme": "black-on-mint",
+            "modal_link_style": "circled-info-icon",
+            "modal_theme": "mint",
+            "breakpoint": 749,
+            "text_align_mobile": "inherit",
+            "margin_top_mobile": 16,
+            "margin_bottom_mobile": 16,
+            "show_lower_limit": true,
+            "show_upper_limit": true,
+            "show_if_outside_limits": true,
+            "product": "{{product}}"
+          }
+        },
+        "4923f5c8-62d3-42db-a835-6e0613c4a182": {
+          "type": "payment_installments",
+          "settings": {}
+        },
+        "5a84f252-bc58-4ca7-8b59-5a727a61c21f": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": false,
+            "type": "radio",
+            "color_picker_type": "radio-swatch",
+            "block_style_rounded": true,
+            "block_style": "outlined",
+            "size_chart_page": "",
+            "size_chart_option_name": "Size"
+          }
+        },
+        "f4eea022-78fd-4497-ab68-10cbc86fe6b4": {
+          "type": "inventory",
+          "settings": {
+            "enable_low_stock_message": true,
+            "enable_backorder_message": false,
+            "low_stock_threshold": 5
+          }
+        },
+        "0f473fb4-422c-40a7-8c15-2fd164440f80": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "iconic_product_features_app_block_XWt9aA": {
+          "type": "shopify:\/\/apps\/iconic-descriptions-that-sell\/blocks\/app-block\/387daf25-20f1-4518-ae49-2f522c6817c7",
+          "settings": {
+            "max_width": 530,
+            "background_color": "",
+            "border_radius": 18,
+            "box_shadow": true,
+            "margin_top": 12,
+            "margin_bottom": 28,
+            "font_size": 15,
+            "text_color": "",
+            "icon_size": 31,
+            "icon_color": "",
+            "list_item_width": 13,
+            "hide_payment_icons": false,
+            "payment_bg_color": "#f8f8f8"
+          }
+        },
+        "text_XYgKJ8": {
+          "type": "text",
+          "settings": {
+            "content": "<p>Enter your content here<\/p>"
+          }
+        },
+        "text_zUHpG8": {
+          "type": "text",
+          "settings": {
+            "content": "<ul><li><br\/>【The IGOGOMI Fold】All the benefits of an E-bike has packed into the original 3-part fold. It takes around 25-seconds to transform your bike into a small compact package (26 ×  13  × 28.7 inches )（L × W × H）,that you can tow, stow and carry anywhere. Travels on rush-hour trains, metros, underground, overground, car trunks, and cabs. There is no need to leave it outside. Just enjoy the ride<br\/><\/li><li><br\/>【Your ride, You decide】 Customize your ride performance with 3 riding modes. Go full throttle up to 19 mile\/h on battery power alone. But the IGOGOMI folding bike also rides like a traditional pedal-only bicycle. Need some extra oomph? Turn on the pedal-to-go for a boost of electric power as you pedal. It simplifies the riding experience for you.<br\/><\/li><li><br\/>【Charge on the go】The compact IGOGOMI Electric 36V \/ 6.8Ah lithium-ion battery packs in the power. The range is 25-35miles. Charging it is just as simple as plugging in your phone. Plug into any standard outlet and fully charge in 4 hours. <br\/><\/li><li><br\/>【The IGOGOMI Fold】All the benefits of an E-bike has packed into the original 3-part fold. It takes around 25-seconds to transform your bike into a small compact package (26 ×  13  × 28.7 inches )（L × W × H）,that you can tow, stow and carry anywhere. Travels on rush-hour trains, metros, underground, overground, car trunks, and cabs. There is no need to leave it outside. Just enjoy the ride<br\/><\/li><li><br\/>【Your ride, You decide】 Customize your ride performance with 3 riding modes. Go full throttle up to 19 mile\/h on battery power alone. But the IGOGOMI folding bike also rides like a traditional pedal-only bicycle. Need some extra oomph? Turn on the pedal-to-go for a boost of electric power as you pedal. It simplifies the riding experience for you.<br\/><\/li><li><br\/>【Charge on the go】The compact IGOGOMI Electric 36V \/ 6.8Ah lithium-ion battery packs in the power. The range is 25-35miles. Charging it is just as simple as plugging in your phone. Plug into any standard outlet and fully charge in 4 hours. <br\/><\/li><\/ul><p><\/p>"
+          }
+        },
+        "a730fe0e-baa3-47bc-90c9-21c5a5d75f2d": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout_buttons": true,
+            "show_gift_card_recipient": true,
+            "add_to_cart_background_color": "rgba(0,0,0,0)",
+            "add_to_cart_text_color": "rgba(0,0,0,0)",
+            "buy_it_now_background_color": "rgba(0,0,0,0)",
+            "buy_it_now_text_color": "rgba(0,0,0,0)"
+          }
+        },
+        "sami_product_labels_app_block_banner_a7xCzJ": {
+          "type": "shopify:\/\/apps\/sami-product-labels\/blocks\/app-block-banner\/b9b44663-5d51-4be1-8104-faedd68da8c5",
+          "disabled": true,
+          "settings": {
+            "shortcode": "<div class=\"samitaPL-banner\" data-id=\"false\"><\/div>"
+          }
+        },
+        "judge_me_reviews_preview_badge_P4YxBe": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/preview_badge\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "70fc43fe-06b6-415f-b0c3-557197d434bb",
+        "07b2f4eb-d5bd-46bf-8ef7-7c3a9dbff7b7",
+        "946375dc-aa95-407e-a9cd-35be355f8dc4",
+        "c0b62d1f-e562-4b86-84cb-fc22c849e93e",
+        "afterpay_on_site_messaging_payments_messaging_4rD3UH",
+        "4923f5c8-62d3-42db-a835-6e0613c4a182",
+        "5a84f252-bc58-4ca7-8b59-5a727a61c21f",
+        "f4eea022-78fd-4497-ab68-10cbc86fe6b4",
+        "0f473fb4-422c-40a7-8c15-2fd164440f80",
+        "iconic_product_features_app_block_XWt9aA",
+        "text_XYgKJ8",
+        "text_zUHpG8",
+        "a730fe0e-baa3-47bc-90c9-21c5a5d75f2d",
+        "sami_product_labels_app_block_banner_a7xCzJ",
+        "judge_me_reviews_preview_badge_P4YxBe"
+      ],
+      "settings": {
+        "show_breadcrumbs": false,
+        "desktop_media_width": 56,
+        "media_size": "",
+        "media_layout_desktop": "carousel_vertical",
+        "media_mobile_indicator": "thumbnails",
+        "media_zoom": "lightbox",
+        "media_enable_video_autoplay": false,
+        "media_enable_video_looping": true,
+        "media_fit_height": true,
+        "show_sticky_add_to_cart": true,
+        "sticky_add_to_cart_position": "right",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "",
+        "heading_color": ""
+      }
+    },
+    "main-details": {
+      "type": "main-product-details",
+      "blocks": {
+        "5bbfd876-e943-47d3-b984-06f967dfd314": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "collapse_content": true,
+            "collapse_open": true,
+            "heading": ""
+          }
+        },
+        "096eee3c-a9d6-48a0-b676-2f8ecf38fe75": {
+          "type": "collapsible_content",
+          "disabled": true,
+          "settings": {
+            "collapse_open": false,
+            "heading": "Collapsible content",
+            "content": "<p>Provide your customers with additional information about the product.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "5bbfd876-e943-47d3-b984-06f967dfd314",
+        "096eee3c-a9d6-48a0-b676-2f8ecf38fe75"
+      ],
+      "settings": {}
+    },
+    "707982550206770871": {
+      "type": "apps",
+      "blocks": {
+        "600ffcbc-1c34-48a7-bea5-92100033f940": {
+          "type": "shopify:\/\/apps\/dadao-product-reviews\/blocks\/product-reviews\/3cc4253a-05eb-4164-8778-b76d83ce00cc",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}",
+            "show_sample_reviews": true
+          }
+        }
+      },
+      "block_order": [
+        "600ffcbc-1c34-48a7-bea5-92100033f940"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": false,
+        "remove_vertical_space": false,
+        "background_color": "",
+        "text_color": ""
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "full_width": true,
+        "carousel": true,
+        "products_count": 8,
+        "grid_columns": 4,
+        "grid_columns_mobile": "2",
+        "subheading": "",
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "content": "",
+        "text_alignment": "text-center",
+        "background_color": "",
+        "text_color": "",
+        "heading_color": ""
+      }
+    },
+    "175304807241628503": {
+      "type": "apps",
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": false,
+        "remove_vertical_space": false,
+        "background_color": "",
+        "text_color": ""
+      }
+    },
+    "465920484447377053": {
+      "type": "apps",
+      "blocks": {
+        "84169b56-4bd7-4e11-922d-4e1388de6624": {
+          "type": "shopify:\/\/apps\/dadao-product-reviews\/blocks\/featured-reviews\/3cc4253a-05eb-4164-8778-b76d83ce00cc",
+          "disabled": true,
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "84169b56-4bd7-4e11-922d-4e1388de6624"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": false,
+        "remove_vertical_space": false,
+        "background_color": "",
+        "text_color": ""
+      }
+    },
+    "056814114181598817": {
+      "type": "apps",
+      "blocks": {
+        "0e5a08b6-94ef-49ad-9a56-c672fc29a5bd": {
+          "type": "shopify:\/\/apps\/dadao-product-reviews\/blocks\/faq\/3cc4253a-05eb-4164-8778-b76d83ce00cc",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "0e5a08b6-94ef-49ad-9a56-c672fc29a5bd"
+      ],
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": false,
+        "remove_vertical_space": false,
+        "background_color": "",
+        "text_color": ""
+      }
+    },
+    "1753548029682b9335": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": false,
+        "remove_vertical_space": false,
+        "background_color": "",
+        "text_color": ""
+      }
+    },
+    "1773287482654f8cf7": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_dY94MK": {
+          "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/review_widget\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_dY94MK"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": false,
+        "remove_vertical_space": false,
+        "background_color": "",
+        "text_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main-details",
+    "707982550206770871",
+    "related-products",
+    "175304807241628503",
+    "465920484447377053",
+    "056814114181598817",
+    "1753548029682b9335",
+    "1773287482654f8cf7"
+  ]
+}

@@ -1,0 +1,329 @@
+{% comment %}
+  Section: igogomi-community-highlights.liquid
+  Place in: sections/
+{% endcomment %}
+
+<style>
+  .igomi-carou-section-wrapper {
+    padding: 40px 20px;
+    text-align: center;
+  }
+
+  .igomi-carou-section-wrapper h2 {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+  }
+
+  .igomi-carou-canvas-area {
+    width: 100vw;
+    background: #ffffff;
+    padding: 40px 0;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    position: relative;
+    overflow: hidden;
+    margin-left: calc(-50vw + 50%);
+  }
+
+  .igomi-carou-marquee-row {
+    overflow: hidden;
+    margin: 10px 0;
+  }
+
+  .igomi-carou-marquee-track {
+    display: flex;
+    width: max-content;
+    animation: igomi-scroll-left 30s linear infinite;
+  }
+
+  .igomi-carou-marquee-track.igomi-carou-reverse {
+    animation-name: igomi-scroll-right;
+  }
+
+  .igomi-carou-canvas-area:hover .igomi-carou-marquee-track {
+    animation-play-state: paused;
+  }
+
+  .igomi-carou-marquee-track img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin: 0 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+    filter: grayscale(30%);
+  }
+
+  .igomi-carou-marquee-track img:hover {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+  }
+
+  @keyframes igomi-scroll-left {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+  }
+
+  @keyframes igomi-scroll-right {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0); }
+  }
+
+  .igomi-carou-modal {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.95);
+    backdrop-filter: blur(5px);
+    justify-content: center;
+    align-items: center;
+  }
+
+  .igomi-carou-modal-content-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    max-width: 1000px;
+  }
+
+  .igomi-carou-modal-img {
+    max-width: 100%;
+    max-height: 80vh;
+    border-radius: 8px;
+    box-shadow: 0 0 30px rgba(0,0,0,1);
+    border: 2px solid #444;
+  }
+
+  .igomi-carou-nav-btn {
+    background: rgba(255,255,255,0.1);
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 50%;
+    transition: background 0.2s;
+  }
+
+  .igomi-carou-nav-btn:hover { background: rgba(255,255,255,0.3); }
+  .igomi-carou-prev { left: -80px; }
+  .igomi-carou-next { right: -80px; }
+
+  .igomi-carou-close-btn {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    color: #fff;
+    font-size: 35px;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .igomi-carou-prev { left: 10px; }
+    .igomi-carou-next { right: 10px; }
+    .igomi-carou-marquee-track img { width: 200px; height: 200px; }
+  }
+</style>
+
+{%- assign row1_images = section.settings.row1_images | split: ',' -%}
+{%- assign row2_images = section.settings.row2_images | split: ',' -%}
+{%- assign row3_images = section.settings.row3_images | split: ',' -%}
+
+{%- assign default_row1 = "https://cdn.shopify.com/s/files/1/0540/8820/4467/files/nanobanana-image-1775842134627.jpg?v=1775884933,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/Rectangle_3034.png?v=1773769091,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/Rectangle_3169.png?v=1773769091,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/Electronic_shifting_for_road_bike._Derailleur_1.png?v=1773769091,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/02_9b14fb31-04d1-4eb2-968a-404a086502ca.jpg?v=1776844812,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/01_11c39036-54fb-4415-9294-69a176a92cae.jpg?v=1776844812,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/12.jpg?v=1776845487,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/02_308c59d6-d615-4ac5-93cb-675c9bd77c0e.jpg?v=1776845487" -%}
+
+{%- assign default_row2 = "https://cdn.shopify.com/s/files/1/0540/8820/4467/files/08.jpg?v=1776845487,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/09.jpg?v=1776845487,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/09.jpg?v=1776845487,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/10.jpg?v=1776845487,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/11_47ca3e79-7d59-4fa4-bfd1-7b9ed057c3c9.jpg?v=1776845486,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/08.jpg?v=1776845487,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/09.jpg?v=1776845487,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/09.jpg?v=1776845487" -%}
+
+{%- assign default_row3 = "https://cdn.shopify.com/s/files/1/0540/8820/4467/files/nanobanana-image-1775842134627.jpg?v=1775884933,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/Rectangle_3034.png?v=1773769091,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/Rectangle_3169.png?v=1773769091,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/Electronic_shifting_for_road_bike._Derailleur_1.png?v=1773769091,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/02_9b14fb31-04d1-4eb2-968a-404a086502ca.jpg?v=1776844812,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/01_11c39036-54fb-4415-9294-69a176a92cae.jpg?v=1776844812,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/12.jpg?v=1776845487,https://cdn.shopify.com/s/files/1/0540/8820/4467/files/02_308c59d6-d615-4ac5-93cb-675c9bd77c0e.jpg?v=1776845487" -%}
+
+{%- if row1_images.size <= 1 and row1_images[0] == blank -%}
+  {%- assign row1_images = default_row1 | split: ',' -%}
+{%- endif -%}
+{%- if row2_images.size <= 1 and row2_images[0] == blank -%}
+  {%- assign row2_images = default_row2 | split: ',' -%}
+{%- endif -%}
+{%- if row3_images.size <= 1 and row3_images[0] == blank -%}
+  {%- assign row3_images = default_row3 | split: ',' -%}
+{%- endif -%}
+
+<div class="igomi-carou-section-wrapper">
+  <h2>{{ section.settings.heading }}</h2>
+</div>
+
+<div class="igomi-carou-canvas-area" id="igomi-carou-{{ section.id }}">
+  <div class="igomi-carou-marquee-row">
+    <div class="igomi-carou-marquee-track" data-track data-row="0" data-speed="30" style="animation-duration: 30s;">
+      {%- for img in row1_images -%}
+        {%- assign src = img | strip -%}
+        <img src="{{ src }}" alt="Community photo {{ forloop.index }}" width="200" height="200" loading="lazy">
+      {%- endfor -%}
+      {%- for img in row1_images -%}
+        {%- assign src = img | strip -%}
+        <img src="{{ src }}" alt="Community photo {{ forloop.index }}" width="200" height="200" loading="lazy" aria-hidden="true">
+      {%- endfor -%}
+    </div>
+  </div>
+  <div class="igomi-carou-marquee-row">
+    <div class="igomi-carou-marquee-track igomi-carou-reverse" data-track data-row="1" data-speed="34" style="animation-duration: 34s;">
+      {%- for img in row2_images -%}
+        {%- assign src = img | strip -%}
+        <img src="{{ src }}" alt="Community photo {{ forloop.index }}" width="200" height="200" loading="lazy">
+      {%- endfor -%}
+      {%- for img in row2_images -%}
+        {%- assign src = img | strip -%}
+        <img src="{{ src }}" alt="Community photo {{ forloop.index }}" width="200" height="200" loading="lazy" aria-hidden="true">
+      {%- endfor -%}
+    </div>
+  </div>
+  <div class="igomi-carou-marquee-row">
+    <div class="igomi-carou-marquee-track" data-track data-row="2" data-speed="38" style="animation-duration: 38s;">
+      {%- for img in row3_images -%}
+        {%- assign src = img | strip -%}
+        <img src="{{ src }}" alt="Community photo {{ forloop.index }}" width="200" height="200" loading="lazy">
+      {%- endfor -%}
+      {%- for img in row3_images -%}
+        {%- assign src = img | strip -%}
+        <img src="{{ src }}" alt="Community photo {{ forloop.index }}" width="200" height="200" loading="lazy" aria-hidden="true">
+      {%- endfor -%}
+    </div>
+  </div>
+</div>
+
+<div id="igomi-carou-modal-{{ section.id }}" class="igomi-carou-modal">
+  <div class="igomi-carou-modal-content-wrapper">
+    <span class="igomi-carou-close-btn">&times;</span>
+    <button class="igomi-carou-nav-btn igomi-carou-prev">&#10094;</button>
+    <img class="igomi-carou-modal-img" src="" alt="Zoomed view" width="1000" height="800">
+    <button class="igomi-carou-nav-btn igomi-carou-next">&#10095;</button>
+  </div>
+</div>
+
+<script>
+(function() {
+  var sectionId = {{ section.id | json }};
+  var canvas = document.getElementById('igomi-carou-' + sectionId);
+  var modal = document.getElementById('igomi-carou-modal-' + sectionId);
+  var fullImg = modal.querySelector('.igomi-carou-modal-img');
+  var closeBtn = modal.querySelector('.igomi-carou-close-btn');
+  var nextBtn = modal.querySelector('.igomi-carou-next');
+  var prevBtn = modal.querySelector('.igomi-carou-prev');
+
+  var rowImageSources = [
+    {{ row1_images | json }},
+    {{ row2_images | json }},
+    {{ row3_images | json }}
+  ];
+
+  var currentIndex = 0;
+  var activeImageSources = rowImageSources[0];
+
+  // Attach click handlers to all non-aria-hidden images
+  var tracks = canvas.querySelectorAll('[data-track]');
+  tracks.forEach(function(track) {
+    var rowIndex = parseInt(track.getAttribute('data-row'), 10);
+    var imgs = track.querySelectorAll('img:not([aria-hidden])');
+    imgs.forEach(function(img, idx) {
+      img.addEventListener('click', function() {
+        openModal(rowIndex, idx);
+      });
+    });
+  });
+
+  function openModal(rowIndex, index) {
+    activeImageSources = rowImageSources[rowIndex] || rowImageSources[0];
+    currentIndex = index % activeImageSources.length;
+    fullImg.src = activeImageSources[currentIndex];
+    modal.style.display = 'flex';
+  }
+
+  function closeModal() {
+    modal.style.display = 'none';
+  }
+
+  function nextImage(e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex + 1) % activeImageSources.length;
+    fullImg.src = activeImageSources[currentIndex];
+  }
+
+  function prevImage(e) {
+    e.stopPropagation();
+    currentIndex = (currentIndex - 1 + activeImageSources.length) % activeImageSources.length;
+    fullImg.src = activeImageSources[currentIndex];
+  }
+
+  closeBtn.addEventListener('click', closeModal);
+  nextBtn.addEventListener('click', nextImage);
+  prevBtn.addEventListener('click', prevImage);
+
+  modal.addEventListener('click', function(e) {
+    if (e.target === modal) closeModal();
+  });
+
+  document.addEventListener('keydown', function(e) {
+    if (modal.style.display === 'flex') {
+      if (e.key === 'ArrowRight') nextImage(e);
+      if (e.key === 'ArrowLeft') prevImage(e);
+      if (e.key === 'Escape') closeModal();
+    }
+  });
+})();
+</script>
+
+{% schema %}
+{
+  "name": "Community Highlights",
+  "tag": "div",
+  "class": "igogomi-community-highlights",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Community Highlights"
+    },
+    {
+      "type": "header",
+      "content": "Row 1 Images"
+    },
+    {
+      "type": "textarea",
+      "id": "row1_images",
+      "label": "Row 1 — Image URLs (comma-separated)",
+      "info": "Paste full CDN URLs separated by commas. Leave blank to use defaults."
+    },
+    {
+      "type": "header",
+      "content": "Row 2 Images"
+    },
+    {
+      "type": "textarea",
+      "id": "row2_images",
+      "label": "Row 2 — Image URLs (comma-separated)",
+      "info": "Paste full CDN URLs separated by commas. Leave blank to use defaults."
+    },
+    {
+      "type": "header",
+      "content": "Row 3 Images"
+    },
+    {
+      "type": "textarea",
+      "id": "row3_images",
+      "label": "Row 3 — Image URLs (comma-separated)",
+      "info": "Paste full CDN URLs separated by commas. Leave blank to use defaults."
+    }
+  ],
+  "presets": [
+    {
+      "name": "Community Highlights"
+    }
+  ]
+}
+{% endschema %}
