@@ -1,0 +1,143 @@
+<style>
+  .product-specs {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px 40px;
+    padding: 30px 0;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .product-specs__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    min-width: 0;
+  }
+
+  .product-specs__icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+  }
+
+  .product-specs__text small {
+    display: block;
+    color: #888;
+    font-size: 13px;
+    margin-bottom: 3px;
+  }
+
+  .product-specs__text strong {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+  }
+
+  @media (max-width: 991px) {
+    .product-specs {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+  }
+
+  @media (max-width: 575px) {
+    .product-specs {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      padding: 24px 0;
+    }
+  }
+</style>
+
+<div class="product-specs" aria-label="Product specifications">
+  <div class="product-specs__item">
+    <svg class="product-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/>
+    </svg>
+    <div class="product-specs__text">
+      <small>Acceleration</small>
+      <strong>0.9s 0-10mph</strong>
+    </div>
+  </div>
+
+  <div class="product-specs__item">
+    <svg class="product-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M12 8v4l3 2"/>
+    </svg>
+    <div class="product-specs__text">
+      <small>Mid-Drive Motor</small>
+      <strong>4160W Peak</strong>
+    </div>
+  </div>
+
+  <div class="product-specs__item">
+    <svg class="product-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M8 12h8M12 8v8"/>
+    </svg>
+    <div class="product-specs__text">
+      <small>Torque</small>
+      <strong>190N·m</strong>
+    </div>
+  </div>
+
+  <div class="product-specs__item">
+    <svg class="product-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M4 16a8 8 0 0 1 16 0"/>
+      <line x1="12" y1="12" x2="16" y2="10"/>
+    </svg>
+    <div class="product-specs__text">
+      <small>Top Speed</small>
+      <strong>45MPH</strong>
+    </div>
+  </div>
+
+  <div class="product-specs__item">
+    <svg class="product-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <path d="M12 21s-6-5.5-6-10a6 6 0 1 1 12 0c0 4.5-6 10-6 10z"/>
+      <circle cx="12" cy="11" r="2"/>
+    </svg>
+    <div class="product-specs__text">
+      <small>Max Range</small>
+      <strong>50 Miles</strong>
+    </div>
+  </div>
+
+  <div class="product-specs__item">
+    <svg class="product-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <rect x="4" y="6" width="14" height="12"/>
+      <line x1="20" y1="10" x2="20" y2="14"/>
+    </svg>
+    <div class="product-specs__text">
+      <small>Battery</small>
+      <strong>52V 26Ah</strong>
+    </div>
+  </div>
+
+  <div class="product-specs__item">
+    <svg class="product-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <circle cx="12" cy="12" r="9"/>
+      <circle cx="12" cy="12" r="3"/>
+    </svg>
+    <div class="product-specs__text">
+      <small>Off-Road Tire</small>
+      <strong>F14&quot;/R12&quot;</strong>
+    </div>
+  </div>
+
+  <div class="product-specs__item">
+    <svg class="product-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M9 12l2 2 4-4"/>
+    </svg>
+    <div class="product-specs__text">
+      <small>Safety Protection</small>
+      <strong>Magnetic Switch</strong>
+    </div>
+  </div>
+</div>
+

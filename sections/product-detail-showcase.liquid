@@ -24,7 +24,7 @@
   }
 
   .igomi-container-wrapper {
-            max-width: 1200px;
+            max-width: 1920px;
             margin: 0 auto;
             overflow: hidden;
         }
@@ -40,6 +40,7 @@
             width: 100%;
             height: auto;
             display: block;
+            border-radius: 12px;
         }
 
         .igomi-banner-overlay {
@@ -62,6 +63,15 @@
             top: auto;
             bottom: 8%;
             transform: none;
+        }
+
+        @media (max-width: 767px) {
+            .igomi-banner-overlay--mobile-top-left {
+                top: 5%;
+                bottom: auto;
+                left: 5%;
+                transform: none;
+            }
         }
 
         /* Feature Sections */
@@ -244,6 +254,11 @@
         <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomi01_1d108719-d7e9-447a-a694-0f8a638b9653.jpg" alt="{{ section.settings.banner1_alt }}" width="1200" height="600" loading="eager">
       {% endif %}
     </picture>
+    {% if section.settings.banner1_overlay_text != blank %}
+      <div class="igomi-banner-overlay igomi-banner-overlay--bottom igomi-banner-overlay--mobile-top-left">
+        <h2>{{ section.settings.banner1_overlay_text | newline_to_br }}</h2>
+      </div>
+    {% endif %}
   </section>
 
   {%- comment -%} Banner 2 {%- endcomment -%}
@@ -323,7 +338,7 @@
       {% endif %}
     </picture>
     {% if section.settings.banner3_overlay_text != blank %}
-      <div class="igomi-banner-overlay igomi-banner-overlay--bottom">
+      <div class="igomi-banner-overlay igomi-banner-overlay--bottom igomi-banner-overlay--mobile-top-left">
         <h2>{{ section.settings.banner3_overlay_text | newline_to_br }}</h2>
       </div>
     {% endif %}
@@ -380,7 +395,7 @@
       {% endif %}
     </picture>
     {% if section.settings.banner4_overlay_text != blank %}
-      <div class="igomi-banner-overlay">
+      <div class="igomi-banner-overlay igomi-banner-overlay--mobile-top-left">
         <h2>{{ section.settings.banner4_overlay_text | newline_to_br }}</h2>
       </div>
     {% endif %}
@@ -447,6 +462,12 @@
       "id": "banner1_alt",
       "label": "Banner 1 — Alt Text",
       "default": "iGOGOMI TRAIL X Peak Power"
+    },
+    {
+      "type": "textarea",
+      "id": "banner1_overlay_text",
+      "label": "Banner 1 — Overlay Text",
+      "default": "Unleash your colors.\nOwn Every Street."
     },
     {
       "type": "header",

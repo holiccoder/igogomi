@@ -27,7 +27,6 @@
         <h2 class="product-name">
                     {{ item.product.title }}
         </h2>
-<div data-shop-id="{{shop.id}}" product-id="{{item.product.id }}" data-page="{{request.page_type}}" class="ddreview-star"></div>
 
         {% unless item.product.has_only_default_variant %}
           <div class="text-sm text-foreground/75 mt-2">

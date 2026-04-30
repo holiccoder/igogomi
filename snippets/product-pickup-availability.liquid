@@ -60,7 +60,6 @@
 
               <div class="self-center">
                                 <h2 class="h5">{{ product_variant.product.title | escape }}</h2>
-<div data-shop-id="{{shop.id}}" product-id="{{product_variant.product.id }}" data-page="{{request.page_type}}" class="ddreview-star"></div>
                 {% unless product_variant.product.has_only_default_variant %}
                   <p class="text-sm text-foreground/75 mt-2">{{ product_variant.title }}</p>
                 {% endunless %}

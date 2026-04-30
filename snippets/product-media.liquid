@@ -282,4 +282,6 @@
       {{ product.media | where: 'media_type', 'model' | json }}
     </script>
   {% endif %}
+
+  {% render 'product-specs', product: product %}
 </div>

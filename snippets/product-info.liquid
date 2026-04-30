@@ -48,7 +48,6 @@
                 <h2 class="{{ block.settings.heading_size }} mb-2">
                   {{ product.title | default: 'Product' }}
                 </h2>
-<div data-shop-id="{{shop.id}}" product-id="{{product.id }}" data-page="{{request.page_type}}" class="ddreview-star"></div>
               </a>
 
               <a
@@ -62,7 +61,6 @@
               <h1 class="{{ block.settings.heading_size }}">
                                 {{ block.settings.content | default: product.title }}
               </h1>
-<div data-shop-id="{{shop.id}}" product-id="{{product.id }}" data-page="{{request.page_type}}" class="ddreview-star"></div>
             {% endif %}
           </div>
         {% when 'rating' %}

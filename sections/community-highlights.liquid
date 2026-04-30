@@ -4,9 +4,14 @@
 {% endcomment %}
 
 <style>
+  #shopify-section-{{ section.id }} {
+    overflow-x: clip;
+  }
+
   .igomi-carou-section-wrapper {
     padding: 40px 20px;
     text-align: center;
+    max-width: 100%;
   }
 
   .igomi-carou-section-wrapper h2 {
@@ -16,14 +21,14 @@
   }
 
   .igomi-carou-canvas-area {
-    width: 100vw;
+    width: 100%;
+    max-width: 100%;
     background: #ffffff;
     padding: 40px 0;
     border-top: 1px solid #e6e6e6;
     border-bottom: 1px solid #e6e6e6;
     position: relative;
     overflow: hidden;
-    margin-left: calc(-50vw + 50%);
   }
 
   .igomi-carou-marquee-row {
