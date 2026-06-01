@@ -16,7 +16,7 @@
 %}
 
 {% if link_url and link_text %}
-  {% render 'section-header-with-link', link_url: link_url, link_text: link_text, header_mb: header_mb %}
+  {% render 'section-header-with-link', link_url: link_url, link_text: link_text, header_mb: header_mb, heading_element: heading_element, heading_style: heading_style %}
 {% else %}
   {% unless section.settings.heading == blank
     and section.settings.subheading == blank
@@ -32,7 +32,7 @@
         {{ section.settings.text_alignment }}
       "
     >
-      {% render 'section-content', button: button %}
+      {% render 'section-content', button: button, heading_element: heading_element, heading_style: heading_style %}
     </div>
   {% endunless %}
 {% endif %}

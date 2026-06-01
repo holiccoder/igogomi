@@ -1,1 +1,44 @@
-{"layout":"theme","sections":{"beae-igogomi":{"type":"beae-igogomi","disabled":true,"settings":{}},"177666786726a9847e":{"type":"apps","disabled":true,"blocks":{"dadao_product_reviews_product_reviews_aWzCdT":{"type":"shopify://apps/dadao-product-reviews/blocks/product-reviews/3cc4253a-05eb-4164-8778-b76d83ce00cc","settings":{"product":"{{product}}","show_sample_reviews":true},"disabled":true}},"block_order":["dadao_product_reviews_product_reviews_aWzCdT"],"settings":{"full_width":true,"remove_horizontal_space":false,"remove_vertical_space":false,"background_color":"","text_color":""}},"1776668172b0491628":{"type":"apps","disabled":true,"blocks":{"dadao_product_reviews_star_8JpNr8":{"type":"shopify://apps/dadao-product-reviews/blocks/star/3cc4253a-05eb-4164-8778-b76d83ce00cc","settings":{"product":"{{product}}"},"disabled":true}},"block_order":["dadao_product_reviews_star_8JpNr8"],"settings":{"full_width":true,"remove_horizontal_space":false,"remove_vertical_space":false,"background_color":"","text_color":""}}},"order":["beae-igogomi","177666786726a9847e","1776668172b0491628"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme",
+  "sections": {
+    "beae-igogomi": {
+      "type": "beae-igogomi",
+      "disabled": true,
+      "settings": {}
+    },
+    "177666786726a9847e": {
+      "type": "apps",
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": false,
+        "remove_vertical_space": false,
+        "background_color": "",
+        "text_color": ""
+      }
+    },
+    "1776668172b0491628": {
+      "type": "apps",
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": false,
+        "remove_vertical_space": false,
+        "background_color": "",
+        "text_color": ""
+      }
+    }
+  },
+  "order": [
+    "beae-igogomi",
+    "177666786726a9847e",
+    "1776668172b0491628"
+  ]
+}

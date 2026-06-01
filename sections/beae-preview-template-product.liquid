@@ -368,7 +368,7 @@
   </span>
         </div>
             </div><!----><!----></div><!----><!----><!----></div><!----><!----><!----><div class="beae-5sbt1wuk beae-block beae-core beae-animation beae-unique-apx3j8xb beae-product-title" data-id="beae-5sbt1wuk" data-loop-index="0" data-uniqueid="apx3j8xb"><!----><h1 class="beae-block beae-x-text beae-typo-h4" data-product-title="true" data-autolayout="beae-5sbt1wuk"><a href="{{ product.url }}">{{ product.title }}</a>
-</h1><!----><!----></div><script type="text/javascript">window.BEAEARGS['beae-5sbt1wukblock-developer'] = {
+<div data-shop-id="{{shop.id}}" product-id="{{product.id }}" data-page="{{request.page_type}}" class="ddreview-star"></div></h1><!----><!----></div><script type="text/javascript">window.BEAEARGS['beae-5sbt1wukblock-developer'] = {
     "id": "beae-5sbt1wuk",
     "mode": {"value": "live"},
     "title":"{{ product.title }}"
@@ -825,6 +825,7 @@ Enter snippet code of review app or contact with our support to help add review 
             <div class="beae-pa--detail" style="display: none">
               <div class="pickup-availability-header">
                                 <h2 class="beae-pa--title beae-typo-h4">{{ product_variant.product.title | escape }}</h2>
+<div data-shop-id="{{shop.id}}" product-id="{{product_variant.product.id }}" data-page="{{request.page_type}}" class="ddreview-star"></div>
                 {%- unless product_variant.product.has_only_default_variant -%}
                   <p class="beae-pa--variant beae-typo-p2">
                       {%- for product_option in product_variant.product.options_with_values -%}

@@ -5,13 +5,21 @@
 {% endif %}
 
 {% if section.settings.heading != blank %}
-  <h2
-    class="heading {{ section.settings.heading_size }}"
+  {% assign _he = heading_element | default: 'h2' %}
+  {% assign _is_heading = false %}
+  {% if _he == 'h1' or _he == 'h2' or _he == 'h3' or _he == 'h4' or _he == 'h5' or _he == 'h6' %}
+    {% assign _is_heading = true %}
+  {% endif %}
+  <{{ _he }}
+    {% if _is_heading %}
+      class="heading {{ section.settings.heading_size }}"
+    {% endif %}
+    {% if heading_style != blank %}style="{{ heading_style }}"{% endif %}
     data-animation="heading"
     data-animation-group="{{ section.id }}"
   >
     {{ section.settings.heading }}
-  </h2>
+  </{{ _he }}>
 {% endif %}
 
 {% if section.settings.content != blank %}

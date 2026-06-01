@@ -30,7 +30,7 @@ data-animation-group="{{ section.id }}-product-cards"
 {% endcapture %}
 
 <div {% render 'section-attrs' %}>
-  {% render 'section-header', link_text: section.settings.link_text, link_url: link_url %}
+  {% render 'section-header', link_text: section.settings.link_text, link_url: link_url, heading_element: 'div', heading_style: 'font-size:2rem;color:black' %}
 
   <div class="section-body">
     {% capture items %}

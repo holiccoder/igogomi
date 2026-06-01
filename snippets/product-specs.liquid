@@ -1,3 +1,49 @@
+{% liquid
+  assign has_product_spec_blocks = false
+  for block in section.blocks
+    if block.type == 'product_spec'
+      assign has_product_spec_blocks = true
+      break
+    endif
+  endfor
+
+  assign spec_acceleration = section.settings.spec_acceleration | default: '0.9s 0-10mph'
+  assign spec_motor = section.settings.spec_motor | default: '4160W Peak'
+  assign spec_torque = section.settings.spec_torque | default: '190N·m'
+  assign spec_top_speed = section.settings.spec_top_speed | default: '45MPH'
+  assign spec_range = section.settings.spec_range | default: '40-65 Miles'
+  assign spec_battery = section.settings.spec_battery | default: '52V 26Ah'
+  assign spec_tire = section.settings.spec_tire | default: 'F14"/R12"'
+  assign spec_safety = section.settings.spec_safety | default: 'Magnetic Switch'
+
+  if product != blank
+    if product.metafields.custom.spec_acceleration.value != blank
+      assign spec_acceleration = product.metafields.custom.spec_acceleration.value
+    endif
+    if product.metafields.custom.spec_motor.value != blank
+      assign spec_motor = product.metafields.custom.spec_motor.value
+    endif
+    if product.metafields.custom.spec_torque.value != blank
+      assign spec_torque = product.metafields.custom.spec_torque.value
+    endif
+    if product.metafields.custom.spec_top_speed.value != blank
+      assign spec_top_speed = product.metafields.custom.spec_top_speed.value
+    endif
+    if product.metafields.custom.spec_range.value != blank
+      assign spec_range = product.metafields.custom.spec_range.value
+    endif
+    if product.metafields.custom.spec_battery.value != blank
+      assign spec_battery = product.metafields.custom.spec_battery.value
+    endif
+    if product.metafields.custom.spec_tire.value != blank
+      assign spec_tire = product.metafields.custom.spec_tire.value
+    endif
+    if product.metafields.custom.spec_safety.value != blank
+      assign spec_safety = product.metafields.custom.spec_safety.value
+    endif
+  endif
+%}
+
 <style>
   .product-specs {
     display: grid;
@@ -53,91 +99,97 @@
 </style>
 
 <div class="product-specs" aria-label="Product specifications">
-  <div class="product-specs__item">
-    <svg class="product-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-      <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"/>
-    </svg>
-    <div class="product-specs__text">
-      <small>Acceleration</small>
-      <strong>0.9s 0-10mph</strong>
-    </div>
-  </div>
+  {% if has_product_spec_blocks %}
+    {% for block in section.blocks %}
+      {% if block.type == 'product_spec' %}
+        {% liquid
+          assign spec_label = block.settings.label | strip
+          assign spec_value = block.settings.value | strip
+        %}
 
-  <div class="product-specs__item">
-    <svg class="product-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-      <circle cx="12" cy="12" r="9"/>
-      <path d="M12 8v4l3 2"/>
-    </svg>
-    <div class="product-specs__text">
-      <small>Mid-Drive Motor</small>
-      <strong>4160W Peak</strong>
+        {% if spec_label != blank or spec_value != blank %}
+          <div class="product-specs__item" {{ block.shopify_attributes }}>
+            {% render 'product-spec-icon',
+              icon: block.settings.icon,
+              custom_icon: block.settings.custom_icon,
+              alt: spec_label,
+              class: 'product-specs__icon'
+            %}
+            <div class="product-specs__text">
+              {% if spec_label != blank %}
+                <small>{{ spec_label | escape }}</small>
+              {% endif %}
+              {% if spec_value != blank %}
+                <strong>{{ spec_value | escape }}</strong>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+  {% else %}
+    <div class="product-specs__item">
+      {% render 'product-spec-icon', icon: 'acceleration', class: 'product-specs__icon' %}
+      <div class="product-specs__text">
+        <small>Acceleration</small>
+        <strong>{{ spec_acceleration | escape }}</strong>
+      </div>
     </div>
-  </div>
 
-  <div class="product-specs__item">
-    <svg class="product-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-      <circle cx="12" cy="12" r="9"/>
-      <path d="M8 12h8M12 8v8"/>
-    </svg>
-    <div class="product-specs__text">
-      <small>Torque</small>
-      <strong>190N·m</strong>
+    <div class="product-specs__item">
+      {% render 'product-spec-icon', icon: 'motor', class: 'product-specs__icon' %}
+      <div class="product-specs__text">
+        <small>Mid-Drive Motor</small>
+        <strong>{{ spec_motor | escape }}</strong>
+      </div>
     </div>
-  </div>
 
-  <div class="product-specs__item">
-    <svg class="product-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-      <path d="M4 16a8 8 0 0 1 16 0"/>
-      <line x1="12" y1="12" x2="16" y2="10"/>
-    </svg>
-    <div class="product-specs__text">
-      <small>Top Speed</small>
-      <strong>45MPH</strong>
+    <div class="product-specs__item">
+      {% render 'product-spec-icon', icon: 'torque', class: 'product-specs__icon' %}
+      <div class="product-specs__text">
+        <small>Torque</small>
+        <strong>{{ spec_torque | escape }}</strong>
+      </div>
     </div>
-  </div>
 
-  <div class="product-specs__item">
-    <svg class="product-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-      <path d="M12 21s-6-5.5-6-10a6 6 0 1 1 12 0c0 4.5-6 10-6 10z"/>
-      <circle cx="12" cy="11" r="2"/>
-    </svg>
-    <div class="product-specs__text">
-      <small>Max Range</small>
-      <strong>50 Miles</strong>
+    <div class="product-specs__item">
+      {% render 'product-spec-icon', icon: 'top_speed', class: 'product-specs__icon' %}
+      <div class="product-specs__text">
+        <small>Top Speed</small>
+        <strong>{{ spec_top_speed | escape }}</strong>
+      </div>
     </div>
-  </div>
 
-  <div class="product-specs__item">
-    <svg class="product-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-      <rect x="4" y="6" width="14" height="12"/>
-      <line x1="20" y1="10" x2="20" y2="14"/>
-    </svg>
-    <div class="product-specs__text">
-      <small>Battery</small>
-      <strong>52V 26Ah</strong>
+    <div class="product-specs__item">
+      {% render 'product-spec-icon', icon: 'range', class: 'product-specs__icon' %}
+      <div class="product-specs__text">
+        <small>Max Range</small>
+        <strong>{{ spec_range | escape }}</strong>
+      </div>
     </div>
-  </div>
 
-  <div class="product-specs__item">
-    <svg class="product-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-      <circle cx="12" cy="12" r="9"/>
-      <circle cx="12" cy="12" r="3"/>
-    </svg>
-    <div class="product-specs__text">
-      <small>Off-Road Tire</small>
-      <strong>F14&quot;/R12&quot;</strong>
+    <div class="product-specs__item">
+      {% render 'product-spec-icon', icon: 'battery', class: 'product-specs__icon' %}
+      <div class="product-specs__text">
+        <small>Battery</small>
+        <strong>{{ spec_battery | escape }}</strong>
+      </div>
     </div>
-  </div>
 
-  <div class="product-specs__item">
-    <svg class="product-specs__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-      <circle cx="12" cy="12" r="9"/>
-      <path d="M9 12l2 2 4-4"/>
-    </svg>
-    <div class="product-specs__text">
-      <small>Safety Protection</small>
-      <strong>Magnetic Switch</strong>
+    <div class="product-specs__item">
+      {% render 'product-spec-icon', icon: 'tire', class: 'product-specs__icon' %}
+      <div class="product-specs__text">
+        <small>Off-Road Tire</small>
+        <strong>{{ spec_tire | escape }}</strong>
+      </div>
     </div>
-  </div>
+
+    <div class="product-specs__item">
+      {% render 'product-spec-icon', icon: 'safety', class: 'product-specs__icon' %}
+      <div class="product-specs__text">
+        <small>Safety Protection</small>
+        <strong>{{ spec_safety | escape }}</strong>
+      </div>
+    </div>
+  {% endif %}
 </div>
-

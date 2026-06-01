@@ -1,9 +1,7 @@
 {% unless section.settings.heading == blank %}
   <div class="section-header section-header--with-link {{ header_mb }} {{ section.settings.text_alignment }}">
-    <div class="filler-left"></div>
-
     <div class="max-sm:pr-3 section-content-spacing">
-      {% render 'section-content' %}
+      {% render 'section-content', heading_element: heading_element, heading_style: heading_style %}
     </div>
 
     <div class="filler-right styled-links">

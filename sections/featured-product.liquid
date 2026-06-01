@@ -135,6 +135,66 @@
     },
     {
       "type": "header",
+      "content": "Product specs values"
+    },
+    {
+      "type": "text",
+      "id": "spec_acceleration",
+      "label": "Acceleration value",
+      "default": "0.9s 0-10mph",
+      "info": "Product metafield override: custom.spec_acceleration"
+    },
+    {
+      "type": "text",
+      "id": "spec_motor",
+      "label": "Mid-Drive Motor value",
+      "default": "4160W Peak",
+      "info": "Product metafield override: custom.spec_motor"
+    },
+    {
+      "type": "text",
+      "id": "spec_torque",
+      "label": "Torque value",
+      "default": "190N·m",
+      "info": "Product metafield override: custom.spec_torque"
+    },
+    {
+      "type": "text",
+      "id": "spec_top_speed",
+      "label": "Top Speed value",
+      "default": "45MPH",
+      "info": "Product metafield override: custom.spec_top_speed"
+    },
+    {
+      "type": "text",
+      "id": "spec_range",
+      "label": "Max Range value",
+      "default": "50 Miles",
+      "info": "Product metafield override: custom.spec_range"
+    },
+    {
+      "type": "text",
+      "id": "spec_battery",
+      "label": "Battery value",
+      "default": "52V 26Ah",
+      "info": "Product metafield override: custom.spec_battery"
+    },
+    {
+      "type": "text",
+      "id": "spec_tire",
+      "label": "Off-Road Tire value",
+      "default": "F14\"/R12\"",
+      "info": "Product metafield override: custom.spec_tire"
+    },
+    {
+      "type": "text",
+      "id": "spec_safety",
+      "label": "Safety Protection value",
+      "default": "Magnetic Switch",
+      "info": "Product metafield override: custom.spec_safety"
+    },
+    {
+      "type": "header",
       "content": "t:sections.all.headers.colors"
     },
     {
@@ -1023,6 +1083,72 @@
         {
           "type": "paragraph",
           "content": "t:sections.main-product.blocks.custom_badges.settings.paragraph.content"
+        }
+      ]
+    },
+    {
+      "type": "product_spec",
+      "name": "Product spec item",
+      "limit": 12,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "custom_icon",
+          "label": "Custom icon",
+          "info": "Optional. Upload an icon image or connect a file metafield. If empty, the preset icon below is used."
+        },
+        {
+          "type": "select",
+          "id": "icon",
+          "label": "Icon",
+          "options": [
+            {
+              "value": "acceleration",
+              "label": "Acceleration"
+            },
+            {
+              "value": "motor",
+              "label": "Motor"
+            },
+            {
+              "value": "torque",
+              "label": "Torque"
+            },
+            {
+              "value": "top_speed",
+              "label": "Top speed"
+            },
+            {
+              "value": "range",
+              "label": "Range"
+            },
+            {
+              "value": "battery",
+              "label": "Battery"
+            },
+            {
+              "value": "tire",
+              "label": "Tire"
+            },
+            {
+              "value": "safety",
+              "label": "Safety"
+            }
+          ],
+          "default": "acceleration"
+        },
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Label",
+          "default": "Acceleration"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Value",
+          "default": "0.9s 0-10mph",
+          "info": "Supports dynamic sources, including product metafields."
         }
       ]
     }

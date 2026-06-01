@@ -1,0 +1,318 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "70fc43fe-06b6-415f-b0c3-557197d434bb": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "07b2f4eb-d5bd-46bf-8ef7-7c3a9dbff7b7": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3",
+            "content": "{{ product.title }}",
+            "text_color": "rgba(0,0,0,0)"
+          }
+        },
+        "946375dc-aa95-407e-a9cd-35be355f8dc4": {
+          "type": "rating",
+          "settings": {
+            "show_empty_rating": false,
+            "star_size": 24
+          }
+        },
+        "c0b62d1f-e562-4b86-84cb-fc22c849e93e": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false,
+            "use_bold_font": true
+          }
+        },
+        "afterpay_on_site_messaging_payments_messaging_4rD3UH": {
+          "type": "shopify://apps/afterpay-on-site-messaging/blocks/payments-messaging/f45a5524-d177-4475-bf59-281efd2215a8",
+          "settings": {
+            "text_align": "inherit",
+            "margin_top": 16,
+            "margin_bottom": 16,
+            "color": "",
+            "size": "md",
+            "intro_text": "or",
+            "show_interest_free": true,
+            "payment_amount_is_bold": true,
+            "show_with": true,
+            "logo_type": "badge",
+            "logo_theme": "black-on-mint",
+            "modal_link_style": "circled-info-icon",
+            "modal_theme": "mint",
+            "breakpoint": 749,
+            "text_align_mobile": "inherit",
+            "margin_top_mobile": 16,
+            "margin_bottom_mobile": 16,
+            "show_lower_limit": true,
+            "show_upper_limit": true,
+            "show_if_outside_limits": true,
+            "product": "{{product}}"
+          }
+        },
+        "4923f5c8-62d3-42db-a835-6e0613c4a182": {
+          "type": "payment_installments",
+          "settings": {}
+        },
+        "5a84f252-bc58-4ca7-8b59-5a727a61c21f": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": true,
+            "type": "radio",
+            "color_picker_type": "radio",
+            "block_style_rounded": true,
+            "block_style": "filled",
+            "size_chart_page": "contac",
+            "size_chart_option_name": "Size"
+          }
+        },
+        "f4eea022-78fd-4497-ab68-10cbc86fe6b4": {
+          "type": "inventory",
+          "settings": {
+            "enable_low_stock_message": true,
+            "enable_backorder_message": false,
+            "low_stock_threshold": 5
+          }
+        },
+        "0f473fb4-422c-40a7-8c15-2fd164440f80": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "text_XYgKJ8": {
+          "type": "text",
+          "settings": {
+            "content": "<p>Enter your content here</p>"
+          }
+        },
+        "text_zUHpG8": {
+          "type": "text",
+          "disabled": true,
+          "settings": { "content": "" }
+        },
+        "a730fe0e-baa3-47bc-90c9-21c5a5d75f2d": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout_buttons": false,
+            "show_gift_card_recipient": false,
+            "add_to_cart_background_color": "rgba(0,0,0,0)",
+            "add_to_cart_text_color": "rgba(0,0,0,0)",
+            "buy_it_now_background_color": "rgba(0,0,0,0)",
+            "buy_it_now_text_color": "rgba(0,0,0,0)"
+          }
+        },
+        "pickup_availability_3KKVxD": {
+          "type": "pickup_availability",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "70fc43fe-06b6-415f-b0c3-557197d434bb",
+        "07b2f4eb-d5bd-46bf-8ef7-7c3a9dbff7b7",
+        "946375dc-aa95-407e-a9cd-35be355f8dc4",
+        "c0b62d1f-e562-4b86-84cb-fc22c849e93e",
+        "afterpay_on_site_messaging_payments_messaging_4rD3UH",
+        "4923f5c8-62d3-42db-a835-6e0613c4a182",
+        "5a84f252-bc58-4ca7-8b59-5a727a61c21f",
+        "f4eea022-78fd-4497-ab68-10cbc86fe6b4",
+        "0f473fb4-422c-40a7-8c15-2fd164440f80",
+        "text_XYgKJ8",
+        "text_zUHpG8",
+        "a730fe0e-baa3-47bc-90c9-21c5a5d75f2d",
+        "pickup_availability_3KKVxD"
+      ],
+      "custom_css": [
+        ".swatch-image-wrapper .sale-badge {display: none;}",
+        ".swatch-image-wrapper .sold-out-badge {display: none;}"
+      ],
+      "settings": {
+        "show_breadcrumbs": true,
+        "desktop_media_width": 56,
+        "media_size": "",
+        "media_layout_desktop": "carousel_vertical",
+        "media_mobile_indicator": "thumbnails",
+        "media_zoom": "lightbox",
+        "media_enable_video_autoplay": false,
+        "media_enable_video_looping": true,
+        "media_fit_height": true,
+        "spec_acceleration": "0.9s 0-10mph",
+        "spec_motor": "4000W Peak",
+        "spec_torque": "190N·m",
+        "spec_top_speed": "38MPH",
+        "spec_range": "40-65 Miles",
+        "spec_battery": "48V 23Ah",
+        "spec_tire": "F14\"/R12\"",
+        "spec_safety": "UL Certification Global Insurance",
+        "show_sticky_add_to_cart": true,
+        "sticky_add_to_cart_position": "right",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "",
+        "heading_color": ""
+      }
+    },
+    "product_hero_banners_ABC123": {
+      "type": "product-hero-banners",
+      "blocks": {
+        "mini_banner_001": {
+          "type": "mini_banner",
+          "settings": {
+            "image": "https://cdn.shopify.com/s/files/1/0540/8820/4467/files/850x500-2.jpg?v=1780125373",
+            "alt": "Gallery Image 1"
+          }
+        },
+        "mini_banner_002": {
+          "type": "mini_banner",
+          "settings": {
+            "image": "https://cdn.shopify.com/s/files/1/0540/8820/4467/files/850x500-1.jpg?v=1780125374",
+            "alt": "Gallery Image 2"
+          }
+        },
+        "mini_banner_003": {
+          "type": "mini_banner",
+          "settings": {
+            "image": "https://cdn.shopify.com/s/files/1/0540/8820/4467/files/850x500-3.jpg?v=1780125374",
+            "alt": "Gallery Image 3"
+          }
+        }
+      },
+      "block_order": ["mini_banner_001", "mini_banner_002", "mini_banner_003"],
+      "settings": {
+        "banner1_desktop_image": "https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomikv003.jpg?v=1780124875",
+        "banner1_mobile_image": "https://cdn.shopify.com/s/files/1/0540/8820/4467/files/840x1180kv3a.jpg?v=1780126152",
+        "banner1_alt": "Minimal. Modern. Unmistakably IGOGOMI",
+        "banner1_subheading": "DESIGN",
+        "banner1_heading": "More comfort. More style. \nMore freedom.",
+        "banner1_description": "Freedom Looks Different Every Day. Some days it's the ride to your favorite café. Some days it's a spontaneous trip along the coast. And sometimes, it's simply choosing your own path. The IGOGOMI CUV i5 combines comfort, confidence, and versatility for every moment in motion.",
+        "banner1_text_position": "left",
+        "banner1_text_color": "#000000",
+        "banner2_desktop_image": "https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomikv004.jpg?v=1780124875",
+        "banner2_mobile_image": "https://cdn.shopify.com/s/files/1/0540/8820/4467/files/840x1180kv1a.jpg?v=1780126152",
+        "banner2_alt": "Power meets intelligence.",
+        "banner2_subheading": "SMART TECH",
+        "banner2_heading": "Power meets intelligence.",
+        "banner2_description": "The IGOGOMI CUV i5 is engineered with smart riding technology for both urban commuting and all-terrain exploration. Equipped with a powerful 750W intelligent motor, automatic 2-speed transmission, and 5-level pedal assist system, it delivers smooth acceleration and adaptive performance in every ride condition.",
+        "banner2_text_position": "left",
+        "banner2_text_color": "#ffffff",
+        "banner3_desktop_image": "https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomikv002_d3108a7c-9550-49d5-8e64-55d1444d5b83.jpg?v=1780124875",
+        "banner3_mobile_image": "https://cdn.shopify.com/s/files/1/0540/8820/4467/files/840x1180kv2a.jpg?v=1780126152",
+        "banner3_alt": "Less Maintenance. More Freedom.",
+        "banner3_subheading": "HIDDEN DRIVE TECHNOLOGY",
+        "banner3_heading": "Less Maintenance. More Freedom.",
+        "banner3_description": "The IGOGOMI CUV i5 features an innovative hidden chain system that seamlessly integrates the drivetrain into the bike's minimalist structure. Protected from dust, dirt, and daily wear, it delivers a cleaner appearance, quieter riding experience.",
+        "banner3_text_position": "right",
+        "banner3_text_color": "#000000",
+        "banner4_desktop_image": "https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomii5-1.jpg?v=1780124876",
+        "banner4_mobile_image": "https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomii5-1a.jpg?v=1780126153",
+        "banner4_alt": "Premium Dark Background",
+        "banner4_height_desktop": 1500,
+        "banner5_desktop_image": "https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomikv001_554032a5-7f9f-46f5-8ce3-b913cfd67e34.jpg?v=1780124875",
+        "banner5_mobile_image": "https://cdn.shopify.com/s/files/1/0540/8820/4467/files/840x1180kv4a.jpg?v=1780126152",
+        "banner5_alt": "Dark Premium Background",
+        "banner5_subheading": "",
+        "banner5_heading": "",
+        "banner5_description": "This section features crisp white typography styled to stand out effortlessly over darker cinematic background imagery.",
+        "banner5_text_position": "left",
+        "banner5_text_color": "#ffffff",
+        "banner5_bg_color": "#111111"
+      }
+    },
+    "1777358140a0929aea": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_8Qpzzr": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": ["judge_me_reviews_review_widget_8Qpzzr"],
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": false,
+        "remove_vertical_space": false,
+        "background_color": "",
+        "text_color": ""
+      }
+    },
+    "17772552885a8a6058": {
+      "type": "apps",
+      "custom_css": ["#ddReviews {}"],
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": true,
+        "remove_vertical_space": true,
+        "background_color": "",
+        "text_color": ""
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "full_width": true,
+        "carousel": true,
+        "products_count": 8,
+        "grid_columns": 4,
+        "grid_columns_mobile": "2",
+        "subheading": "",
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "content": "",
+        "text_alignment": "text-center",
+        "background_color": "",
+        "text_color": "",
+        "heading_color": ""
+      }
+    },
+    "465920484447377053": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": false,
+        "remove_vertical_space": false,
+        "background_color": "",
+        "text_color": ""
+      }
+    },
+    "056814114181598817": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": false,
+        "remove_vertical_space": false,
+        "background_color": "",
+        "text_color": ""
+      }
+    },
+    "1753548029682b9335": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": false,
+        "remove_vertical_space": false,
+        "background_color": "",
+        "text_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product_hero_banners_ABC123",
+    "1777358140a0929aea",
+    "17772552885a8a6058",
+    "related-products",
+    "465920484447377053",
+    "056814114181598817",
+    "1753548029682b9335"
+  ]
+}

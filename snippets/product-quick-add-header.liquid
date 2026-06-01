@@ -29,6 +29,7 @@
     <a href="{{ product.url }}" class="heading product-title pr-6">
             {{ product.title }}
     </a>
+<div data-shop-id="{{shop.id}}" product-id="{{product.id }}" data-page="{{request.page_type}}" class="ddreview-star"></div>
 
     <div
       class="product-price mt-4 {% if price_block.settings.use_bold_font %} bold {% endif %}"

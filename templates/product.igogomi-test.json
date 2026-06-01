@@ -1,1 +1,479 @@
-{"sections":{"main":{"type":"main-product","blocks":{"70fc43fe-06b6-415f-b0c3-557197d434bb":{"type":"vendor","settings":{}},"07b2f4eb-d5bd-46bf-8ef7-7c3a9dbff7b7":{"type":"title","settings":{"heading_size":"h3","content":"{{ product.title }}","text_color":"rgba(0,0,0,0)"}},"946375dc-aa95-407e-a9cd-35be355f8dc4":{"type":"rating","disabled":true,"settings":{"show_empty_rating":false,"star_size":24}},"c0b62d1f-e562-4b86-84cb-fc22c849e93e":{"type":"price","settings":{"show_taxes_notice":false,"use_bold_font":true}},"afterpay_on_site_messaging_payments_messaging_4rD3UH":{"type":"shopify://apps/afterpay-on-site-messaging/blocks/payments-messaging/f45a5524-d177-4475-bf59-281efd2215a8","settings":{"text_align":"inherit","margin_top":16,"margin_bottom":16,"color":"","size":"md","intro_text":"or","show_interest_free":true,"payment_amount_is_bold":true,"show_with":true,"logo_type":"badge","logo_theme":"black-on-mint","modal_link_style":"circled-info-icon","modal_theme":"mint","breakpoint":749,"text_align_mobile":"inherit","margin_top_mobile":16,"margin_bottom_mobile":16,"show_lower_limit":true,"show_upper_limit":true,"show_if_outside_limits":true,"product":"{{product}}"}},"4923f5c8-62d3-42db-a835-6e0613c4a182":{"type":"payment_installments","settings":{}},"5a84f252-bc58-4ca7-8b59-5a727a61c21f":{"type":"variant_picker","settings":{"hide_sold_out_variants":false,"type":"radio","color_picker_type":"radio-swatch","block_style_rounded":true,"block_style":"outlined","size_chart_page":"","size_chart_option_name":"Size"}},"f4eea022-78fd-4497-ab68-10cbc86fe6b4":{"type":"inventory","settings":{"enable_low_stock_message":true,"enable_backorder_message":false,"low_stock_threshold":5}},"0f473fb4-422c-40a7-8c15-2fd164440f80":{"type":"quantity_selector","settings":{}},"text_XYgKJ8":{"type":"text","settings":{"content":"<p>Enter your content here</p>"}},"text_zUHpG8":{"type":"text","disabled":true,"settings":{"content":"<ul><li><br/>【The IGOGOMI Fold】All the benefits of an E-bike has packed into the original 3-part fold. It takes around 25-seconds to transform your bike into a small compact package (26 ×  13  × 28.7 inches )（L × W × H）,that you can tow, stow and carry anywhere. Travels on rush-hour trains, metros, underground, overground, car trunks, and cabs. There is no need to leave it outside. Just enjoy the ride<br/></li><li><br/>【Your ride, You decide】 Customize your ride performance with 3 riding modes. Go full throttle up to 19 mile/h on battery power alone. But the IGOGOMI folding bike also rides like a traditional pedal-only bicycle. Need some extra oomph? Turn on the pedal-to-go for a boost of electric power as you pedal. It simplifies the riding experience for you.<br/></li><li><br/>【Charge on the go】The compact IGOGOMI Electric 36V / 6.8Ah lithium-ion battery packs in the power. The range is 25-35miles. Charging it is just as simple as plugging in your phone. Plug into any standard outlet and fully charge in 4 hours. <br/></li><li><br/>【The IGOGOMI Fold】All the benefits of an E-bike has packed into the original 3-part fold. It takes around 25-seconds to transform your bike into a small compact package (26 ×  13  × 28.7 inches )（L × W × H）,that you can tow, stow and carry anywhere. Travels on rush-hour trains, metros, underground, overground, car trunks, and cabs. There is no need to leave it outside. Just enjoy the ride<br/></li><li><br/>【Your ride, You decide】 Customize your ride performance with 3 riding modes. Go full throttle up to 19 mile/h on battery power alone. But the IGOGOMI folding bike also rides like a traditional pedal-only bicycle. Need some extra oomph? Turn on the pedal-to-go for a boost of electric power as you pedal. It simplifies the riding experience for you.<br/></li><li><br/>【Charge on the go】The compact IGOGOMI Electric 36V / 6.8Ah lithium-ion battery packs in the power. The range is 25-35miles. Charging it is just as simple as plugging in your phone. Plug into any standard outlet and fully charge in 4 hours. <br/></li></ul><p></p>"}},"a730fe0e-baa3-47bc-90c9-21c5a5d75f2d":{"type":"buy_buttons","settings":{"show_dynamic_checkout_buttons":true,"show_gift_card_recipient":true,"add_to_cart_background_color":"rgba(0,0,0,0)","add_to_cart_text_color":"rgba(0,0,0,0)","buy_it_now_background_color":"rgba(0,0,0,0)","buy_it_now_text_color":"rgba(0,0,0,0)"}},"sami_product_labels_app_block_banner_a7xCzJ":{"type":"shopify://apps/sami-product-labels/blocks/app-block-banner/b9b44663-5d51-4be1-8104-faedd68da8c5","disabled":true,"settings":{"shortcode":"<div class=\"samitaPL-banner\" data-id=\"false\"></div>"}}},"block_order":["70fc43fe-06b6-415f-b0c3-557197d434bb","07b2f4eb-d5bd-46bf-8ef7-7c3a9dbff7b7","946375dc-aa95-407e-a9cd-35be355f8dc4","c0b62d1f-e562-4b86-84cb-fc22c849e93e","afterpay_on_site_messaging_payments_messaging_4rD3UH","4923f5c8-62d3-42db-a835-6e0613c4a182","5a84f252-bc58-4ca7-8b59-5a727a61c21f","f4eea022-78fd-4497-ab68-10cbc86fe6b4","0f473fb4-422c-40a7-8c15-2fd164440f80","text_XYgKJ8","text_zUHpG8","a730fe0e-baa3-47bc-90c9-21c5a5d75f2d","sami_product_labels_app_block_banner_a7xCzJ"],"settings":{"show_breadcrumbs":false,"desktop_media_width":56,"media_size":"","media_layout_desktop":"carousel_vertical","media_mobile_indicator":"thumbnails","media_zoom":"lightbox","media_enable_video_autoplay":false,"media_enable_video_looping":true,"media_fit_height":true,"show_sticky_add_to_cart":true,"sticky_add_to_cart_position":"right","background_color":"rgba(0,0,0,0)","text_color":"","heading_color":""}},"main-details":{"type":"main-product-details","blocks":{"5bbfd876-e943-47d3-b984-06f967dfd314":{"type":"description","disabled":true,"settings":{"collapse_content":true,"collapse_open":true,"heading":""}}},"block_order":["5bbfd876-e943-47d3-b984-06f967dfd314"],"settings":{}},"product_detail_showcase_GaNnCk":{"type":"product-detail-showcase","blocks":{"feature_card_1_nFtqbr":{"type":"feature_card_1","settings":{"card_alt":"4000W Mid-Drive Motor","card_title":"4000W Mid-Drive Motor","card_body":"Designed for young riders who crave excitement, the TRAIL X electric dirt bike delivers power you can trust."}},"feature_card_1_KnNDjw":{"type":"feature_card_1","settings":{"card_alt":"Full Suspensions","card_title":"Full Suspensions","card_body":"The TRAIL X electric dirt bike uses a rear nitrogen shock and 220mm front hydraulic forks to absorb bumps."}},"feature_card_1_J7Kgfg":{"type":"feature_card_1","settings":{"card_alt":"Dual Hydraulic Brakes","card_title":"Dual Hydraulic Brakes","card_body":"The TRAIL X electric dirt bike combines front and rear hydraulic disc brakes for smooth, reliable stopping."}},"feature_card_1_GPd9nw":{"type":"feature_card_1","settings":{"card_alt":"Fat Tires","card_title":"12\" & 14\" Fat Tires","card_body":"The TRAIL X features rugged 12\" and 14\" off-road tires for exceptional grip and stability."}},"feature_card_2_w47BPq":{"type":"feature_card_2","settings":{"card_alt":"Three Speed Modes","card_title":"Three Speed Modes","card_body":"Choose from 22 mph, 28 mph, or 38 mph to match your skill level and riding needs."}},"feature_card_2_jAQqk7":{"type":"feature_card_2","settings":{"card_alt":"Wide Illumination","card_title":"Wide Illumination Range","card_body":"A powerful lighting range lights up the road ahead, helping you spot obstacles easily."}},"feature_card_2_yfaab7":{"type":"feature_card_2","settings":{"card_alt":"Plug and Ride","card_title":"Plug. Charge. Ride.","card_body":"No battery removal. No opening panels. Just plug and charge instantly."}},"feature_card_2_N4cNWh":{"type":"feature_card_2","settings":{"card_alt":"Ride Longer","card_title":"Ride Longer. Sit Better.","card_body":"Upgraded seat with high-resilience foam for superior comfort and support."}}},"block_order":["feature_card_1_nFtqbr","feature_card_1_KnNDjw","feature_card_1_J7Kgfg","feature_card_1_GPd9nw","feature_card_2_w47BPq","feature_card_2_jAQqk7","feature_card_2_yfaab7","feature_card_2_N4cNWh"],"name":"iGOGOMI Showcase","settings":{"banner1_alt":"iGOGOMI TRAIL X Peak Power","banner2_alt":"iGOGOMI TRAIL X Dimensions and Specs","banner3_alt":"Inspired by Legends","banner3_overlay_text":"Inspired by Legends.\nPowered by Electricity.","intro_eyebrow":"IGOGOMI TRAIL X","intro_heading":"4000W ELECTRIC DIRT BIKE BUILT TO RIDE HARD","intro_body":"The IGOGOMI TRAIL X is a high-performance electric dirt bike powered by a 4000W motor, reaching speeds up to 40 MPH. Equipped with a durable battery, full suspension, and hydraulic disc brakes, it delivers smooth, controlled riding on any terrain.","banner4_alt":"Thoughtful Design","banner4_overlay_text":"Where Comfort Meets Thoughtful Design","bottom_heading":"Power. Visibility. Convenience. Comfort."}},"community_highlights_NnFkJi":{"type":"community-highlights","name":"Community Highlights","settings":{"heading":"Community Highlights","row1_images":"","row2_images":"","row3_images":""}},"related-products":{"type":"related-products","settings":{"full_width":true,"carousel":true,"products_count":8,"grid_columns":4,"grid_columns_mobile":"2","subheading":"","heading":"You may also like","heading_size":"h2","content":"","text_alignment":"text-center","background_color":"","text_color":"","heading_color":""}},"465920484447377053":{"type":"apps","disabled":true,"settings":{"full_width":true,"remove_horizontal_space":false,"remove_vertical_space":false,"background_color":"","text_color":""}},"056814114181598817":{"type":"apps","blocks":{"0e5a08b6-94ef-49ad-9a56-c672fc29a5bd":{"type":"shopify://apps/dadao-product-reviews/blocks/faq/3cc4253a-05eb-4164-8778-b76d83ce00cc","settings":{"product":"{{product}}"},"disabled":true}},"block_order":["0e5a08b6-94ef-49ad-9a56-c672fc29a5bd"],"disabled":true,"settings":{"full_width":true,"remove_horizontal_space":false,"remove_vertical_space":false,"background_color":"","text_color":""}},"1753548029682b9335":{"type":"apps","disabled":true,"settings":{"full_width":true,"remove_horizontal_space":false,"remove_vertical_space":false,"background_color":"","text_color":""}}},"order":["main","main-details","product_detail_showcase_GaNnCk","community_highlights_NnFkJi","related-products","465920484447377053","056814114181598817","1753548029682b9335"]}
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "70fc43fe-06b6-415f-b0c3-557197d434bb": {
+          "type": "vendor",
+          "settings": {}
+        },
+        "07b2f4eb-d5bd-46bf-8ef7-7c3a9dbff7b7": {
+          "type": "title",
+          "settings": {
+            "heading_size": "h3",
+            "content": "{{ product.title }}",
+            "text_color": "rgba(0,0,0,0)"
+          }
+        },
+        "946375dc-aa95-407e-a9cd-35be355f8dc4": {
+          "type": "rating",
+          "settings": {
+            "show_empty_rating": false,
+            "star_size": 24
+          }
+        },
+        "c0b62d1f-e562-4b86-84cb-fc22c849e93e": {
+          "type": "price",
+          "settings": {
+            "show_taxes_notice": false,
+            "use_bold_font": true
+          }
+        },
+        "afterpay_on_site_messaging_payments_messaging_4rD3UH": {
+          "type": "shopify://apps/afterpay-on-site-messaging/blocks/payments-messaging/f45a5524-d177-4475-bf59-281efd2215a8",
+          "settings": {
+            "text_align": "inherit",
+            "margin_top": 16,
+            "margin_bottom": 16,
+            "color": "",
+            "size": "md",
+            "intro_text": "or",
+            "show_interest_free": true,
+            "payment_amount_is_bold": true,
+            "show_with": true,
+            "logo_type": "badge",
+            "logo_theme": "black-on-mint",
+            "modal_link_style": "circled-info-icon",
+            "modal_theme": "mint",
+            "breakpoint": 749,
+            "text_align_mobile": "inherit",
+            "margin_top_mobile": 16,
+            "margin_bottom_mobile": 16,
+            "show_lower_limit": true,
+            "show_upper_limit": true,
+            "show_if_outside_limits": true,
+            "product": "{{product}}"
+          }
+        },
+        "4923f5c8-62d3-42db-a835-6e0613c4a182": {
+          "type": "payment_installments",
+          "settings": {}
+        },
+        "5a84f252-bc58-4ca7-8b59-5a727a61c21f": {
+          "type": "variant_picker",
+          "settings": {
+            "hide_sold_out_variants": true,
+            "type": "radio",
+            "color_picker_type": "radio",
+            "block_style_rounded": true,
+            "block_style": "filled",
+            "size_chart_page": "contac",
+            "size_chart_option_name": "Size"
+          }
+        },
+        "f4eea022-78fd-4497-ab68-10cbc86fe6b4": {
+          "type": "inventory",
+          "settings": {
+            "enable_low_stock_message": true,
+            "enable_backorder_message": false,
+            "low_stock_threshold": 5
+          }
+        },
+        "0f473fb4-422c-40a7-8c15-2fd164440f80": {
+          "type": "quantity_selector",
+          "settings": {}
+        },
+        "text_XYgKJ8": {
+          "type": "text",
+          "settings": {
+            "content": "<p>Enter your content here</p>"
+          }
+        },
+        "text_zUHpG8": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "content": "<ul><li><br/>【The IGOGOMI Fold】All the benefits of an E-bike has packed into the original 3-part fold. It takes around 25-seconds to transform your bike into a small compact package (26 ×  13  × 28.7 inches )（L × W × H）,that you can tow, stow and carry anywhere. Travels on rush-hour trains, metros, underground, overground, car trunks, and cabs. There is no need to leave it outside. Just enjoy the ride<br/></li><li><br/>【Your ride, You decide】 Customize your ride performance with 3 riding modes. Go full throttle up to 19 mile/h on battery power alone. But the IGOGOMI folding bike also rides like a traditional pedal-only bicycle. Need some extra oomph? Turn on the pedal-to-go for a boost of electric power as you pedal. It simplifies the riding experience for you.<br/></li><li><br/>【Charge on the go】The compact IGOGOMI Electric 36V / 6.8Ah lithium-ion battery packs in the power. The range is 25-35miles. Charging it is just as simple as plugging in your phone. Plug into any standard outlet and fully charge in 4 hours. <br/></li><li><br/>【The IGOGOMI Fold】All the benefits of an E-bike has packed into the original 3-part fold. It takes around 25-seconds to transform your bike into a small compact package (26 ×  13  × 28.7 inches )（L × W × H）,that you can tow, stow and carry anywhere. Travels on rush-hour trains, metros, underground, overground, car trunks, and cabs. There is no need to leave it outside. Just enjoy the ride<br/></li><li><br/>【Your ride, You decide】 Customize your ride performance with 3 riding modes. Go full throttle up to 19 mile/h on battery power alone. But the IGOGOMI folding bike also rides like a traditional pedal-only bicycle. Need some extra oomph? Turn on the pedal-to-go for a boost of electric power as you pedal. It simplifies the riding experience for you.<br/></li><li><br/>【Charge on the go】The compact IGOGOMI Electric 36V / 6.8Ah lithium-ion battery packs in the power. The range is 25-35miles. Charging it is just as simple as plugging in your phone. Plug into any standard outlet and fully charge in 4 hours. <br/></li></ul><p></p>"
+          }
+        },
+        "a730fe0e-baa3-47bc-90c9-21c5a5d75f2d": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout_buttons": false,
+            "show_gift_card_recipient": false,
+            "add_to_cart_background_color": "rgba(0,0,0,0)",
+            "add_to_cart_text_color": "rgba(0,0,0,0)",
+            "buy_it_now_background_color": "rgba(0,0,0,0)",
+            "buy_it_now_text_color": "rgba(0,0,0,0)"
+          }
+        },
+        "saas_integrator_cnc_productpage_PaeiF8": {
+          "type": "shopify://apps/saas-integrator-cnc/blocks/productpage/019c4751-1e9a-7c1b-929b-b66b2053ec6a",
+          "disabled": true,
+          "settings": {
+            "pdp_lookup_mode": "embedded",
+            "embedded_heading_label": "Click & Collect",
+            "embedded_change_store_label": "View more stores",
+            "change_store_color": "#000000",
+            "change_store_font_size": 16,
+            "change_store_bold": true,
+            "change_store_alignment": "right",
+            "embedded_postcode_placeholder": "Enter zip/postcode",
+            "pdp_postcode_remember": false,
+            "enable_store_hours": true,
+            "proximity_window_days": 7,
+            "distance_unit": "auto",
+            "store_location_ids": "",
+            "available_stores_text": "Pick up at",
+            "cnc_metafield_key": "stock_override",
+            "cnc_metafield_value": "true",
+            "cnc_override_custom_message": "Allow 2 to 3 days for collection",
+            "cnc_skip_stock_validation": "no_stock_only",
+            "cnc_pickup_in_store_only": false,
+            "cnc_metafield_value_2": "Pickup_Only",
+            "cnc_override_custom_message_2": "Available for in-store pickup only",
+            "cnc_skip_stock_validation_2": "off",
+            "cnc_pickup_in_store_only_2": false,
+            "cnc_metafield_value_3": "",
+            "cnc_override_custom_message_3": "",
+            "cnc_skip_stock_validation_3": "off",
+            "cnc_pickup_in_store_only_3": false,
+            "product": "{{product}}",
+            "stock_display_mode": "status_only",
+            "custom_in_stock_message": "Available",
+            "custom_out_of_stock_message": "Not Available",
+            "custom_low_stock_message": "Low Stock",
+            "low_stock_threshold": 0,
+            "in_stock_color": "#01af67",
+            "out_of_stock_color": "#e74c3c",
+            "low_stock_color": "#ffc107",
+            "selected_store_title_font_size": 18,
+            "selected_store_title_bold": true,
+            "pdp_stock_badge_font_size": 13,
+            "pdp_directions_button_label": "Get Directions >>",
+            "pdp_directions_button_background": "#000000",
+            "pdp_directions_button_text_color": "#ffffff",
+            "pdp_directions_button_font_size": 10,
+            "pdp_store_card_border_color": "#ffffff",
+            "pdp_selected_card_background": "#ffffff",
+            "pdp_selected_card_border_color": "#000000",
+            "pdp_selected_card_border_radius": 0,
+            "radio_button_color": "#000000",
+            "see_store_info_text": "See Store Info",
+            "see_store_info_color": "#000000",
+            "choose_another_store_label": "Choose Another Store",
+            "pdp_confirmation_banner_enable": true,
+            "pdp_confirmation_banner_text": "Your store: {store}",
+            "pdp_no_store_banner_text": "Select a store for Click & Collect",
+            "pdp_confirmation_banner_background": "#ffffff",
+            "pdp_confirmation_banner_text_color": "#000000"
+          }
+        },
+        "shop_shop_login_button_app_block_UgfeDL": {
+          "type": "shopify://apps/shop/blocks/shop-login-button-app-block/7cab7c4a-1dfc-4b7e-8e53-31f104f2fa4e",
+          "disabled": true,
+          "settings": {}
+        },
+        "sami_product_labels_app_block_banner_a7xCzJ": {
+          "type": "shopify://apps/sami-product-labels/blocks/app-block-banner/b9b44663-5d51-4be1-8104-faedd68da8c5",
+          "disabled": true,
+          "settings": {
+            "shortcode": "<div class=\"samitaPL-banner\" data-id=\"false\"></div>"
+          }
+        },
+        "pickup_availability_3KKVxD": {
+          "type": "pickup_availability",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "70fc43fe-06b6-415f-b0c3-557197d434bb",
+        "07b2f4eb-d5bd-46bf-8ef7-7c3a9dbff7b7",
+        "946375dc-aa95-407e-a9cd-35be355f8dc4",
+        "c0b62d1f-e562-4b86-84cb-fc22c849e93e",
+        "afterpay_on_site_messaging_payments_messaging_4rD3UH",
+        "4923f5c8-62d3-42db-a835-6e0613c4a182",
+        "5a84f252-bc58-4ca7-8b59-5a727a61c21f",
+        "f4eea022-78fd-4497-ab68-10cbc86fe6b4",
+        "0f473fb4-422c-40a7-8c15-2fd164440f80",
+        "text_XYgKJ8",
+        "text_zUHpG8",
+        "a730fe0e-baa3-47bc-90c9-21c5a5d75f2d",
+        "saas_integrator_cnc_productpage_PaeiF8",
+        "shop_shop_login_button_app_block_UgfeDL",
+        "sami_product_labels_app_block_banner_a7xCzJ",
+        "pickup_availability_3KKVxD"
+      ],
+      "custom_css": [
+        ".swatch-image-wrapper .sale-badge {display: none;}",
+        ".swatch-image-wrapper .sold-out-badge {display: none;}"
+      ],
+      "settings": {
+        "show_breadcrumbs": true,
+        "desktop_media_width": 56,
+        "media_size": "",
+        "media_layout_desktop": "carousel_vertical",
+        "media_mobile_indicator": "thumbnails",
+        "media_zoom": "lightbox",
+        "media_enable_video_autoplay": false,
+        "media_enable_video_looping": true,
+        "media_fit_height": true,
+        "spec_acceleration": "0.9s 0-10mph",
+        "spec_motor": "4000W Peak",
+        "spec_torque": "190N·m",
+        "spec_top_speed": "38MPH",
+        "spec_range": "40-65 Miles",
+        "spec_battery": "48V 23Ah",
+        "spec_tire": "F14\"/R12\"",
+        "spec_safety": "UL Certification Global Insurance",
+        "show_sticky_add_to_cart": true,
+        "sticky_add_to_cart_position": "right",
+        "background_color": "rgba(0,0,0,0)",
+        "text_color": "",
+        "heading_color": ""
+      }
+    },
+    "main-details": {
+      "type": "main-product-details",
+      "blocks": {
+        "5bbfd876-e943-47d3-b984-06f967dfd314": {
+          "type": "description",
+          "disabled": true,
+          "settings": {
+            "collapse_content": true,
+            "collapse_open": true,
+            "heading": ""
+          }
+        }
+      },
+      "block_order": [
+        "5bbfd876-e943-47d3-b984-06f967dfd314"
+      ],
+      "custom_css": [],
+      "settings": {}
+    },
+    "product_detail_showcase_GaNnCk": {
+      "type": "product-detail-showcase",
+      "blocks": {
+        "feature_card_1_nFtqbr": {
+          "type": "feature_card_1",
+          "settings": {
+            "card_alt": "4000W Mid-Drive Motor",
+            "card_title": "4000W Mid-Drive Motor",
+            "card_body": "Designed for young riders who crave excitement, the TRAIL X electric dirt bike delivers power you can trust."
+          }
+        },
+        "feature_card_1_KnNDjw": {
+          "type": "feature_card_1",
+          "settings": {
+            "card_alt": "Full Suspensions",
+            "card_title": "Full Suspensions",
+            "card_body": "The TRAIL X electric dirt bike uses a rear nitrogen shock and 220mm front hydraulic forks to absorb bumps."
+          }
+        },
+        "feature_card_1_J7Kgfg": {
+          "type": "feature_card_1",
+          "settings": {
+            "card_alt": "Dual Hydraulic Brakes",
+            "card_title": "Dual Hydraulic Brakes",
+            "card_body": "The TRAIL X electric dirt bike combines front and rear hydraulic disc brakes for smooth, reliable stopping."
+          }
+        },
+        "feature_card_1_GPd9nw": {
+          "type": "feature_card_1",
+          "settings": {
+            "card_image": "{{ product.metafields.custom.top_card_four_image.value }}",
+            "card_alt": "Fat Tires",
+            "card_title": "12\" & 14\" Fat Tires",
+            "card_body": "Mud. Gravel. Pavement. Sand.\nThe TRAIL X all-terrain fat tires are designed to keep you moving with aggressive grip, reinforced durability, and confident handling in every condition"
+          }
+        },
+        "feature_card_2_w47BPq": {
+          "type": "feature_card_2",
+          "settings": {
+            "card_alt": "Three Speed Modes",
+            "card_title": "Three Speed Modes",
+            "card_body": "Choose from 22 mph, 28 mph, or 38 mph to match your skill level and riding needs."
+          }
+        },
+        "feature_card_2_jAQqk7": {
+          "type": "feature_card_2",
+          "settings": {
+            "card_alt": "Wide Illumination",
+            "card_title": "Wide Illumination Range",
+            "card_body": "A powerful lighting range lights up the road ahead, helping you spot obstacles easily."
+          }
+        },
+        "feature_card_2_yfaab7": {
+          "type": "feature_card_2",
+          "settings": {
+            "card_image": "{{ product.metafields.custom.bottom_card_image_3_desktop.value }}",
+            "card_alt": "Plug and Ride",
+            "card_title": "Plug. Charge. Ride.",
+            "card_body": "No battery removal. No opening panels. Just plug and charge instantly."
+          }
+        },
+        "feature_card_2_N4cNWh": {
+          "type": "feature_card_2",
+          "settings": {
+            "card_image": "{{ product.metafields.custom.bottom_card_image_4_image.value }}",
+            "card_alt": "Ride Longer",
+            "card_title": "Ride Longer. Sit Better.",
+            "card_body": "Upgraded seat with high-resilience foam for superior comfort and support."
+          }
+        }
+      },
+      "block_order": [
+        "feature_card_1_nFtqbr",
+        "feature_card_1_KnNDjw",
+        "feature_card_1_J7Kgfg",
+        "feature_card_1_GPd9nw",
+        "feature_card_2_w47BPq",
+        "feature_card_2_jAQqk7",
+        "feature_card_2_yfaab7",
+        "feature_card_2_N4cNWh"
+      ],
+      "name": "iGOGOMI Showcase",
+      "settings": {
+        "banner1_desktop_image": "{{ product.metafields.custom.product_description_1st_image.value }}",
+        "banner1_mobile_image": "{{ product.metafields.custom.banner_1_mobile.value }}",
+        "banner1_alt": "iGOGOMI TRAIL X Peak Power",
+        "banner1_overlay_text": "Climb Anything.\nProve Everything.",
+        "banner2_desktop_image": "{{ product.metafields.custom[\"2nd_image\"].value }}",
+        "banner2_mobile_image": "{{ product.metafields.custom.banner_2_mobile.value }}",
+        "banner2_alt": "iGOGOMI TRAIL X Dimensions and Specs",
+        "banner3_desktop_image": "{{ product.metafields.custom[\"3rd_image\"].value }}",
+        "banner3_mobile_image": "{{ product.metafields.custom.banner_3_mobile.value }}",
+        "banner3_alt": "Inspired by Legends",
+        "banner3_overlay_text": "Not Stage.\nJust Power and resistance.",
+        "intro_eyebrow": "IGOGOMI TRAIL X",
+        "intro_heading": "4000W ELECTRIC DIRT BIKE BUILT TO RIDE HARD",
+        "intro_body": "The IGOGOMI TRAIL X is a high-performance electric dirt bike powered by a 4000W motor, capable of reaching speeds up to 38 MPH. Equipped with a durable battery, full suspension, and hydraulic disc brakes, it delivers smooth and controlled riding across all terrains, with a range of up to 65 miles under optimal conditions (tested with a 50 kg rider in PAS Level 1 on flat roads with no wind).",
+        "banner4_desktop_image": "{{ product.metafields.custom.banner_4_desktop.value }}",
+        "banner4_mobile_image": "{{ product.metafields.custom.banner_4_mobile.value }}",
+        "banner4_alt": "Thoughtful Design",
+        "banner4_overlay_text": "Where Comfort Meets Thoughtful Design",
+        "bottom_heading": "Power. Visibility. Convenience. Comfort."
+      }
+    },
+    "community_highlights_NnFkJi": {
+      "type": "community-highlights",
+      "name": "Community Highlights",
+      "settings": {
+        "heading": "Community Highlights",
+        "row1_images": "",
+        "row2_images": "",
+        "row3_images": ""
+      }
+    },
+    "1777358140a0929aea": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_review_widget_8Qpzzr": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_review_widget_8Qpzzr"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": false,
+        "remove_vertical_space": false,
+        "background_color": "",
+        "text_color": ""
+      }
+    },
+    "17772552885a8a6058": {
+      "type": "apps",
+      "custom_css": [
+        "#ddReviews {}"
+      ],
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": true,
+        "remove_vertical_space": true,
+        "background_color": "",
+        "text_color": ""
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "full_width": true,
+        "carousel": true,
+        "products_count": 8,
+        "grid_columns": 4,
+        "grid_columns_mobile": "2",
+        "subheading": "",
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "content": "",
+        "text_alignment": "text-center",
+        "background_color": "",
+        "text_color": "",
+        "heading_color": ""
+      }
+    },
+    "465920484447377053": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": false,
+        "remove_vertical_space": false,
+        "background_color": "",
+        "text_color": ""
+      }
+    },
+    "056814114181598817": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": false,
+        "remove_vertical_space": false,
+        "background_color": "",
+        "text_color": ""
+      }
+    },
+    "1753548029682b9335": {
+      "type": "apps",
+      "disabled": true,
+      "settings": {
+        "full_width": true,
+        "remove_horizontal_space": false,
+        "remove_vertical_space": false,
+        "background_color": "",
+        "text_color": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main-details",
+    "product_detail_showcase_GaNnCk",
+    "community_highlights_NnFkJi",
+    "1777358140a0929aea",
+    "17772552885a8a6058",
+    "related-products",
+    "465920484447377053",
+    "056814114181598817",
+    "1753548029682b9335"
+  ]
+}

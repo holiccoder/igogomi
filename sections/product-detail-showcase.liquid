@@ -67,7 +67,7 @@
 
         @media (max-width: 767px) {
             .igomi-banner-overlay--mobile-top-left {
-                top: 5%;
+                top: 50%;
                 bottom: auto;
                 left: 5%;
                 transform: none;
@@ -244,14 +244,14 @@
   <section class="igomi-banner">
     <picture>
       {% if section.settings.banner1_desktop_image != blank %}
-        <source media="(min-width: 768px)" srcset="{{ section.settings.banner1_desktop_image | image_url: width: 1200 }}">
+        <source media="(min-width: 768px)" srcset="{{ section.settings.banner1_desktop_image | image_url: width: 2500 }} 2500w" sizes="100vw">
       {% else %}
         <source media="(min-width: 768px)" srcset="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/kv_7a3364bf-6361-40d4-9e7d-f38dfc362513.jpg">
       {% endif %}
       {% if section.settings.banner1_mobile_image != blank %}
-        <img src="{{ section.settings.banner1_mobile_image | image_url: width: 800 }}" alt="{{ section.settings.banner1_alt }}" width="1200" height="600" loading="eager">
+        <img src="{{ section.settings.banner1_mobile_image | image_url: width: 800 }}" alt="{{ section.settings.banner1_alt }}" width="800" height="auto" loading="eager">
       {% else %}
-        <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomi01_1d108719-d7e9-447a-a694-0f8a638b9653.jpg" alt="{{ section.settings.banner1_alt }}" width="1200" height="600" loading="eager">
+        <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomi01_1d108719-d7e9-447a-a694-0f8a638b9653.jpg" alt="{{ section.settings.banner1_alt }}" width="800" height="auto" loading="eager">
       {% endif %}
     </picture>
     {% if section.settings.banner1_overlay_text != blank %}
@@ -265,14 +265,14 @@
   <section class="igomi-banner">
     <picture>
       {% if section.settings.banner2_desktop_image != blank %}
-        <source media="(min-width: 768px)" srcset="{{ section.settings.banner2_desktop_image | image_url: width: 1200 }}">
+        <source media="(min-width: 768px)" srcset="{{ section.settings.banner2_desktop_image | image_url: width: 2500 }}">
       {% else %}
         <source media="(min-width: 768px)" srcset="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/kv000_fd83a6e2-bccf-4d35-a457-2c6489567c4e.jpg">
       {% endif %}
       {% if section.settings.banner2_mobile_image != blank %}
-        <img src="{{ section.settings.banner2_mobile_image | image_url: width: 800 }}" alt="{{ section.settings.banner2_alt }}" width="1200" height="600" loading="lazy">
+        <img src="{{ section.settings.banner2_mobile_image | image_url: width: 800 }}" alt="{{ section.settings.banner2_alt }}" width="800" height="auto" loading="lazy">
       {% else %}
-        <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomi02_5b12a774-064e-4a44-bd72-3d7ec1e25846.jpg" alt="{{ section.settings.banner2_alt }}" width="1200" height="600" loading="lazy">
+        <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomi02_5b12a774-064e-4a44-bd72-3d7ec1e25846.jpg" alt="{{ section.settings.banner2_alt }}" width="800" height="auto" loading="lazy">
       {% endif %}
     </picture>
   </section>
@@ -327,14 +327,14 @@
   <section class="igomi-banner">
     <picture>
       {% if section.settings.banner3_desktop_image != blank %}
-        <source media="(min-width: 768px)" srcset="{{ section.settings.banner3_desktop_image | image_url: width: 1200 }}">
+        <source media="(min-width: 768px)" srcset="{{ section.settings.banner3_desktop_image | image_url: width: 2500 }}">
       {% else %}
         <source media="(min-width: 768px)" srcset="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomi-image.jpg">
       {% endif %}
       {% if section.settings.banner3_mobile_image != blank %}
-        <img src="{{ section.settings.banner3_mobile_image | image_url: width: 800 }}" alt="{{ section.settings.banner3_alt }}" width="1200" height="600" loading="lazy">
+        <img src="{{ section.settings.banner3_mobile_image | image_url: width: 800 }}" alt="{{ section.settings.banner3_alt }}" width="800" height="auto" loading="lazy">
       {% else %}
-        <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/0001_4d5630ec-0ba2-4a73-a95a-b9694fb95f8b.jpg" alt="{{ section.settings.banner3_alt }}" width="1200" height="600" loading="lazy">
+        <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/0001_4d5630ec-0ba2-4a73-a95a-b9694fb95f8b.jpg" alt="{{ section.settings.banner3_alt }}" width="800" height="auto" loading="lazy">
       {% endif %}
     </picture>
     {% if section.settings.banner3_overlay_text != blank %}
@@ -384,14 +384,14 @@
   <section class="igomi-banner">
     <picture>
       {% if section.settings.banner4_desktop_image != blank %}
-        <source media="(min-width: 768px)" srcset="{{ section.settings.banner4_desktop_image | image_url: width: 1200 }}">
+        <source media="(min-width: 768px)" srcset="{{ section.settings.banner4_desktop_image | image_url: width: 2500 }}">
       {% else %}
         <source media="(min-width: 768px)" srcset="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomikv002.jpg">
       {% endif %}
       {% if section.settings.banner4_mobile_image != blank %}
-        <img src="{{ section.settings.banner4_mobile_image | image_url: width: 800 }}" alt="{{ section.settings.banner4_alt }}" width="1200" height="600" loading="lazy">
+        <img src="{{ section.settings.banner4_mobile_image | image_url: width: 800 }}" alt="{{ section.settings.banner4_alt }}" width="800" height="auto" loading="lazy">
       {% else %}
-        <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomi002a.jpg" alt="{{ section.settings.banner4_alt }}" width="1200" height="600" loading="lazy">
+        <img src="https://cdn.shopify.com/s/files/1/0540/8820/4467/files/igogomi002a.jpg" alt="{{ section.settings.banner4_alt }}" width="800" height="auto" loading="lazy">
       {% endif %}
     </picture>
     {% if section.settings.banner4_overlay_text != blank %}
@@ -535,7 +535,7 @@
       "type": "textarea",
       "id": "intro_body",
       "label": "Body Text",
-      "default": "The IGOGOMI TRAIL X is a high-performance electric dirt bike powered by a 4000W motor, reaching speeds up to 40 MPH. Equipped with a durable battery, full suspension, and hydraulic disc brakes, it delivers smooth, controlled riding on any terrain."
+      "default": "The IGOGOMI TRAIL X is a high-performance electric dirt bike powered by a 4000W motor, capable of reaching speeds up to 38 MPH. Equipped with a durable battery, full suspension, and hydraulic disc brakes, it delivers smooth and controlled riding across all terrains, with a range of up to 65 miles under optimal conditions (tested with a 50 kg rider in PAS Level 1 on flat roads with no wind)."
     },
     {
       "type": "header",

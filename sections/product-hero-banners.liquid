@@ -1,0 +1,705 @@
+<style>
+.igomi-hero-container {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.igomi-hero-banner {
+  position: relative;
+  width: 99%;
+  overflow: hidden;
+  border-radius: 10px;
+  margin: 1rem auto;
+}
+
+.igomi-hero-banner:last-of-type {
+  margin-bottom: 1rem;
+}
+
+#shopify-section-template--20458191814835__product_hero_banners_ABC123 > div > section.igomi-hero-banner.igomi-hero-banner--full {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  height: 1450px;
+}
+
+.igomi-hero-banner:nth-child(3) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.igomi-hero-banner:nth-child(4) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0;
+}
+
+.igomi-hero-banner:nth-child(5) {
+  margin-top: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+#shopify-section-template--20458191814835__product_hero_banners_ABC123 > div > section:nth-child(5) {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.igomi-hero-bg {
+  width: 100%;
+  line-height: 0;
+}
+
+.igomi-hero-bg img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+.igomi-hero-banner__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 40px 15px 0;
+  right: 0;
+}
+
+.igomi-hero-banner__content {
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-left: 40px;
+}
+
+.igomi-hero-banner__subheading {
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 700;
+}
+
+.igomi-hero-banner__heading {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.igomi-hero-banner__description {
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  line-height: 1.6;
+  font-weight: 600;
+}
+
+.igomi-hero-banner--left .igomi-hero-banner__overlay {
+  justify-content: flex-start;
+}
+
+.igomi-hero-banner--right .igomi-hero-banner__overlay {
+  justify-content: flex-end;
+}
+
+.igomi-hero-banner--right .igomi-hero-banner__content {
+  text-align: right;
+  align-items: flex-end;
+}
+
+.igomi-hero-banner--center .igomi-hero-banner__overlay {
+  justify-content: center;
+}
+
+.igomi-hero-banner--center .igomi-hero-banner__content {
+  text-align: center;
+  align-items: center;
+  padding-left: 0;
+}
+
+.igomi-hero-mini-row {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto 1rem auto;
+  padding: 0 10px;
+}
+
+.igomi-hero-mini-grid {
+  display: flex;
+  gap: 1.5rem;
+  width: 100%;
+}
+
+.igomi-hero-mini-banner {
+  position: relative;
+  flex: 1;
+  height: 400px;
+  overflow: hidden;
+}
+
+.igomi-hero-mini-banner .igomi-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.igomi-hero-mini-banner .igomi-hero-bg img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+@media not all and (min-width: 768px) {
+  .igomi-hero-banner {
+    width: 95%;
+    margin: 0.5rem auto;
+    border-radius: 10px;
+  }
+
+  .igomi-hero-banner.igomi-hero-banner--no-margin-mobile {
+    margin-bottom: 0 !important;
+  }
+
+  .igomi-hero-banner:nth-child(3) {
+    margin-top: 0.3rem;
+    margin-bottom: 1rem;
+  }
+
+  .igomi-hero-banner:nth-child(4) {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+    border-radius: 0;
+  }
+
+  .igomi-hero-banner:nth-child(5) {
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .igomi-hero-banner--full {
+    height: auto !important;
+  }
+
+  .igomi-hero-banner:nth-child(2) .igomi-hero-banner__content {
+    color: #ffffff !important;
+  }
+
+  .igomi-hero-banner:nth-child(3) .igomi-hero-banner__overlay {
+    align-items: flex-end !important;
+    padding-bottom: 20px;
+  }
+
+  .igomi-hero-banner:nth-child(1) .igomi-hero-banner__content {
+    padding-top: 20px;
+  }
+
+  .igomi-hero-banner:nth-child(2) .igomi-hero-banner__content {
+    padding-top: 50px;
+  }
+
+  .igomi-hero-banner__description {
+    display: none;
+  }
+
+  .igomi-hero-banner:nth-child(5) .igomi-hero-banner__description {
+    display: block;
+  }
+
+  .igomi-hero-banner--dark .igomi-hero-bg {
+    filter: brightness(120%);
+  }
+
+  .igomi-hero-banner__overlay {
+    justify-content: flex-start !important;
+    padding: 20px 15px 0;
+  }
+
+  .igomi-hero-banner__content {
+    max-width: 100% !important;
+    margin: 0 auto !important;
+    padding-left: 0 !important;
+    padding-bottom: 5rem;
+    text-align: left !important;
+    align-items: flex-start !important;
+    color: #000000 !important;
+  }
+
+  .igomi-hero-mini-grid {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .igomi-hero-mini-banner {
+    flex: none;
+    height: 350px;
+    width: 100%;
+  }
+}
+</style>
+
+<div class="igomi-hero-container" data-section-id="{{ section.id }}">
+
+  {%- comment -%} BANNER 1: DESIGN {%- endcomment -%}
+  <section class="igomi-hero-banner igomi-hero-banner--dark igomi-hero-banner--{{ section.settings.banner1_text_position | default: 'left' }}">
+    <picture class="igomi-hero-bg">
+      {% if section.settings.banner1_mobile_image != blank %}
+        <source media="(max-width: 768px)" srcset="{{ section.settings.banner1_mobile_image }}">
+      {% endif %}
+      {% if section.settings.banner1_desktop_image != blank %}
+        <img src="{{ section.settings.banner1_desktop_image }}" alt="{{ section.settings.banner1_alt }}">
+      {% else %}
+        <div style="background:#e5e5e5;width:100%;height:100%;"></div>
+      {% endif %}
+    </picture>
+    <div class="igomi-hero-banner__overlay">
+      <div class="igomi-hero-banner__content" style="color: {{ section.settings.banner1_text_color | default: '#000000' }};">
+        {% if section.settings.banner1_subheading != blank %}
+          <span class="igomi-hero-banner__subheading">{{ section.settings.banner1_subheading }}</span>
+        {% endif %}
+        {% if section.settings.banner1_heading != blank %}
+          <h2 class="igomi-hero-banner__heading">{{ section.settings.banner1_heading }}</h2>
+        {% endif %}
+        {% if section.settings.banner1_description != blank %}
+          <p class="igomi-hero-banner__description">{{ section.settings.banner1_description }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} BANNER 2: SMART TECH {%- endcomment -%}
+  <section class="igomi-hero-banner igomi-hero-banner--dark igomi-hero-banner--{{ section.settings.banner2_text_position | default: 'left' }}">
+    <picture class="igomi-hero-bg">
+      {% if section.settings.banner2_mobile_image != blank %}
+        <source media="(max-width: 768px)" srcset="{{ section.settings.banner2_mobile_image }}">
+      {% endif %}
+      {% if section.settings.banner2_desktop_image != blank %}
+        <img src="{{ section.settings.banner2_desktop_image }}" alt="{{ section.settings.banner2_alt }}">
+      {% else %}
+        <div style="background:#e5e5e5;width:100%;height:100%;"></div>
+      {% endif %}
+    </picture>
+    <div class="igomi-hero-banner__overlay">
+      <div class="igomi-hero-banner__content" style="color: {{ section.settings.banner2_text_color | default: '#ffffff' }};">
+        {% if section.settings.banner2_subheading != blank %}
+          <span class="igomi-hero-banner__subheading">{{ section.settings.banner2_subheading }}</span>
+        {% endif %}
+        {% if section.settings.banner2_heading != blank %}
+          <h2 class="igomi-hero-banner__heading">{{ section.settings.banner2_heading }}</h2>
+        {% endif %}
+        {% if section.settings.banner2_description != blank %}
+          <p class="igomi-hero-banner__description">{{ section.settings.banner2_description }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} BANNER 3: HIDDEN DRIVE TECHNOLOGY {%- endcomment -%}
+  <section class="igomi-hero-banner igomi-hero-banner--dark igomi-hero-banner--{{ section.settings.banner3_text_position | default: 'right' }} igomi-hero-banner--no-margin-mobile">
+    <picture class="igomi-hero-bg">
+      {% if section.settings.banner3_mobile_image != blank %}
+        <source media="(max-width: 768px)" srcset="{{ section.settings.banner3_mobile_image }}">
+      {% endif %}
+      {% if section.settings.banner3_desktop_image != blank %}
+        <img src="{{ section.settings.banner3_desktop_image }}" alt="{{ section.settings.banner3_alt }}">
+      {% else %}
+        <div style="background:#e5e5e5;width:100%;height:100%;"></div>
+      {% endif %}
+    </picture>
+    <div class="igomi-hero-banner__overlay">
+      <div class="igomi-hero-banner__content" style="color: {{ section.settings.banner3_text_color | default: '#000000' }};">
+        {% if section.settings.banner3_subheading != blank %}
+          <span class="igomi-hero-banner__subheading">{{ section.settings.banner3_subheading }}</span>
+        {% endif %}
+        {% if section.settings.banner3_heading != blank %}
+          <h2 class="igomi-hero-banner__heading">{{ section.settings.banner3_heading }}</h2>
+        {% endif %}
+        {% if section.settings.banner3_description != blank %}
+          <p class="igomi-hero-banner__description">{{ section.settings.banner3_description }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} BANNER 4: FULL-HEIGHT SPECIAL (NO TEXT) {%- endcomment -%}
+  <section class="igomi-hero-banner igomi-hero-banner--full" style="height: 1430px;">
+    <picture class="igomi-hero-bg">
+      {% if section.settings.banner4_mobile_image != blank %}
+        <source media="(max-width: 768px)" srcset="{{ section.settings.banner4_mobile_image }}">
+      {% endif %}
+      {% if section.settings.banner4_desktop_image != blank %}
+        <img src="{{ section.settings.banner4_desktop_image }}" alt="{{ section.settings.banner4_alt }}">
+      {% else %}
+        <div style="background:#e5e5e5;width:100%;height:100%;"></div>
+      {% endif %}
+    </picture>
+    <div class="igomi-hero-banner__overlay"></div>
+  </section>
+
+  {%- comment -%} BANNER 5: DARK / WHITE TEXT {%- endcomment -%}
+  <section class="igomi-hero-banner igomi-hero-banner--{{ section.settings.banner5_text_position | default: 'left' }} igomi-hero-banner--dark" style="{% if section.settings.banner5_bg_color != blank %}background-color: {{ section.settings.banner5_bg_color }};{% endif %}">
+    <picture class="igomi-hero-bg">
+      {% if section.settings.banner5_mobile_image != blank %}
+        <source media="(max-width: 768px)" srcset="{{ section.settings.banner5_mobile_image }}">
+      {% endif %}
+      {% if section.settings.banner5_desktop_image != blank %}
+        <img src="{{ section.settings.banner5_desktop_image }}" alt="{{ section.settings.banner5_alt }}">
+      {% else %}
+        <div style="background:#111111;width:100%;height:100%;"></div>
+      {% endif %}
+    </picture>
+    <div class="igomi-hero-banner__overlay">
+      <div class="igomi-hero-banner__content" style="color: {{ section.settings.banner5_text_color | default: '#ffffff' }};">
+        {% if section.settings.banner5_subheading != blank %}
+          <span class="igomi-hero-banner__subheading">{{ section.settings.banner5_subheading }}</span>
+        {% endif %}
+        {% if section.settings.banner5_heading != blank %}
+          <h2 class="igomi-hero-banner__heading">{{ section.settings.banner5_heading }}</h2>
+        {% endif %}
+        {% if section.settings.banner5_description != blank %}
+          <p class="igomi-hero-banner__description">{{ section.settings.banner5_description }}</p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  {%- comment -%} MINI-BANNER ROW {%- endcomment -%}
+  {% if section.blocks.size > 0 %}
+    <div class="igomi-hero-mini-row">
+      <div class="igomi-hero-mini-grid">
+        {% for block in section.blocks %}
+          {% if block.type == 'mini_banner' %}
+            <div class="igomi-hero-mini-banner" {{ block.shopify_attributes }}>
+              <div class="igomi-hero-bg">
+                {% if block.settings.link != blank %}<a href="{{ block.settings.link }}" data-instant>{% endif %}
+                {% if block.settings.image != blank %}
+                  <img src="{{ block.settings.image }}" alt="{{ block.settings.alt }}" loading="lazy">
+                {% else %}
+                  <div style="background:#e5e5e5;width:100%;height:100%;"></div>
+                {% endif %}
+                {% if block.settings.link != blank %}</a>{% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+
+</div>
+
+{% schema %}
+{
+  "name": "Product Hero Banners",
+  "class": "section-product-hero-banners",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Banner 1 — DESIGN"
+    },
+    {
+      "type": "url",
+      "id": "banner1_desktop_image",
+      "label": "Desktop Image URL"
+    },
+    {
+      "type": "url",
+      "id": "banner1_mobile_image",
+      "label": "Mobile Image URL"
+    },
+    {
+      "type": "text",
+      "id": "banner1_alt",
+      "label": "Alt Text",
+      "default": "Minimal. Modern. Unmistakably IGOGOMI"
+    },
+    {
+      "type": "text",
+      "id": "banner1_subheading",
+      "label": "Subheading",
+      "default": "DESIGN"
+    },
+    {
+      "type": "text",
+      "id": "banner1_heading",
+      "label": "Heading",
+      "default": "Minimal. Modern. Unmistakably IGOGOMI"
+    },
+    {
+      "type": "textarea",
+      "id": "banner1_description",
+      "label": "Description",
+      "default": "Crafted with a seamless aluminum unibody frame and a hidden chain design, every detail is built for clean aesthetics and everyday functionality. Designed to handle both all-terrain adventures and daily commuting, CUV blends durability, versatility, and modern urban style into one refined ride."
+    },
+    {
+      "type": "select",
+      "id": "banner1_text_position",
+      "label": "Text Position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "banner1_text_color",
+      "label": "Text Color",
+      "options": [
+        { "value": "#000000", "label": "Black" },
+        { "value": "#ffffff", "label": "White" }
+      ],
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Banner 2 — SMART TECH"
+    },
+    {
+      "type": "url",
+      "id": "banner2_desktop_image",
+      "label": "Desktop Image URL"
+    },
+    {
+      "type": "url",
+      "id": "banner2_mobile_image",
+      "label": "Mobile Image URL"
+    },
+    {
+      "type": "text",
+      "id": "banner2_alt",
+      "label": "Alt Text",
+      "default": "Power meets intelligence."
+    },
+    {
+      "type": "text",
+      "id": "banner2_subheading",
+      "label": "Subheading",
+      "default": "SMART TECH"
+    },
+    {
+      "type": "text",
+      "id": "banner2_heading",
+      "label": "Heading",
+      "default": "Power meets intelligence."
+    },
+    {
+      "type": "textarea",
+      "id": "banner2_description",
+      "label": "Description",
+      "default": "The IGOGOMI CUV i5 is engineered with smart riding technology for both urban commuting and all-terrain exploration. Equipped with a powerful 750W intelligent motor, automatic 2-speed transmission, and 5-level pedal assist system, it delivers smooth acceleration and adaptive performance in every ride condition."
+    },
+    {
+      "type": "select",
+      "id": "banner2_text_position",
+      "label": "Text Position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "banner2_text_color",
+      "label": "Text Color",
+      "options": [
+        { "value": "#000000", "label": "Black" },
+        { "value": "#ffffff", "label": "White" }
+      ],
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Banner 3 — HIDDEN DRIVE TECHNOLOGY"
+    },
+    {
+      "type": "url",
+      "id": "banner3_desktop_image",
+      "label": "Desktop Image URL"
+    },
+    {
+      "type": "url",
+      "id": "banner3_mobile_image",
+      "label": "Mobile Image URL"
+    },
+    {
+      "type": "text",
+      "id": "banner3_alt",
+      "label": "Alt Text",
+      "default": "Less Maintenance. More Freedom."
+    },
+    {
+      "type": "text",
+      "id": "banner3_subheading",
+      "label": "Subheading",
+      "default": "HIDDEN DRIVE TECHNOLOGY"
+    },
+    {
+      "type": "text",
+      "id": "banner3_heading",
+      "label": "Heading",
+      "default": "Less Maintenance. More Freedom."
+    },
+    {
+      "type": "textarea",
+      "id": "banner3_description",
+      "label": "Description",
+      "default": "The IGOGOMI CUV i5 features an innovative hidden chain system that seamlessly integrates the drivetrain into the bike's minimalist structure. Protected from dust, dirt, and daily wear, it delivers a cleaner appearance, quieter riding experience."
+    },
+    {
+      "type": "select",
+      "id": "banner3_text_position",
+      "label": "Text Position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "select",
+      "id": "banner3_text_color",
+      "label": "Text Color",
+      "options": [
+        { "value": "#000000", "label": "Black" },
+        { "value": "#ffffff", "label": "White" }
+      ],
+      "default": "#000000"
+    },
+    {
+      "type": "header",
+      "content": "Banner 4 — FULL HEIGHT (No Text)"
+    },
+    {
+      "type": "url",
+      "id": "banner4_desktop_image",
+      "label": "Desktop Image URL"
+    },
+    {
+      "type": "url",
+      "id": "banner4_mobile_image",
+      "label": "Mobile Image URL"
+    },
+    {
+      "type": "text",
+      "id": "banner4_alt",
+      "label": "Alt Text"
+    },
+    {
+      "type": "range",
+      "id": "banner4_height_desktop",
+      "label": "Desktop Height (px)",
+      "min": 600,
+      "max": 2500,
+      "step": 50,
+      "unit": "px",
+      "default": 1500
+    },
+    {
+      "type": "header",
+      "content": "Banner 5 — DARK HERO (White Text)"
+    },
+    {
+      "type": "url",
+      "id": "banner5_desktop_image",
+      "label": "Desktop Image URL"
+    },
+    {
+      "type": "url",
+      "id": "banner5_mobile_image",
+      "label": "Mobile Image URL"
+    },
+    {
+      "type": "text",
+      "id": "banner5_alt",
+      "label": "Alt Text"
+    },
+    {
+      "type": "text",
+      "id": "banner5_subheading",
+      "label": "Subheading"
+    },
+    {
+      "type": "text",
+      "id": "banner5_heading",
+      "label": "Heading"
+    },
+    {
+      "type": "textarea",
+      "id": "banner5_description",
+      "label": "Description",
+      "default": "This section features crisp white typography styled to stand out effortlessly over darker cinematic background imagery."
+    },
+    {
+      "type": "select",
+      "id": "banner5_text_position",
+      "label": "Text Position",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "center", "label": "Center" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "banner5_text_color",
+      "label": "Text Color",
+      "options": [
+        { "value": "#000000", "label": "Black" },
+        { "value": "#ffffff", "label": "White" }
+      ],
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "banner5_bg_color",
+      "label": "Background Color",
+      "default": "#111111"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "mini_banner",
+      "name": "Mini Banner Image",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "url",
+          "id": "image",
+          "label": "Image URL"
+        },
+        {
+          "type": "text",
+          "id": "alt",
+          "label": "Alt Text"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Link (optional)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Hero Banners",
+      "blocks": [
+        { "type": "mini_banner" },
+        { "type": "mini_banner" },
+        { "type": "mini_banner" }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -33,6 +33,63 @@
       --slideshow-background: 45 45 45;
     {% endif %}
   }
+
+  #shopify-section-{{ section.id }} [data-home-first-slideshow-secondary-button] {
+    background: transparent !important;
+    --button-background-hover-opacity: 0;
+    --button-background-active-opacity: 0;
+    --tw-ring-color: transparent !important;
+  }
+
+  #shopify-section-{{ section.id }} [data-home-first-slideshow-secondary-button]:hover,
+  #shopify-section-{{ section.id }} [data-home-first-slideshow-secondary-button]:active,
+  #shopify-section-{{ section.id }} [data-home-first-slideshow-secondary-button]:focus-visible {
+    background: transparent !important;
+    --tw-ring-color: transparent !important;
+  }
+
+  {% if section.id contains 'slideshow_' %}
+    #shopify-section-{{ section.id }} {
+      margin-bottom: 0.8rem;
+    }
+
+    #shopify-section-{{ section.id }} .slideshow-element {
+      max-width: 98% !important;
+      border-radius: 12px !important;
+    }
+
+    #shopify-section-{{ section.id }} .slide-content {
+      padding-bottom: 2rem;
+    }
+
+    #shopify-section-{{ section.id }} .button {
+      --tw-ring-color: transparent !important;
+    }
+
+    #shopify-section-{{ section.id }} .button:hover,
+    #shopify-section-{{ section.id }} .button:active,
+    #shopify-section-{{ section.id }} .button:focus-visible {
+      --tw-ring-color: transparent !important;
+    }
+
+    #shopify-section-{{ section.id }} split-lines {
+      margin-left: 1.5rem;
+    }
+
+    {% if section.id == 'slideshow_pfbTJm' %}
+      @media not all and (min-width: 768px) {
+        #shopify-section-{{ section.id }} split-lines,
+        #shopify-section-{{ section.id }} .subheading,
+        #shopify-section-{{ section.id }} .button {
+          color: #ffffff !important;
+        }
+        #shopify-section-{{ section.id }} .button {
+          --button-background: 255 255 255 !important;
+          --button-foreground: 255 255 255 !important;
+        }
+      }
+    {% endif %}
+  {% endif %}
 </style>
 
 <div
@@ -242,8 +299,14 @@
               {%- endunless -%}
 
               {%- unless block.settings.heading == empty -%}
+                {% liquid
+                  assign slide_heading = block.settings.heading | escape
+                  assign slide_heading = slide_heading | replace: '&lt;br&gt;', '<br>'
+                  assign slide_heading = slide_heading | replace: '&lt;br/&gt;', '<br>'
+                  assign slide_heading = slide_heading | replace: '&lt;br /&gt;', '<br>'
+                %}
                 <split-lines class="{{ block.settings.heading_size }}" data-slide-animation-element>
-                  <div>{{ block.settings.heading }}</div>
+                  <div>{{ slide_heading }}</div>
                 </split-lines>
               {%- endunless -%}
 
@@ -271,6 +334,12 @@
                   </div>
 
                   {%- unless block.settings.button2_text == empty -%}
+                    {% liquid
+                      assign second_button_attrs = ''
+                      if template.name == 'index' and block.id == 'slide_X9aajV' or template.name == 'index' and block.id == 'slide_33EkHw'
+                        assign second_button_attrs = 'data-home-first-slideshow-secondary-button'
+                      endif
+                    %}
                     <div
                       class="pb-2 -mb-2"
                       data-slide-animation-element
@@ -282,7 +351,8 @@
                         style: block.settings.button2_style,
                         text_color: block.settings.button2_text_color,
                         background_color: block.settings.button2_background_color,
-                        size: block.settings.button_size
+                        size: block.settings.button_size,
+                        attrs: second_button_attrs
                       %}
                     </div>
                   {%- endunless -%}
@@ -339,6 +409,29 @@
     {% endif %}
   </slideshow-element>
 </div>
+
+{% if section.id == 'slideshow_pfbTJm' %}
+  <script>
+    (function() {
+      const section = document.currentScript.closest('.shopify-section');
+      if (!section) return;
+      const mq = window.matchMedia('not all and (min-width: 768px)');
+      function apply() {
+        if (mq.matches) {
+          section.querySelectorAll('split-lines, .subheading, .button').forEach(el => {
+            el.style.color = '#ffffff';
+          });
+          section.querySelectorAll('.button').forEach(el => {
+            el.style.setProperty('--button-background', '255 255 255');
+            el.style.setProperty('--button-foreground', '255 255 255');
+          });
+        }
+      }
+      apply();
+      mq.addEventListener('change', apply);
+    })();
+  </script>
+{% endif %}
 
 {% schema %}
 {
