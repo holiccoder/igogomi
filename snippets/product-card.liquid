@@ -164,6 +164,17 @@
     <div class="mt-2">
       {% if card_product %}
         {% render 'price', product: card_product %}
+
+        {% if card_product.handle == 'igogomi-cuv-i5-20-all-terrain-utility-e-bike' %}
+          {% if request.page_type == 'collection' or request.page_type == 'index' %}
+            <span
+              class="inline-block mt-2 text-[16px] leading-none font-bold"
+              style="color: #b8860b; border: 1px solid #b8860b; padding: 6px 12px; border-radius: 10px;"
+            >
+              Pre Sale
+            </span>
+          {% endif %}
+        {% endif %}
       {% else %}
         {{ 5000 | money }}
       {% endif %}

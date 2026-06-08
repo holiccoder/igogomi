@@ -246,7 +246,69 @@
         document.querySelector('.shopify-policy__body .rte').classList.add('prose', 'max-w-none');
       {% endif %}
     </script>
-  {%- render 'layouthub_footer' -%} 
+
+    <script>
+      // (function() {
+      //   var CHECKOUT_FALLBACK_DELAY_MS = 8000;
+      //   var pendingTimer = null;
+      //
+      //   function clearPendingFallback() {
+      //     if (pendingTimer) {
+      //       clearTimeout(pendingTimer);
+      //       pendingTimer = null;
+      //     }
+      //   }
+
+        // function hasSlotPickerLoader() {
+        //   var selectors = [
+        //     '.slot-picker-loader',
+        //     '[class*="slot-picker-loader"]',
+        //     '[class*="slot-picker"]'
+        //   ];
+        //
+        //   for (var i = 0; i < selectors.length; i++) {
+        //     if (document.querySelector(selectors[i])) {
+        //       return true;
+        //     }
+        //   }
+        //
+        //   return false;
+        // }
+
+      //   function alreadyOnCheckout() {
+      //     return /\/checkout(s)?(\/|$)/.test(window.location.pathname);
+      //   }
+      //
+      //   function queueCheckoutFallback() {
+      //     clearPendingFallback();
+      //
+      //     pendingTimer = setTimeout(function() {
+      //       if (alreadyOnCheckout()) {
+      //         return;
+      //       }
+      //
+      //       if (!hasSlotPickerLoader()) {
+      //         return;
+      //       }
+      //
+      //       window.location.assign('/checkout');
+      //     }, CHECKOUT_FALLBACK_DELAY_MS);
+      //   }
+      //
+      //   document.addEventListener('click', function(event) {
+      //     var button = event.target.closest('button[name="checkout"], input[name="checkout"]');
+      //     if (!button) {
+      //       return;
+      //     }
+      //
+      //     queueCheckoutFallback();
+      //   });
+      //
+      //   window.addEventListener('pagehide', clearPendingFallback);
+      //   window.addEventListener('beforeunload', clearPendingFallback);
+      // })();
+    </script>
+  {%- render 'layouthub_footer' -%}
  {%- render "ecom_footer"-%}
 <!-- BEAE-FOOTER --> 
 {%- render 'beae_footer' -%}

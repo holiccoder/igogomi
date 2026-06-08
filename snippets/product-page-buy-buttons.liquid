@@ -8,6 +8,11 @@
   if block.settings.show_dynamic_checkout_buttons and gift_card_recipient_feature_active == false
     assign show_dynamic_checkout = true
   endif
+
+  assign is_pre_sale_product = false
+  if product.handle == 'igogomi-cuv-i5-20-all-terrain-utility-e-bike'
+    assign is_pre_sale_product = true
+  endif
 %}
 
 <style>
@@ -23,6 +28,13 @@
       background: block.settings.buy_it_now_background_color,
       text: block.settings.buy_it_now_text_color
     %}
+  }
+
+  #shopify-section-{{ section.id }} .preorder-note {
+    margin-top: 10px;
+    color: #b8860b;
+    font-size: 1.4rem;
+    font-weight: 600;
   }
 </style>
 
@@ -90,6 +102,10 @@
           {%- endif -%}
         </span>
       </button>
+
+      {% if is_pre_sale_product %}
+        <p class="preorder-note">Pre-order: Estimated to ship around mid-August!</p>
+      {% endif %}
 
       {% if show_dynamic_checkout %}
         {{ form | payment_button }}

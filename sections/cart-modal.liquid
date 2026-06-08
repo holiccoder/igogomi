@@ -115,15 +115,17 @@
               {% endif %}
 
               {% if section.settings.show_checkout_button %}
-                {% form 'cart', cart, data-form-button-loading: true, class: 'contents' %}
+
+                {% form 'cart', cart, data-form-button-loading: false, class: 'flex-1' %}
                   <button
-                    type="submit"
-                    name="checkout"
-                    class="button button-primary button-checkout whitespace-nowrap max-sm:text-xs flex-1"
+                          type="submit"
+                          name="checkout"
+                          class="button button-primary button-checkout whitespace-nowrap max-sm:text-xs w-full"
                   >
                     {{ 'sections.cart.checkout' | t }}
                   </button>
                 {% endform %}
+
               {% endif %}
             </div>
           </div>

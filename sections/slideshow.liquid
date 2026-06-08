@@ -50,13 +50,25 @@
 
   {% if section.id contains 'slideshow_' %}
     #shopify-section-{{ section.id }} {
-      margin-bottom: 0.8rem;
+      margin-bottom: 0.4rem;
     }
 
     #shopify-section-{{ section.id }} .slideshow-element {
       max-width: 98% !important;
       border-radius: 12px !important;
     }
+
+    {% if section.id == 'slideshow_pfbTJm' or section.id == 'slideshow_N64Qxc' or section.id == 'slideshow_gT4fPb' %}
+      #shopify-section-{{ section.id }} {
+        max-width: 99%;
+        margin: 0 auto;
+      }
+
+      #shopify-section-{{ section.id }} .slideshow-element {
+        max-width: 100% !important;
+        margin: 0 auto;
+      }
+    {% endif %}
 
     #shopify-section-{{ section.id }} .slide-content {
       padding-bottom: 2rem;
@@ -77,13 +89,23 @@
     }
 
     {% if section.id == 'slideshow_pfbTJm' %}
+      #shopify-section-{{ section.id }} .slide-buttons > div:first-child .button {
+        background: linear-gradient(90deg, #8b0000 0%, #00008b 100%) !important;
+        --button-background: transparent !important;
+        --button-foreground: 255 255 255 !important;
+        --button-background-hover-opacity: 0;
+        --button-background-active-opacity: 0;
+        color: #ffffff !important;
+        opacity: 0.5;
+      }
+
       @media not all and (min-width: 768px) {
         #shopify-section-{{ section.id }} split-lines,
-        #shopify-section-{{ section.id }} .subheading,
-        #shopify-section-{{ section.id }} .button {
+        #shopify-section-{{ section.id }} .subheading {
           color: #ffffff !important;
         }
-        #shopify-section-{{ section.id }} .button {
+        #shopify-section-{{ section.id }} .slide-buttons > div:not(:first-child) .button {
+          color: #ffffff !important;
           --button-background: 255 255 255 !important;
           --button-foreground: 255 255 255 !important;
         }
@@ -421,7 +443,7 @@
           section.querySelectorAll('split-lines, .subheading, .button').forEach(el => {
             el.style.color = '#ffffff';
           });
-          section.querySelectorAll('.button').forEach(el => {
+          section.querySelectorAll('.slide-buttons > div:not(:first-child) .button').forEach(el => {
             el.style.setProperty('--button-background', '255 255 255');
             el.style.setProperty('--button-foreground', '255 255 255');
           });

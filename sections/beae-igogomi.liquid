@@ -9,7 +9,26 @@
             <!--/BEAE-EMBED-->
         {% endif %}
 
-{% render 'beae_header', BEAE_THEME: true %}{% endif %}<link rel="stylesheet" id="beae-exported-page-css" media="all" href="{{"beae-69b977da0ba5bf79000588a2.css" | asset_url}}"><div class="beae-builder-v2 beae-builder"><div class="beae-sections beae-content-wrapper"><script type="text/javascript">if (!window.BEAEARGS) {window.BEAEARGS = {};}</script>
+{% render 'beae_header', BEAE_THEME: true %}{% endif %}<link rel="stylesheet" id="beae-exported-page-css" media="all" href="{{"beae-69b977da0ba5bf79000588a2.css" | asset_url}}"><style>
+  .beae-pre-sale-badge {
+    display: inline-block;
+    margin-left: 10px;
+    padding: 2px 10px;
+    border: 1px solid #b8860b;
+    border-radius: 999px;
+    color: #b8860b;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.3;
+    vertical-align: middle;
+  }
+  .beae-preorder-note {
+    margin-top: 10px;
+    color: #b8860b;
+    font-size: 14px;
+    font-weight: 600;
+  }
+</style><div class="beae-builder-v2 beae-builder"><div class="beae-sections beae-content-wrapper"><script type="text/javascript">if (!window.BEAEARGS) {window.BEAEARGS = {};}</script>
 <!----><section id="" data-sectionid="beae-8dr0o6m2" data-width="1470" data-margin="30px" data-margin-mobile="15px" data-type="flexContainer" class="beae-typo-p1 beae-8dr0o6m2 section-beae-8dr0o6m2 beae-section beae-core" data-template="Product detail 19"><!----><!----><div class="beae-flexbox beae-typo-p1" style="padding: 0px;"><div class="beae__section--container beae-flexbox-container" style="max-width: var(--beae-page-width, 1470px);"><!----><div class="beae-flexbox-core beae-x-flex-section grid-container-width"><!----><div class="beae-s9joytnw beae-block beae-core beae-animation beae-unique-xqdptfzz" data-id="beae-s9joytnw" data-uniqueid="xqdptfzz""><!---->
       {% capture beae_variant_size_guide_icon %}{% endcapture %}
     {% capture beae_variant_size_guide_icon %}{% endcapture %}
@@ -67,6 +86,10 @@
           {%- form 'product', product,class: "beae-product-form-next beae-product-form--single beae-product-form-detail", data-product_id: product.id, data-handle: product.handle, data-variant-id: product.selected_or_first_available_variant.id, data-available: product.available -%}
             {%- liquid
               assign selected_variant = product.selected_or_first_available_variant
+                  assign beae_show_pre_sale_texts = false
+                  if product.handle == 'igogomi-cuv-i5-20-all-terrain-utility-e-bike'
+                    assign beae_show_pre_sale_texts = true
+                  endif
             -%}
          <div class="beae-flexbox-core beae-x-featuted_product" data-product_id="{{ product.id }}"><!----><!----><div class="beae-iegzpbuc beae-block beae-core beae-animation beae-unique-96yfyd49" data-id="beae-iegzpbuc" data-loop-index="0" data-uniqueid="96yfyd49""><!----><div class="beae-block beae-x-breadcrumb">{%- unless template == 'index' or template == 'cart' or template == 'list-collections' or template == '404' -%}
             {%- assign t = template | split: '.' | first -%}
@@ -429,7 +452,7 @@
         {% endif %}
       {% endif %}
       
-  </span><span class="beae-product-single__price--regular">{% liquid
+  </span>{% if beae_show_pre_sale_texts %}<span class="beae-pre-sale-badge">Pre Sale</span>{% endif %}<span class="beae-product-single__price--regular">{% liquid
     assign print_compare = ''
     if selected_variant != blank   
       if selected_variant.price < selected_variant.compare_at_price
@@ -751,7 +774,7 @@ Enter snippet code of review app or contact with our support to help add review 
             if product.selected_or_first_available_variant.featured_media.preview_image == blank
                 assign product_variant_media = product.featured_media.preview_image | image_url: width: 100
             endif
-        -%}{{ product_variant_media }}" data-action="cart" data-add-to-cart-text="{{ 'sections.beae-igogomi.be649020154_html' | t }}" data-text-outstock="{{ 'sections.beae-igogomi.be28375103_html' | t }}" data-text-added-cart="{{ 'sections.beae-igogomi.be1182278043_html' | t }}" data-sold-out-text="{{ 'sections.beae-igogomi.be1538394658_html' | t }}" data-add-success="{{ 'sections.beae-igogomi.be1427617666_html' | t }}" data-link="" data-choose-options-text="{{ 'sections.beae-igogomi.be719299147_html' | t }}" data-type="text" data-show-icon-mobile="false"><!----><span class="beae-add-to-cart-text-content">{{ 'sections.beae-igogomi.be649020154_html' | t }}</span><!----><div class="beae-add-to-cart-loader-wrp"><span class="beae-add-to-cart-loader"></span></div></button><script type="text/javascript">window.BEAEARGS['beae-qufc1ls5block-add-to-cart'] = {
+        -%}{{ product_variant_media }}" data-action="cart" data-add-to-cart-text="{{ 'sections.beae-igogomi.be649020154_html' | t }}" data-text-outstock="{{ 'sections.beae-igogomi.be28375103_html' | t }}" data-text-added-cart="{{ 'sections.beae-igogomi.be1182278043_html' | t }}" data-sold-out-text="{{ 'sections.beae-igogomi.be1538394658_html' | t }}" data-add-success="{{ 'sections.beae-igogomi.be1427617666_html' | t }}" data-link="" data-choose-options-text="{{ 'sections.beae-igogomi.be719299147_html' | t }}" data-type="text" data-show-icon-mobile="false"><!----><span class="beae-add-to-cart-text-content">{{ 'sections.beae-igogomi.be649020154_html' | t }}</span><!----><div class="beae-add-to-cart-loader-wrp"><span class="beae-add-to-cart-loader"></span></div></button>{% if beae_show_pre_sale_texts %}<p class="beae-preorder-note">Pre-order: Estimated to ship around mid-August!</p>{% endif %}<script type="text/javascript">window.BEAEARGS['beae-qufc1ls5block-add-to-cart'] = {
     "id": "beae-qufc1ls5",
     "mode": {"value": "live"},
     "loopIndex":0

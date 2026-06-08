@@ -10764,3 +10764,23 @@ shopify-accelerated-checkout-cart {
     --color-headings: 255 255 255 !important;
   }
 }
+
+/*a.button {*/
+/*  background: linear-gradient(90deg, #ff0000 0%, #0000ff 100%) !important;*/
+/*  --button-background: transparent !important;*/
+/*  --button-background-hover-opacity: 0;*/
+/*  --button-background-active-opacity: 0;*/
+/*  opacity: 0.7;*/
+/*}*/
+
+@media screen and (max-width: 767px) {
+   #shopify-section-template--20450213789875__slideshow_N64Qxc,
+   #shopify-section-template--20450213789875__slideshow_pfbTJm,
+   #shopify-section-template--20450213789875__slideshow_gT4fPb,
+   #shopify-section-template--20450213789875__text_with_icons_A9gH8F
+   {
+     width:96%;
+     margin:0.5rem auto;
+   }
+}
+

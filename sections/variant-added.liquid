@@ -22,8 +22,8 @@
     {{ 'sections.cart.view_cart' | t }}
   </a>
 
-  {% form 'cart', cart, data-form-button-loading: true, class: 'contents' %}
-    <button type="submit" name="checkout" class="button button-primary whitespace-nowrap max-md:text-xs flex-1">
+  {% form 'cart', cart, data-form-button-loading: true, class: 'flex-1' %}
+    <button type="submit" name="checkout" class="button button-primary whitespace-nowrap max-md:text-xs w-full">
       {{ 'sections.cart.checkout' | t }}
     </button>
   {% endform %}

@@ -167,6 +167,100 @@
             class: 'my-6',
             block: block
           %}
+          {% if product.metafields.custom.specifications != blank %}
+            <div class="product-specifications my-6">
+              <style>
+                .product-specifications {
+                  border: 1px solid #e5e5e5;
+                  border-radius: 8px;
+                  overflow: hidden;
+                }
+                .product-specifications-toggle {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  width: 100%;
+                  padding: 14px 16px;
+                  background: none;
+                  border: none;
+                  cursor: pointer;
+                  font-size: 0.9375rem;
+                  font-weight: 600;
+                  color: rgba(var(--color-foreground), 0.85);
+                  text-align: left;
+                }
+                .product-specifications-toggle:hover {
+                  background: rgba(var(--color-foreground), 0.03);
+                }
+                .product-specifications-arrow {
+                  width: 18px;
+                  height: 18px;
+                  transition: transform 0.25s ease;
+                  flex-shrink: 0;
+                  margin-left: 12px;
+                }
+                .product-specifications.is-open .product-specifications-arrow {
+                  transform: rotate(180deg);
+                }
+                .product-specifications-content {
+                  display: none;
+                  padding: 0 16px 16px;
+                }
+                .product-specifications.is-open .product-specifications-content {
+                  display: block;
+                }
+                .product-specifications-table {
+                  width: 100%;
+                  border-collapse: collapse;
+                  font-size: 0.875rem;
+                }
+                .product-specifications-table tr {
+                  border-bottom: 1px solid rgba(var(--color-foreground), 0.08);
+                }
+                .product-specifications-table tr:last-child {
+                  border-bottom: none;
+                }
+                .product-specifications-table td {
+                  padding: 10px 0;
+                  vertical-align: top;
+                }
+                .product-specifications-table td:first-child {
+                  font-weight: 600;
+                  color: rgba(var(--color-foreground), 0.75);
+                  width: 40%;
+                  padding-right: 16px;
+                }
+                .product-specifications-table td:last-child {
+                  color: rgba(var(--color-foreground), 1);
+                }
+                @media (min-width: 768px) {
+                  .product-specifications-table td:first-child {
+                    width: 33%;
+                  }
+                }
+              </style>
+              <button class="product-specifications-toggle" onclick="this.parentElement.classList.toggle('is-open')" aria-expanded="false">
+                <span>Specifications</span>
+                <svg class="product-specifications-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="product-specifications-content">
+                <table class="product-specifications-table">
+                  <tbody>
+                    {% for spec in product.metafields.custom.specifications.value %}
+                      {% if spec[1] != blank %}
+                        <tr>
+                          <td>{{ spec[0] | replace: '_', ' ' | capitalize }}</td>
+                          <td>{{ spec[1] }}</td>
+                        </tr>
+                      {% endif %}
+                    {% endfor %}
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          {% endif %}
         {% when 'complementary_products' %}
           {% render 'product-complementary-products', product: product, class: 'my-8 md:my-12', block: block %}
         {% when 'share_button' %}
